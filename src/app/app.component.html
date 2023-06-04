@@ -1,50 +1,408 @@
-<div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-  <img src="/img/beams.jpg" alt="" class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
-  <div class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-  <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
-    <div class="mx-auto max-w-md">
-      <img src="/img/logo.svg" class="h-6" alt="Tailwind Play" />
-      <div class="divide-y divide-gray-300/50">
-        <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
-          <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
-          <ul class="space-y-4">
-            <li class="flex items-center">
-              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="11" />
-                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-              </svg>
-              <p class="ml-4">
-                Customizing your
-                <code class="text-sm font-bold text-gray-900">tailwind.config.js</code> file
-              </p>
-            </li>
-            <li class="flex items-center">
-              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="11" />
-                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-              </svg>
-              <p class="ml-4">
-                Extracting classes with
-                <code class="text-sm font-bold text-gray-900">@apply</code>
-              </p>
-            </li>
-            <li class="flex items-center">
-              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="11" />
-                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-              </svg>
-              <p class="ml-4">Code completion with instant preview</p>
-            </li>
-          </ul>
-          <p>Perfect for learning how the framework works, prototyping a new idea, or creating a demo to share online.</p>
+<div class="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+        <div class="section-bg">
+            <div class="w-full flex justify-between px-4">
+                <!-- website Logo -->
+                <a href="/">
+                    <img class="h-[26px] lg:h-[32px]" src="/assets/images/logo/logo.png" alt="logo" />
+                </a>
+                <div class="flex items-center">
+                    <!-- dark and light mode toggle -->
+                    <button id="theme-toggle" type="button" class="dark-light-btn">
+                        <i id="theme-toggle-dark-icon" class="fa-solid text-xl fa-moon hidden"></i>
+                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl hidden"></i>
+                    </button>
+                    <!-- mobile toggle button -->
+                    <button id="menu-toggle" type="button" class="menu-toggle-btn">
+                        <i id="menu-toggle-open-icon" class="fa-solid fa-bars text-xl "></i>
+                        <i id="menu-toggle-close-icon" class="fa-solid fa-xmark text-xl hidden  "></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="pt-8 text-base font-semibold leading-7">
-          <p class="text-gray-900">Want to dig deeper into Tailwind?</p>
-          <p>
-            <a href="https://tailwindcss.com/docs" class="text-sky-500 hover:text-sky-600">Read the docs &rarr;</a>
-          </p>
+
+        <!-- mobile menu start -->
+        <nav id="navbar" class="hidden lg:hidden">
+            <ul
+                class="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]">
+                <li>
+                    <a class="mobile-menu-items-active" href="./aboutOne.html">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-regular fa-user"></i>
+                        </span>Sobre mí </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="./resumeOne.html">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </span>Currículum </a>
+                </li>
+                <li>
+                  <a class="mobile-menu-items" href="./contactOne.html">
+                      <span class="mr-2 text-xl">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                      </span>Cursos </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="./portfiloOne.html">
+                        <span class="mr-2 text-xl">
+                            <i class="fas fa-briefcase"></i>
+                        </span>Portafolio </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- mobile menu end -->
+
+        <div class="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
+            <!-- sidber personal info -->
+            <div class="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
+                <div
+                    class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
+                    <!-- profile image -->
+                    <img src="/assets/images/about/avatar.jpg"
+                        class="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
+                        alt="about" />
+                    <div class="pt-[100px] pb-8">
+                        <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Cristian Ortega </h2>
+                        <h3
+                            class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
+                            Software Developer </h3>
+                        <div class="flex justify-center space-x-3">
+                            <!-- facebook icon and link -->
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <!-- twitter icon and link -->
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </span>
+                            </a>
+                            <!-- dribbble icon and link -->
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#e14a84]">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </span>
+                            </a>
+                            <!-- linkedin icon and link -->
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <!-- personal infomation start -->
+                        <div class="p-7 rounded-2xl mt-7 bg-[#F3F6F6] dark:bg-[#1D1D1D]">
+                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] pb-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#E93B81] shadow-md">
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Phone </p>
+                                    <p class="dark:text-white">+123 456 7890</p>
+                                </div>
+                            </div>
+                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md">
+                                    <i class="fa-solid fa-envelope-open-text"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
+                                    <p class="dark:text-white">example@mail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#FD7590] shadow-md">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Location </p>
+                                    <p class="dark:text-white">Hong kong china</p>
+                                </div>
+                            </div>
+                            <div class="flex py-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Birthday </p>
+                                    <p class="dark:text-white">May 27, 1990</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- personal infomation end-->
+                        <!-- dowanload button -->
+                        <button class="dowanload-btn">
+                            <img class="mr-3" src="/assets/images/icons/dowanload.png" alt="icon" /> Download CV </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-8">
+                <!-- header for mobile devices start -->
+                <header
+                    class="lg:w-[560px] h-[144px] hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white dark:bg-[#111111]">
+                    <nav class="hidden lg:block">
+                        <ul class="flex justify-center">
+                            <li> <a class="menu-active" href="./aboutOne.html">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-regular fa-user"></i>
+                                    </span> Sobre mí </a></li>
+                            <li> <a class="menu-item" href="./resumeOne.html">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-regular fa-file-lines"></i>
+                                    </span> Currículum </a></li>
+                            <li> <a class="menu-item" href="./contactOne.html">
+                                    <span class="text-xl mb-1">
+                                      <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                    </span> Cursos </a></li>
+                            <li> <a class="menu-item" href="./portfiloOne.html">
+                                    <span class="text-xl mb-1">
+                                        <i class="fas fa-briefcase"></i>
+                                    </span> Portafolio </a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <!-- header for mobile devices end -->
+
+                <!-- about me section start -->
+                <div>
+                    <div class="lg:rounded-2xl bg-white dark:bg-[#111111]">
+                        <div class="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
+                            <!-- about page title -->
+                            <h2 class="after-effect after:left-52">About Me</h2>
+                            <!-- personal info for mobile devices start -->
+                            <div class="lg:hidden">
+                                <div
+                                    class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
+                                    <!-- profile image  -->
+                                    <img src="/assets/images/about/avatar.jpg"
+                                        class="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
+                                        alt="about" />
+                                    <div class="pt-[100px] pb-8">
+                                        <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Cristian Ortega
+                                        </h2>
+                                        <h3
+                                            class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
+                                            Ui/Ux Designer </h3>
+
+                                        <div class="flex justify-center space-x-3">
+                                            <!-- facebook icon and link -->
+                                            <a href="https://www.facebook.com/" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#1773EA]">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </span>
+                                            </a>
+                                            <!-- twitter icon and link -->
+                                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#1C9CEA]">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </span>
+                                            </a>
+                                            <!-- dribbble icon and link -->
+                                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#e14a84]">
+                                                    <i class="fa-brands fa-dribbble"></i>
+                                                </span>
+                                            </a>
+                                            <!-- linkedin icon and link -->
+                                            <a href="https://www.linkedin.com/" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#0072b1]">
+                                                    <i class="fa-brands fa-linkedin-in"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+
+                                        <!-- personal info start -->
+                                        <div class="p-7 rounded-2xl mt-7 bg-[#F3F6F6] dark:bg-[#1D1D1D]">
+                                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] pb-2.5">
+                                                <span class="socialbtn bg-white dark:bg-black text-[#E93B81] shadow-md">
+                                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                                </span>
+                                                <div class="text-left ml-2.5">
+                                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Phone </p>
+                                                    <p class="dark:text-white">+123 456 7890</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                                <span class="socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md">
+                                                    <i class="fa-solid fa-envelope-open-text"></i>
+                                                </span>
+                                                <div class="text-left ml-2.5">
+                                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
+                                                    <p class="dark:text-white">example@mail.com</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                                <span class="socialbtn bg-white dark:bg-black text-[#FD7590] shadow-md">
+                                                    <i class="fa-solid fa-location-dot"></i>
+                                                </span>
+                                                <div class="text-left ml-2.5">
+                                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Location </p>
+                                                    <p class="dark:text-white">Hong kong china</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex py-2.5">
+                                                <span class="socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md">
+                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                </span>
+                                                <div class="text-left ml-2.5">
+                                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Birthday </p>
+                                                    <p class="dark:text-white">May 27, 1990</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- personal info end -->
+
+                                        <!-- dowanload button -->
+                                        <button class="dowanload-btn">
+                                            <img class="mr-3" src="/assets/images/icons/dowanload.png" alt="icon" /> Download
+                                            CV
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- personal info for mobile devices end -->
+
+                            <div class="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden">
+                                <div class="col-span-12 space-y-2.5">
+                                    <div class="lg:mr-16">
+                                        <p class="text-[#44566c] dark:text-color-910 leading-7"> I'm Creative Director
+                                            and UI/UX Designer from Sydney, Australia, working in web development and
+                                            print media. I enjoy turning complex problems into simple, beautiful and
+                                            intuitive designs. </p>
+                                        <p class="text-[#44566c] leading-7 mt-2.5 dark:text-color-910"> My aim is to
+                                            bring across your message and identity in the most creative way. I created
+                                            web design for many famous brand companies. </p>
+                                    </div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- what i do section start -->
+                        <div class="pb-12 px-2 sm:px-5 md:px-10 lg:px-14">
+                            <h3 class="text-[35px] dark:text-white font-bold font-robotoSlab pb-5"> What I do! </h3>
+                            <div class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+                                <div class="about-box bg-[#fcf4ff] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="/assets/images/icons/icon.svg"
+                                        alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold"> Ui/Ux Design </h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit
+                                            amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-box bg-[#fefaf0] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="/assets/images/icons/icon1.svg"
+                                        alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold"> App Development </h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit
+                                            amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-box bg-[#fcf4ff] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="/assets/images/icons/icon2.svg"
+                                        alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold"> Photography </h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit
+                                            amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-box bg-[#fff4f4] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="/assets/images/icons/icon3.svg"
+                                        alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold"> Photography </h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit
+                                            amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-box bg-[#fff0f8] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="/assets/images/icons/icon4.svg"
+                                        alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold"> Managment </h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit
+                                            amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-box bg-[#f3faff] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="/assets/images/icons/icon5.svg"
+                                        alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold"> Web Development </h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit
+                                            amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- what i do section start -->
+                        <div class="px-2 sm:px-5 md:px-10 lg:px-14">
+                            <div class="bg-[#F8FBFB] dark:bg-[#0D0D0D] max-w-full h-auto py-10 rounded-xl">
+                                <h3 class="text-center dark:text-white text-6xl mb-3 font-semibold"> Clients </h3>
+                                <!-- slider and slider items -->
+                                <div class="slickOne text-center px-2 pt-8">
+                                    <div>
+                                        <img class="overflow-hidden brand-img" src="/assets/images/slider/brand.png"
+                                            alt="brand icon" />
+                                    </div>
+                                    <div>
+                                        <img class="overflow-hidden brand-img" src="/assets/images/slider/brand1.png"
+                                            alt="brand icon" />
+                                    </div>
+                                    <div>
+                                        <img class="overflow-hidden brand-img" src="/assets/images/slider/brand2.png"
+                                            alt="brand icon" />
+                                    </div>
+                                    <div>
+                                        <img class="overflow-hidden brand-img" src="/assets/images/slider/brand3.png"
+                                            alt="brand icon" />
+                                    </div>
+                                    <div>
+                                        <img class="overflow-hidden brand-img" src="/assets/images/slider/brand4.png"
+                                            alt="brand icon" />
+                                    </div>
+                                    <div>
+                                        <img class="overflow-hidden brand-img" src="/assets/images/slider/brand1.png"
+                                            alt="brand icon" />
+                                    </div>
+                                    <div>
+                                        <img class="overflow-hidden brand-img" src="/assets/images/slider/brand1.png"
+                                            alt="brand icon" />
+                                    </div>
+                                </div>
+                                <!-- slider and slider items end -->
+                            </div>
+                        </div>
+
+                        <!-- footer start -->
+                        <footer class="overflow-hidden rounded-b-2xl" style="background: transparent">
+                            <p class="text-center py-6 text-gray-lite dark:text-color-910"> © 2022 All Rights Reserved
+                                by <a class="hover:text-[#FA5252] duration-300 transition"
+                                    href="https://themeforest.net/user/ib-themes" target="_blank"
+                                    rel="noopener noreferrer"> ib-themes</a>. </p>
+                        </footer>
+                        <!-- footer section end -->
+                    </div>
+                </div>
+                <!-- about me section start -->
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
+    <!-- End bgHomeBg -->

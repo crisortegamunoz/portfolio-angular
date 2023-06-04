@@ -1,3 +1,71 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer components {
+  .about-box {
+    @apply dark:border-2 rounded-xl p-6 flex gap-4 border-[#212425];
+  }
+  .after-effect {
+    @apply text-7xl font-bold font-robotoSlab inline-block relative after:absolute  transform after:-translate-y-[50%] after:bg-gradient-to-r from-[#FA5252] to-[#DD2476] after:h-0.5 after:rounded-md after:content-[""] md:after:w-48  after:top-[50%] dark:text-white;
+  }
+  .resume-btn {
+    @apply bg-[#EDF2F2] cursor-default px-5 py-2 rounded-lg  text-gray-lite dark:bg-[#1C1C1C] dark:text-[#A6A6A6];
+  }
+  .socialbtn {
+    @apply w-10 h-10 rounded-lg hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]  flex justify-center items-center  hover:text-white transition-colors duration-300  ease-in-out bg-[#F3F6F6] dark:bg-[#212425];
+  }
+  .fillter-btn {
+    @apply text-gray-lite dark:text-[#A6A6A6] hover:text-[#FA5252] transition duration-300 cursor-pointer  ;
+  }
+  .mobile-menu-items{
+    @apply pl-4 cursor-pointer transition-colors duration-300 ease-in-out font-poppins text-gray-lite font-medium flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center dark:text-white dark:hover:text-[#FA5252] hover:text-[#FA5252];
+  }
+  .mobile-menu-items-active{
+    @apply pl-4 cursor-pointer transition-colors duration-300 ease-in-out font-poppins  font-medium flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center dark:text-[#FA5252] text-[#FA5252]  dark:hover:text-[#FA5252] hover:text-[#FA5252];
+  }
+  .dark-light-btn{
+    @apply bg-white dark:bg-[#4d4d4d] dark:text-white w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full flex justify-center items-center hover:bg-[#ef4060] dark:hover:bg-[#ef4060] text-black hover:text-white dark:hover:text-white transition-all duration-300 ease-in-out cursor-pointer;
+  }
+  .menu-active{
+    @apply w-20 h-20 rounded-[10px] cursor-pointer font-poppins bg-[#F3F6F6] font-medium text-xtiny mx-2.5 text-gray-lite dark:text-[#A6A6A6] justify-center flex flex-col items-center lg:text-white lg:dark:text-white lg:bg-gradient-to-r from-[#FA5252] to-[#DD2476] transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476];
+
+  }
+  .menu-item{
+@apply w-20 h-20 rounded-[10px] cursor-pointer font-poppins bg-[#F3F6F6] font-medium mx-2.5 text-xtiny text-gray-lite dark:text-[#A6A6A6] justify-center flex flex-col items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476];
+  }
+  .dowanload-btn{
+    @apply flex items-center mx-auto bg-gradient-to-r from-[#FA5252] to-[#DD2476] duration-200 transition ease-linear hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef] px-8 py-3 text-lg text-white rounded-[35px] mt-6;
+  }
+  .menu-toggle-btn{
+    @apply bg-white ml-3 lg:hidden w-[40px] h-[40px] lg:w-[50px] rounded-full flex justify-center items-center hover:bg-[#ef4060] text-black hover:text-white transition-all duration-300 ease-in-out cursor-pointer;
+
+  }
+  .modal-container{
+    @apply  w-full hidden md:w-10/12 flex items-center lg:w-[850px] bg-white dark:bg-[#323232] mx-auto rounded-xl p-4 md:p-8 absolute left-1/2 top-1/2 transform -translate-x-[50%] -translate-y-[50%] shadow-lg;
+  }
+
+  .dot-icon{
+    @apply pl-6 relative after:absolute after:h-1 after:w-1 after:bg-gray-lite after:rounded-full after:left-2 after:top-[50%] transform after:-translate-y-1/2;
+  }
+  .comment-btn{
+    @apply flex items-center bg-gradient-to-r from-[#FA5252] to-[#DD2476] duration-200 transition ease-linear hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef] px-8 py-[12px] text-lg text-white rounded-[35px] mt-8;
+  }
+  .section-bg{
+    @apply container w-full bg-[#F3F6F6] dark:bg-black lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-[50px];
+  }
+  .preview-img{
+    @apply text-center w-full mx-auto shadow-zinc-400 rounded-[12px] border-4 border-slate-800 border-solid duration-500 transition hover:border-slate-500;
+  }
+  .menu-item-two-active{
+    @apply text-white  dark:text-white bg-gradient-to-r from-[#FA5252] to-[#DD2476] rounded-md cursor-pointer font-poppins bg-white  font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]  ;
+  }
+  .menu-item-two{
+    @apply rounded-md cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] dark:text-[#A6A6A6] ;
+  }
+
+
+
+
+}
+
