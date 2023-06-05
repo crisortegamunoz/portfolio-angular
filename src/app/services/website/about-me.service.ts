@@ -15,7 +15,7 @@ export class AboutMeService {
       {
         id: 1,
         title: `Tech's Companies`,
-        description: 'Ayudando a la industria de tecnologica desarrollando plataformas de alto rendimiento, para facilitar la vida a las personas.',
+        description: 'Ayudando a la industria tecnológica a desarrollar nuevas plataformas de alto rendimiento con la finaliad de facilitar la vida a las personas.',
         class: 'about-box bg-[#fcf4ff] dark:bg-transparent',
         image: '/assets/images/icons/icon.svg'
       },

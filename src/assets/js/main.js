@@ -23,7 +23,6 @@
       bostami.setLight();
       bostami.setLight1();
       bostami.istopeActivation();
-      bostami.preloader();
       bostami.slickActive();
     },
 
@@ -76,29 +75,6 @@
             }
           }
         });
-      });
-    },
-
-    // preloader  function
-    preloader: function () {
-      $(window).on("load", function () {
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
-          navigator.userAgent
-        )
-          ? true
-          : false;
-        var preloader = $("#preloader");
-
-        if (!isMobile) {
-          setTimeout(function () {
-            preloader.addClass("preloaded");
-          }, 800);
-          setTimeout(function () {
-            preloader.remove();
-          }, 2000);
-        } else {
-          preloader.remove();
-        }
       });
     },
 
@@ -416,21 +392,6 @@
 
       $(window).on("load", function () {
         if ($("#isotop-gallery-wrapper").length) {
-          var $grid = $("#isotop-gallery-wrapper").isotope({
-            // options
-            itemSelector: ".isotop-item",
-            percentPosition: true,
-            masonry: {
-              // use element for option
-              columnWidth: ".grid-sizer",
-            },
-          });
-
-          // filter items on button click
-          $(".isotop-menu-wrapper").on("click", "li", function () {
-            var filterValue = $(this).attr("data-filter");
-            $grid.isotope({ filter: filterValue });
-          });
 
           // change is-checked class on buttons
           $(".isotop-menu-wrapper").each(function (i, buttonGroup) {
