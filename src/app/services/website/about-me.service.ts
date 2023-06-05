@@ -28,15 +28,15 @@ export class AboutMeService {
       },
       {
         id: 3,
-        title: 'Desarrollo',
+        title: 'Gestión de equipo',
         description: 'Guiando y retroalimentando a los miembros del equipo en pro del cumplimiento de metas, priorizando la eficiencia y prolijidad.',
         class: 'about-box bg-[#fff4f4] dark:bg-transparent',
         image: '/assets/images/icons/icon3.svg'
       },
       {
         id: 4,
-        title: 'Gestión de equipo',
-        description: 'Dedicado a crear, mantener y mejorar las funcionalides de las distintas plataformas de la compañía.',
+        title: 'Desarrollo',
+        description: 'Dedicado a la creación, mantención y a mejorar las funcionalides de las aplicaciones para que el usuario tenga una buena experiencia.',
         class: 'about-box bg-[#fcf4ff] dark:bg-transparent',
         image: '/assets/images/icons/icon2.svg'
       }
