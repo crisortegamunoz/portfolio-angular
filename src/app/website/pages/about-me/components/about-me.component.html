@@ -1,29 +1,33 @@
-<div class="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
-  <!-- about page title -->
-  <h2 class="after-effect after:left-52">Sobre mí</h2>
-  <!-- personal info for mobile devices start -->
-  <app-mobile-information></app-mobile-information>
-  <!-- personal info for mobile devices end -->
+<div>
+  <div class="lg:rounded-2xl bg-white dark:bg-[#111111]">
+    <div class="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
+      <!-- about page title -->
+      <h2 class="after-effect after:left-52">Sobre mí</h2>
+      <!-- personal info for mobile devices start -->
+      <app-mobile-information></app-mobile-information>
+      <!-- personal info for mobile devices end -->
 
-  <div class="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden">
-      <div class="col-span-12 space-y-2.5">
-          <div class="lg:mr-16">
-              <p class="text-[#44566c] dark:text-color-910 leading-7">
-                ¡Hola! Me llamo Cristian, soy ingeniero en informática con 7 años de experiencia
-                en el desarrollo y gestión de software, con un fuerte compromiso con la satisfacción
-                y el bienestar del cliente, diseñando e implementando mejoras en los sistemas.</p>
-              <p class="text-[#44566c] leading-7 mt-2.5 dark:text-color-910">
-                Soy apasionado por aprender nuevas tecnologías y siempre estoy buscando nuevas
-                herramientas para mejorar mis habilidades en el campo del desarrollo de software. </p>
+      <div class="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden">
+          <div class="col-span-12 space-y-2.5">
+              <div class="lg:mr-16">
+                  <p class="text-[#44566c] dark:text-color-910 leading-7">
+                    ¡Hola! Me llamo Cristian, soy ingeniero en informática con 7 años de experiencia
+                    en el desarrollo y gestión de software, con un fuerte compromiso con la satisfacción
+                    y el bienestar del cliente, diseñando e implementando mejoras en los sistemas.</p>
+                  <p class="text-[#44566c] leading-7 mt-2.5 dark:text-color-910">
+                    Soy apasionado por aprender nuevas tecnologías y siempre estoy buscando nuevas
+                    herramientas para mejorar mis habilidades en el campo del desarrollo de software. </p>
+              </div>
+              <div></div>
           </div>
-          <div></div>
       </div>
-  </div>
-</div>
+    </div>
 
-<div class="pb-12 px-2 sm:px-5 md:px-10 lg:px-14">
-  <h3 class="text-[35px] dark:text-white font-bold font-robotoSlab pb-5"> Mí día a día </h3>
-  <div *ngIf="boxes.length > 0" class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
-    <app-about-box [box]="box" *ngFor="let box of boxes"></app-about-box>
+    <div class="pb-12 px-2 sm:px-5 md:px-10 lg:px-14">
+      <h3 class="text-[35px] dark:text-white font-bold font-robotoSlab pb-5"> Mí día a día </h3>
+      <div *ngIf="boxes.length > 0" class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+        <app-about-box [box]="box" *ngFor="let box of boxes"></app-about-box>
+      </div>
+    </div>
   </div>
 </div>

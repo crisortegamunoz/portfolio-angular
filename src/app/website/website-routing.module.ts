@@ -14,7 +14,19 @@ const routes: Routes = [
       },
       {
         path: 'about-me',
-        loadChildren: () => import('./pages/about-me/about-me.module').then(m => m.AboutMeModule),
+        loadChildren: () => import('./pages/about-me/about-me.module').then(m => m.AboutMeModule)
+      },
+      {
+        path: 'curriculum',
+        loadChildren: () => import('./pages/curriculum/curriculum.module').then(m => m.CurriculumModule)
+      },
+      {
+        path: 'certificate',
+        loadChildren: () => import('./pages/certificate/certificate.module').then(m => m.CertificateModule)
+      },
+      {
+        path: 'portfolio',
+        loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule)
       }
     ]
   }

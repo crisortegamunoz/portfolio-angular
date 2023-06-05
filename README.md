@@ -8,10 +8,9 @@ El portafolio personal contará con las siguientes funcionalidades:
 
     1. Página de inicio: Presentará una introducción sobre mí, resaltando mis habilidades y experiencia clave.
     2. Currículum: Se proporcionará una sección donde se mostrará mi currículum, detallando mi historial educativo, experiencia laboral y habilidades técnicas.
-    3. Información sobre mí: Se incluirá una sección donde se brindará información personal sobre mí, como intereses, pasatiempos y logros relevantes.
-    4. Certificados: Se mostrarán los certificados obtenidos en cursos, programas de capacitación y otras certificaciones relevantes.
-    5. Proyectos destacados: Se incluirá una sección dedicada a mostrar los proyectos en los que he trabajado. Cada proyecto se presentará con una breve descripción, capturas de pantalla y enlaces a los repositorios o demostraciones en vivo, si corresponde.
-    6. Navegación intuitiva: Se proporcionará una barra de navegación para facilitar la exploración de las diferentes secciones del portafolio.
+    3. Certificados: Se mostrarán los certificados obtenidos en cursos, programas de capacitación y otras certificaciones relevantes.
+    4. Proyectos destacados: Se incluirá una sección dedicada a mostrar los proyectos en los que he trabajado. Cada proyecto se presentará con una breve descripción, capturas de pantalla y enlaces a los repositorios o demostraciones en vivo, si corresponde.
+    5. Navegación intuitiva: Se proporcionará una barra de navegación para facilitar la exploración de las diferentes secciones del portafolio.
 
 ## Tecnologías utilizadas
 El proyecto se desarrollará utilizando las siguientes tecnologías:
