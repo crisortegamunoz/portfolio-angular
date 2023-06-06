@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CurriculumRoutingModule } from './curriculum-routing.module';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
   ],
   imports: [
     CommonModule,
-    CurriculumRoutingModule
+    CurriculumRoutingModule,
+    SharedModule
   ]
 })
 export class CurriculumModule { }

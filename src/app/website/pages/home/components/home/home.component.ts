@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './home.component.html'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
+  changingText: string;
+  texts: string[];
+  currentIndex: number;
+
+  constructor() {
+    this.changingText = 'Backend Developer';
+    this.texts = ['Backend Developer', 'Frontend Developer', 'FullStack Developer'];
+    this.currentIndex = 0;
+  }
+
+  ngOnInit() {
+    setInterval(() => {
+      this.changingText = this.texts[this.currentIndex];
+      this.currentIndex = (this.currentIndex + 1) % this.texts.length;
+    }, 2000);
+  }
 
 }
