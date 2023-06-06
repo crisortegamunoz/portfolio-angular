@@ -6,7 +6,8 @@
           [src]="certificate?.image" alt="portfolio image" />
       </a>
     </div>
-    <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">{{ certificate?.entity }}</span>
+    <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Plataforma: {{ certificate?.entity }}</span>
+    <span class="pt-1 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Aprobado el: {{ certificate?.completed | date:'dd-MM-yyyy' }}</span>
     <h2
       class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
       <a href="#portfiloTwo" rel="modal:open">{{ certificate?.name }}</a>
