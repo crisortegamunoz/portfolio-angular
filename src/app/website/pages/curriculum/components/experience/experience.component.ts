@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Experience } from '../../../../../models/website/experience.models';
 import { ExperienceService } from '../../../../../services/website/experience.service';
 
@@ -10,7 +10,7 @@ import { ExperienceService } from '../../../../../services/website/experience.se
 
 export class ExperienceComponent  {
 
-  experience: Experience | null;
+  @Input() experience: Experience | null;
 
   constructor(private experienceService: ExperienceService) {
     this.experience = null;

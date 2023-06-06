@@ -1,10 +1,12 @@
 export interface Experience {
   id: number;
-  role?: string;
-  entity: string;
-  entityDescription?: string;
-  responsabilities?: string[];
-  technologies?: string[];
+  role?: string | null;
+  roleDescription: string | null;
+  entity: string | null;
+  entityDescription: string | null;
   startDate: Date;
   endDate: Date;
+  responsabilities: string[];
+  technologies: string[];
+  projects: string[];
 }

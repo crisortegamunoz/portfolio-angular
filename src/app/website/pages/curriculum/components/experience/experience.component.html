@@ -1,11 +1,12 @@
-<div class="py-4 dark:bg-transparent bg-[#eef5fa] pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2">
-  <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2017-2021</span>
-  <h3 class="text-xl dark:text-white"> {{ experience?.role }}</h3>
-      <h4 class="text-lg font-medium dark:text-white"> {{ experience?.entity }}</h4>
-      <p class="dark:text-[#b7b7b7]"> {{ experience?.entityDescription }} </p>
-      <p *ngIf="experience?.responsabilities" class="dark:text-[#b7b7b7]"> Responsabilidades: </p>
-      <ul *ngIf="experience?.responsabilities" class="list-disc ml-6">
-        <li class="dark:text-[#b7b7b7]">Responsabilidad 1</li>
+<div *ngIf="experience" class="py-4 dark:bg-transparent bg-[#eef5fa] pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2">
+  <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]"> {{ experience.startDate | date:'yyyy-MM' }} - {{ experience.endDate | date:'yyyy-MM' }}</span>
+  <h3 *ngIf="experience.role" class="text-xl dark:text-white"> {{ experience.role }}</h3>
+  <h4 class="text-lg font-medium dark:text-white"> {{ experience.entity }}</h4>
+  <p *ngIf="experience.entityDescription" class="dark:text-[#b7b7b7]"> {{ experience.entityDescription }} </p>
+  <p *ngIf="experience.roleDescription" class="dark:text-[#b7b7b7]"> {{ experience.roleDescription }} </p>
+  <p *ngIf="experience.responsabilities.length > 0" class="dark:text-[#b7b7b7]"> Responsabilidades: </p>
+      <ul *ngIf="experience.responsabilities.length > 0" class="list-disc ml-6">
+        <li *ngFor="let responsability of experience.responsabilities" class="dark:text-[#b7b7b7]">{{ responsability }}</li>
       </ul>
 </div>
 
