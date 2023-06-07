@@ -1,10 +1,15 @@
+import { Category } from "./caterogry.models";
+
 export interface Portfolio {
   id: number;
-  projectCode: string;
   projectName: string;
   image: string;
   descriptions: string[];
+  repository?: string;
+  demo?: string;
   workingFrom: Date;
-  workingTo: Date;
+  workingTo: Date | null;
   publish: Date;
+  category: Category;
+  technologies: string[];
 }

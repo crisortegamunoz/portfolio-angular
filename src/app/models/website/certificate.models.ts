@@ -1,3 +1,5 @@
+import { Category } from "./caterogry.models";
+
 export interface Certificate {
   id: number;
   name: string;
@@ -5,4 +7,5 @@ export interface Certificate {
   url: string;
   entity: string;
   completed: Date;
+  category: Category;
 }
