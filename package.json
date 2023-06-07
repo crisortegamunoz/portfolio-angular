@@ -53,6 +53,8 @@
     "micromatch": "^4.0.5",
     "minimist": "^1.2.6",
     "nanoid": "^3.3.4",
+    "ngx-pagination": "^6.0.3",
+    "ngx-spinner": "^16.0.2",
     "normalize-path": "^3.0.0",
     "object-hash": "^3.0.0",
     "path-parse": "^1.0.7",

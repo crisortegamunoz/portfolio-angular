@@ -14,7 +14,7 @@ export class FooterComponent {
 
   getText(): string {
     const today = new Date();
-    return `© ${today.getFullYear()} All Rights Reserved by me.`;
+    return `© ${today.getFullYear()} All Rights Reserved by me. Beta Version 0.5`;
   }
 
 }
