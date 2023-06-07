@@ -63,6 +63,12 @@
     @apply pl-4 cursor-pointer transition-colors duration-300 ease-in-out font-poppins  font-medium flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center dark:text-[#FA5252] text-[#FA5252]  dark:hover:text-[#FA5252] hover:text-[#FA5252];
   }
 
+  .filter-active{
+    @apply text-white  dark:text-white bg-gradient-to-r from-[#FFE79B] to-[#edc851] rounded-md cursor-pointer font-poppins bg-black  font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white hover:bg-gradient-to-r from-[#FFE79B] to-[#edc851]  ;
+  }
+  .filter{
+    @apply rounded-md cursor-pointer font-poppins bg-black text-black font-medium mx-2.5 flex text-xtiny py-2 md:px-3 xl:px-4 flex-wrap transition-all duration-300 ease-in-out dark:hover:text-black dark:bg-[#c97a0c] hover:text-white hover:bg-gradient-to-r from-[#f2991d] to-[#edc851] dark:text-white ;
+  }
 
 
 

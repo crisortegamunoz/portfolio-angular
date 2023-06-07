@@ -14,4 +14,10 @@ export class CertificateService {
   getAll(): Certificate[] {
     return WebsiteData.loadCertificate();
   }
+
+  getByCategoryId(categoryId: number): Certificate[] {
+    const array = WebsiteData.loadCertificate();
+    return array.filter(certificate => certificate.category.id === categoryId);
+  }
+
 }

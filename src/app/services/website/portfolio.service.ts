@@ -14,4 +14,9 @@ export class PortfolioService {
   getAll(): Portfolio[] {
     return WebsiteData.loadPortfolio();
   }
+
+  getByCategoryId(categoryId: number): Portfolio[] {
+    const array = WebsiteData.loadPortfolio();
+    return array.filter(portfolio => portfolio.category.id === categoryId)
+  }
 }

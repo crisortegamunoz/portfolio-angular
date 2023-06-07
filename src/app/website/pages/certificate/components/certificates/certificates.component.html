@@ -4,11 +4,9 @@
       <h2 class="after-effect after:left-60 mt-12 lg:mt-0">Certificados</h2>
 
       <!-- fillter group buttons -->
-      <div class="button-group isotop-menu-wrapper mt-[30px] flex w-full justify-start md:justify-end flex-wrap font-medium">
-        <button class="fillter-btn mr-4 md:mx-4 is-checked">Todos</button>
-        <button class="fillter-btn mr-4 md:mx-4 is-checked">Backend</button>
-        <button class="fillter-btn mr-4 md:mx-4 is-checked">Frontend</button>
-        <button class="fillter-btn mr-4 md:mx-4 is-checked">Cloud</button>
+      <div *ngIf="categories.length > 0" class="button-group isotop-menu-wrapper mt-[30px] flex w-full justify-start md:justify-end flex-wrap font-medium">
+        <button class="filter" (click)="searchByCategory(null)">Todos</button>
+        <button class="filter" *ngFor="let category of categories" (click)="searchByCategory(category.id)">{{ category.name }}</button>
       </div>
     </div>
     <!-- End py-12 -->

@@ -23,7 +23,7 @@ export class WebsiteData {
       },
       {
         id: 3,
-        name: 'Profesional',
+        name: 'Personal',
         section: 'Portfolio'
       },
       {
@@ -42,12 +42,64 @@ export class WebsiteData {
   static loadCertificate(): Certificate[] {
     return [
       {
+        id: 27,
+        name: 'Angular Router y Modular',
+        image: '/assets/images/certificate/2023-06-01_Angular_Router_Modular.png',
+        url: 'https://firebasestorage.googleapis.com/v0/b/portfolio-crisortega.appspot.com/o/images%2Fcertificate%2F2023-06-01_Angular_Router_Modular.png?alt=media&token=5655ff5b-e8c6-4e3b-a838-93cbe5cad7e3',
+        entity: 'Platzi',
+        completed: new Date(2023, 5, 1),
+        category: {
+          id: 5,
+          name: 'Frontend',
+          section: 'Certificate'
+        }
+      },
+      {
+        id: 26,
+        name: 'Consumo de APIS Rest con Angular',
+        image: '/assets/images/certificate/2023-05-29_Consumo_Api_Rest.png',
+        url: 'https://firebasestorage.googleapis.com/v0/b/portfolio-crisortega.appspot.com/o/images%2Fcertificate%2F2023-05-29_Consumo_Api_Rest.png?alt=media&token=0d155a09-98b9-46df-86b1-668821700020',
+        entity: 'Platzi',
+        completed: new Date(2023, 4, 29),
+        category: {
+          id: 5,
+          name: 'Frontend',
+          section: 'Certificate'
+        }
+      },
+      {
+        id: 25,
+        name: 'Angular Componentes y Servicios',
+        image: '/assets/images/certificate/2023-05-25_Componentes_y_servicios.png',
+        url: 'https://firebasestorage.googleapis.com/v0/b/portfolio-crisortega.appspot.com/o/images%2Fcertificate%2F2023-05-25_Componentes_y_servicios.png?alt=media&token=d4d06dc8-b9d7-4b0e-974d-7e63cdebf8fe',
+        entity: 'Platzi',
+        completed: new Date(2023, 4, 25),
+        category: {
+          id: 5,
+          name: 'Frontend',
+          section: 'Certificate'
+        }
+      },
+      {
+        id: 24,
+        name: 'Fundamentos de Angular',
+        image: '/assets/images/certificate/2023-05-24_Fundamentos_de_angular.png',
+        url: 'https://firebasestorage.googleapis.com/v0/b/portfolio-crisortega.appspot.com/o/images%2Fcertificate%2F2023-05-24_Fundamentos_de_angular.png?alt=media&token=ae0eee0f-0410-45da-9572-db7371df5eea',
+        entity: 'Platzi',
+        completed: new Date(2023, 4, 24),
+        category: {
+          id: 5,
+          name: 'Frontend',
+          section: 'Certificate'
+        }
+      },
+      {
         id: 23,
         name: 'Almacenamiento y DataBase AWS',
         image: '/assets/images/certificate/2023-04-04_Computo.png',
         url: 'https://firebasestorage.googleapis.com/v0/b/portfolio-crisortega.appspot.com/o/images%2Fcertificate%2F2023-04-04_Computo.png?alt=media&token=d6880102-086b-47a6-8491-d65ce39910e2',
         entity: 'Platzi',
-        completed: new Date(2022, 4, 6),
+        completed: new Date(2023, 3, 4),
         category: {
           id: 6,
           name: 'Cloud',
@@ -60,7 +112,7 @@ export class WebsiteData {
         image: '/assets/images/certificate/2023-03-07_Fundamentos_AWS.png',
         url: 'https://firebasestorage.googleapis.com/v0/b/portfolio-crisortega.appspot.com/o/images%2Fcertificate%2F2023-03-07_Fundamentos_AWS.png?alt=media&token=0f158699-0ba8-4028-9ac4-814819fa397c',
         entity: 'Platzi',
-        completed: new Date(2022, 4, 6),
+        completed: new Date(2023, 2, 27),
         category: {
           id: 6,
           name: 'Cloud',
@@ -112,7 +164,7 @@ export class WebsiteData {
         image: '/assets/images/certificate/2020-11-02_JavaScript_Profesional.png',
         url: 'https://firebasestorage.googleapis.com/v0/b/portfolio-crisortega.appspot.com/o/images%2Fcertificate%2F2020-11-02_JavaScript_Profesional.png?alt=media&token=ffe885fd-d0cd-4d8c-82dd-1268b12e9234',
         entity: 'Platzi',
-        completed: new Date(2020, 5, 30),
+        completed: new Date(2020, 10, 2),
         category: {
           id: 4,
           name: 'Backend',
@@ -358,7 +410,7 @@ export class WebsiteData {
         workingTo: new Date(2021, 8, 8),
         publish: new Date(2023, 5, 7),
         category: {
-          id: 3,
+          id: 1,
           name: 'Profesional',
           section: 'Portfolio'
         },
@@ -380,7 +432,7 @@ export class WebsiteData {
         workingTo: new Date(2021, 8, 8),
         publish: new Date(2023, 5, 7),
         category: {
-          id: 3,
+          id: 1,
           name: 'Profesional',
           section: 'Portfolio'
         },
@@ -403,7 +455,7 @@ export class WebsiteData {
         workingTo: new Date(2021, 3, 20),
         publish: new Date(2023, 5, 7),
         category: {
-          id: 3,
+          id: 1,
           name: 'Profesional',
           section: 'Portfolio'
         },

@@ -1,16 +1,16 @@
-<div class="rounded-lg bg-[#fff3fc] dark:bg-[#212425] p-6 dark:border-[2px] border-[#212425] ">
+<div *ngIf="certificate" class="rounded-lg bg-[#fff3fc] dark:bg-[#212425] p-6 dark:border-[2px] border-[#212425] ">
     <div class="overflow-hidden rounded-lg">
-      <a href="#portfiloTwo" rel="modal:open">
+      <a [href]="certificate.url" target="_blank" rel="noopener noreferrer">
         <img
           class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-          [src]="certificate?.image" alt="portfolio image" />
+          [src]="certificate.image" alt="portfolio image" />
       </a>
     </div>
-    <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-white">Plataforma: {{ certificate?.entity }}</span>
-    <span class="pt-1 text-[14px] font-normal text-gray-lite block dark:text-white">Aprobado el: {{ certificate?.completed | date:'dd-MM-yyyy' }}</span>
+    <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-white">Plataforma: {{ certificate.entity }}</span>
+    <span class="pt-1 text-[14px] font-normal text-gray-lite block dark:text-white">Aprobado el: {{ certificate.completed | date:'dd-MM-yyyy' }}</span>
     <h2
       class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-      <a href="#portfiloTwo" rel="modal:open">{{ certificate?.name }}</a>
+      <a [href]="certificate.url" target="_blank" rel="noopener noreferrer">{{ certificate.name }}</a>
     </h2>
 </div>
 
