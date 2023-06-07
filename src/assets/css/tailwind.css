@@ -52,10 +52,11 @@ html {
 */
 
 body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9d2bf3), to(#5050f5));
+  background: linear-gradient(#9d2bf3, #5050f5);
   margin: 0;
-  /* 1 */
   line-height: inherit;
-  /* 2 */
+
 }
 
 /*
@@ -2096,7 +2097,7 @@ video {
 }
 
 .bg-homeBg {
-  background-image: url('/images/background/bg.jpg');
+  background-image: url('/assets/images/background/main_bg.png');
 }
 
 .bg-gradient-to-r {
@@ -2104,11 +2105,11 @@ video {
 }
 
 .bg-close-light {
-  background-image: url('/images/icons/closelight.jpg');
+  background-image: url('/assetsimages/icons/closelight.jpg');
 }
 
 .bg-previewBg {
-  background-image: url('/images/background/previewbg.png');
+  background-image: url('/assets/images/background/previewbg.png');
 }
 
 .from-\[\#FA5252\] {
@@ -2936,15 +2937,15 @@ video {
 }
 
 .dark .dark\:bg-homeTwoBg-dark {
-  background-image: url('/images/background/bgtwo.jpg');
+  background-image: url('/assets/images/background/bgtwo.jpg');
 }
 
 .dark .dark\:bg-homeBg-dark {
-  background-image: url('/images/background/bg-dark.jpg');
+  background-image: url('/assets/images/background/bg-dark.jpg');
 }
 
 .dark .dark\:bg-close-dark {
-  background-image: url('/images/icons/closeDark.png');
+  background-image: url('/assets/images/icons/closeDark.png');
 }
 
 .dark .dark\:text-white {

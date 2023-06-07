@@ -37,7 +37,7 @@ module.exports = {
       backgroundImage: {
         'homeBg': "url('/assets/images/background/bg.jpg')",
         'homeBg-dark': "url('/assets/images/background/bg-dark.jpg')",
-        'homeTwoBg-dark': "url('/assets/images/background/bgtwo.jpg')",
+        'homeTwoBg-dark': "url('/assets/images/background/main_bg.png')",
         'previewBg': "url('/assets/images/background/previewbg.png')",
         'preview': "url('/assets/images/background/download 1.png')",
         'close-light': "url('/assets/images/icons/closelight.jpg')",

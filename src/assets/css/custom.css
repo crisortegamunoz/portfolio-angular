@@ -161,11 +161,11 @@ input:-webkit-autofill:focus {
 }
 
 .close-light {
-	background-image: url(../images/icons/closelight.jpg);
+	background-image: url(/assets/images/icons/closelight.jpg);
 }
 
 .close-dark {
-	background-image: url(../images/icons/closeDark.png);
+	background-image: url(/assets/images/icons/closeDark.png);
 }
 
 .modal a.close-modal {
