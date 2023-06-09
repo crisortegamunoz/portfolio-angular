@@ -6,7 +6,6 @@
             <button class="filter" (click)="searchByCategory(null)">Todos</button>
             <button class="filter" *ngFor="let category of categories" (click)="searchByCategory(category.id)">{{ category.name }}</button>
           </div>
-
           <app-spinner *ngIf="portfolios.length <= 0" [message]="'Cargando...'"></app-spinner>
           <div *ngIf="portfolios.length > 0" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[30px] grid gap-x-10 gap-y-7 mb-6">
               <app-portfolio-item *ngFor="let portfolio of portfolios" [portfolio]="portfolio"></app-portfolio-item>

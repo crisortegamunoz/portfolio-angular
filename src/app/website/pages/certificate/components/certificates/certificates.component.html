@@ -2,20 +2,15 @@
   <div class="container mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
     <div class="py-12">
       <h2 class="after-effect after:left-60 mt-12 lg:mt-0">Certificados</h2>
-
-      <!-- fillter group buttons -->
       <div *ngIf="categories.length > 0" class="button-group isotop-menu-wrapper mt-[30px] flex w-full justify-start md:justify-end flex-wrap font-medium">
         <button class="filter" (click)="searchByCategory(null)">Todos</button>
         <button class="filter" *ngFor="let category of categories" (click)="searchByCategory(category.id)">{{ category.name }}</button>
       </div>
     </div>
     <app-spinner *ngIf="certificates.length <= 0"[message]="'Cargando...'"></app-spinner>
-    <!-- End py-12 -->
     <div *ngIf="certificates.length > 0" id="isotop-gallery-wrapper" class="flex flex-wrap justify-start mymix portfolio_list-two three-col ">
         <app-certificate *ngFor="let certificate of certificates" [certificate]="certificate" class="portfolio_list-two-items isotop-item dev branding "></app-certificate>
     </div>
   </div>
-
   <app-footer></app-footer>
-
 </section>

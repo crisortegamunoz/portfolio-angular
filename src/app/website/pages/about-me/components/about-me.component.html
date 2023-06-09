@@ -11,7 +11,6 @@
                           src="/assets/images/about/about.jpg" alt="about image" />
                   </div>
                   <div class="col-span-12 md:col-span-8 space-y-2.5">
-                      <!-- who am i content  -->
                       <div class="md:mr-12 xl:mr-16">
                           <h3 class="text-4xl font-medium dark:text-white mb-2.5"> ¿Quién Soy? </h3>
                           <p class="text-gray-lite dark:text-color-910 leading-7"> ¡Hola! Me llamo Cristian, soy ingeniero en informática con 7 años de experiencia
@@ -20,17 +19,15 @@
                           <p class="text-gray-lite leading-7 mt-2.5 dark:text-color-910"> Soy un apasionado por aprender nuevas tecnologías y siempre estoy buscando nuevas
                             herramientas para mejorar mis habilidades en el campo del desarrollo de software. </p>
                       </div>
-
-                      <!-- personal info -->
                       <app-personal-info></app-personal-info>
                   </div>
               </div>
           </div>
-
           <!-- whai i do contain -->
           <div class="pb-12">
               <h3 class="text-[35px] dark:text-white font-medium pb-5"> Mí día a día </h3>
-              <div class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+              <app-spinner *ngIf="boxes.length <= 0" [message]="'Cargando...'"></app-spinner>
+              <div *ngIf="boxes.length > 0" class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                   <app-about-box *ngFor="let box of boxes" [box]="box"></app-about-box>
               </div>
           </div>
