@@ -9,9 +9,9 @@
         <button class="filter" *ngFor="let category of categories" (click)="searchByCategory(category.id)">{{ category.name }}</button>
       </div>
     </div>
+    <app-spinner *ngIf="certificates.length <= 0"[message]="'Cargando...'"></app-spinner>
     <!-- End py-12 -->
-
-    <div id="isotop-gallery-wrapper" class="flex flex-wrap justify-start mymix portfolio_list-two three-col ">
+    <div *ngIf="certificates.length > 0" id="isotop-gallery-wrapper" class="flex flex-wrap justify-start mymix portfolio_list-two three-col ">
         <app-certificate *ngFor="let certificate of certificates" [certificate]="certificate" class="portfolio_list-two-items isotop-item dev branding "></app-certificate>
     </div>
   </div>

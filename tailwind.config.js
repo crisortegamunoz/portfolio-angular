@@ -72,7 +72,8 @@ module.exports = {
         'color-970': '#1C1C1C',
         'color-980': '#0D0D0D',
         'color-990': '#212425',
-
+        'portfolio-color-1': '#5050f5',
+        'portfolio-color-2': '#9d2bf3'
       },
       boxShadow: {
         'icon': '0 4px 6px 0px rgba(0, 0, 0, 0.08)',

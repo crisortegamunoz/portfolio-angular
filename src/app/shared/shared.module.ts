@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FilterButtonComponent } from './components/filter-button/filter-button.component';
 import { DaysSincePipe } from './pipe/days-since.pipe';
 import { EllipsisPipe } from './pipe/ellipsis.pipe';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
@@ -14,7 +15,8 @@ import { EllipsisPipe } from './pipe/ellipsis.pipe';
     FooterComponent,
     FilterButtonComponent,
     DaysSincePipe,
-    EllipsisPipe
+    EllipsisPipe,
+    SpinnerComponent
   ],
   imports: [
     CommonModule
@@ -22,6 +24,7 @@ import { EllipsisPipe } from './pipe/ellipsis.pipe';
   exports: [
     MobileInformationComponent,
     FooterComponent,
+    SpinnerComponent,
     DaysSincePipe,
     EllipsisPipe
   ]
