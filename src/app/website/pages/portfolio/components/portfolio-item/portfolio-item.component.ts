@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PortfolioService } from '../../../../../services/website/portfolio.service';
 import { Portfolio } from '../../../../../models/website/portfolio.models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio-item',
@@ -10,12 +10,16 @@ export class PortfolioItemComponent implements OnInit {
 
   @Input() portfolio: Portfolio | null;
 
-  constructor() {
+  constructor(private router: Router) {
     this.portfolio = null;
   }
 
   ngOnInit(): void {
 
+  }
+
+  showDetail(): void {
+    this.router.navigate(['/portfolio-detail', this.portfolio?.id]);
   }
 
 }

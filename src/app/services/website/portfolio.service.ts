@@ -15,6 +15,12 @@ export class PortfolioService {
     return WebsiteData.loadPortfolio();
   }
 
+  findById(id: string) {
+    const itemId = parseInt(id);
+    const array = WebsiteData.loadPortfolio();
+    return array.find(item => item.id === itemId)!;
+  }
+
   getByCategoryId(categoryId: number): Portfolio[] {
     const array = WebsiteData.loadPortfolio();
     return array.filter(portfolio => portfolio.category.id === categoryId)

@@ -1,5 +1,6 @@
 import { Category } from "../models/website/caterogry.models";
 import { Certificate } from "../models/website/certificate.models";
+import { Experience } from "../models/website/experience.models";
 import { Portfolio } from "../models/website/portfolio.models";
 
 export class WebsiteData {
@@ -41,6 +42,19 @@ export class WebsiteData {
 
   static loadCertificate(): Certificate[] {
     return [
+      {
+        id: 28,
+        name: 'Angular CDK y TailwindCSS',
+        image: '/assets/images/certificate/2023-06-11_Angular_TailwindCSS.png',
+        url: 'https://firebasestorage.googleapis.com/v0/b/portfolio-crisortega.appspot.com/o/images%2Fcertificate%2F2023-06-11_Angular_TailwindCSS.png?alt=media&token=aea5831f-225f-43fd-85b8-3c920fce9e1d',
+        entity: 'Platzi',
+        completed: new Date(2023, 5, 11),
+        category: {
+          id: 5,
+          name: 'Frontend',
+          section: 'Certificate'
+        }
+      },
       {
         id: 27,
         name: 'Angular Router y Modular',
@@ -400,6 +414,7 @@ export class WebsiteData {
       {
         id: 12,
         projectName: 'Seguros Generales',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/PAC.jpg',
         descriptions: [
           `Módulo de Kinetyc Platform. A diferencia del módulo Líneas Comerciales, "PAC" esta orientado a procesos de auto-atención
@@ -419,6 +434,7 @@ export class WebsiteData {
       {
         id: 11,
         projectName: 'Siniestros',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/CLL.jpg',
         descriptions: [
           `Módulo de Kinetyc PAS Life. Orientado a registrar denuncios y siniestros de seguros de vida y salud individual.
@@ -441,15 +457,18 @@ export class WebsiteData {
       {
         id: 10,
         projectName: 'Kamaleón',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/KML.png',
         descriptions: [
           `Esta aplicación permite la personalización de aplicaciones web, haciendo que un intermediario que posea una
            campaña comercial tenga todo el flujo desde crear la cotización hasta obtener la póliza personalizada con sus
-           colores, logos, banners y hasta otros tipos de letra.`,
-          `Por ejemplo, si la empresa de seguros “Fantasía” posee el sistema, y se los entrega al intermediario “Seguros Verdes”,
+           colores, logos, banners y hasta otros tipos de letra. Por ejemplo, si la empresa de seguros “Fantasía” posee el sistema, y se los entrega al intermediario “Seguros Verdes”,
            este podría cambiar la visual de la aplicación web, y al entregarle a sus clientes el enlace para que realicé la cotización,
             este podrá ver la página con la “marca” del intermediario sin tener dudas del por qué esta llegando a algo relacionado
-            con “Seguros Fantasía”`,
+            con “Seguros Fantasía”.`,
+          `Mi rol en este proyecto fue diseñar la base de datos en conjunto al arquitecto, realizar el desarrollo de la aplicación utilizando
+           Java 11 y Springboot, dentro de sus funcionalidades se realizó una integración con Amazon S3 para guardar los cambios hechos por los
+           usuarios. También apoyé en el desarrollo frontend con algunas tareas utilizando Angular 8.`,
         ],
         workingFrom: new Date(2021, 0, 15),
         workingTo: new Date(2021, 3, 20),
@@ -464,6 +483,7 @@ export class WebsiteData {
       {
         id: 9,
         projectName: 'Portafolio API 3.0',
+        client: null,
         image: '/assets/images/portfolio/personal/Portfolio-api-v2.jpg',
         descriptions: [
           `Después de realizar un curso de Java Springboot, ya que necesitaba capacitarme para empezar a desarrollar
@@ -492,6 +512,7 @@ export class WebsiteData {
       {
         id: 8,
         projectName: 'Portafolio 3.0',
+        client: null,
         image: '/assets/images/portfolio/personal/portfolio-angular-v1.png',
         descriptions: [
           `Esta fue una versión de mi portafolio en la que invertí mucho tiempo. Apliqué todo el conocimiento adquirido
@@ -521,6 +542,7 @@ export class WebsiteData {
       {
         id: 7,
         projectName: 'Seguros Garantía',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/PAS.png',
         descriptions: [
           `Módulo de Kinetyc Platform. A diferencia del módulo Líneas Comerciales, "PAS" esta orientado a procesos de auto-atención
@@ -540,6 +562,7 @@ export class WebsiteData {
       {
         id: 6,
         projectName: 'Campañas Comerciales',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/mkc.jpg',
         descriptions: [
           `Módulo de la plataforma Kinetyc. Permite la creación de campañas comerciales en base a un convenio
@@ -560,6 +583,7 @@ export class WebsiteData {
       {
         id: 5,
         projectName: 'Rick & Morty',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/laboratory/Rick_And_Morty.png',
         descriptions: [
           `Este mini proyecto nace de uno de las tantas tareas dadas en el curso de Angular impartido por Escalab.
@@ -586,6 +610,7 @@ export class WebsiteData {
       {
         id: 4,
         projectName: 'Convenios Comerciales',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/PRA.jpg',
         descriptions: [
           `Módulo de la plataforma Kinetyc donde se realizá el registro de las condiciones de comercialización
@@ -605,6 +630,7 @@ export class WebsiteData {
       {
         id: 3,
         projectName: 'Seguros de Vida',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/AGL.jpg',
         descriptions: [
           `Módulo central de Kinetyc PAS Life. Se hace cargo de todo el proceso de manejo de cotización, propuesta,
@@ -625,6 +651,7 @@ export class WebsiteData {
       {
         id: 2,
         projectName: 'Líneas Comerciales',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/AGC.jpg',
         descriptions: [
           `Módulo dentro de Kinetyc Platform orientado a los seguros de garantía, es utilizado por los intermediarios
@@ -643,6 +670,7 @@ export class WebsiteData {
       {
         id: 1,
         projectName: 'Cobranza',
+        client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/COL.jpeg',
         descriptions: [
         `Módulo Kinetyc Platform. Donde se realiza la gestión de procesos de activación de mandatos de cobros de pólizas.
@@ -661,6 +689,89 @@ export class WebsiteData {
         technologies: [],
       }
     ];
+  }
+
+  static loadExperience(): Experience[] {
+    return [
+      {
+        id: 2,
+        role: 'Líder Técnico / Senior Full Stack Developer',
+        roleDescription: '',
+        entity: 'Clave Tecnologías, Santiago.',
+        entityDescription: 'Es una compañía especializada en el desarrollo de software para la industria aseguradora, brindando soluciones innovadoras que ayudan a sus clientes a mejorar sus procesos y aumentar su eficiencia.',
+        responsabilities: [
+          'Organizar el tiempo y calidad del equipo mediante la metodología Scrum.',
+          'Trabajar con los clientes para evaluar si un requisito de negocio específico es viable y realizable desde una perspectiva técnica.',
+          'Traducir los requisitos de negocio en tareas técnicas específicas que el equipo de desarrollo pueda entender y llevar a cabo.',
+          'Buscar opciones de mejora en la aplicación para mejorar el rendimiento y la eficiencia de esta.'
+        ],
+        technologies: [
+
+        ],
+        startDate: new Date(2022, 8, 27),
+        endDate: new Date(2023, 4, 31),
+        projects: []
+      },
+      {
+        id: 2,
+        role: 'Líder Técnico / Senior Full Stack Developer',
+        roleDescription: '',
+        entity: 'Clave Tecnologías, Santiago.',
+        entityDescription: 'Es una compañía especializada en el desarrollo de software para la industria aseguradora, brindando soluciones innovadoras que ayudan a sus clientes a mejorar sus procesos y aumentar su eficiencia.',
+        responsabilities: [
+          'Organizar el tiempo y calidad del equipo mediante la metodología Scrum.',
+          'Trabajar con los clientes para evaluar si un requisito de negocio específico es viable y realizable desde una perspectiva técnica.',
+          'Traducir los requisitos de negocio en tareas técnicas específicas que el equipo de desarrollo pueda entender y llevar a cabo.',
+          'Buscar opciones de mejora en la aplicación para mejorar el rendimiento y la eficiencia de esta.'
+        ],
+        technologies: [
+
+        ],
+        startDate: new Date(2022, 8, 27),
+        endDate: new Date(2023, 4, 31),
+        projects: []
+      },
+      {
+        id: 2,
+        role: 'Líder Técnico / Senior Full Stack Developer',
+        roleDescription: '',
+        entity: 'Clave Tecnologías, Santiago.',
+        entityDescription: 'Es una compañía especializada en el desarrollo de software para la industria aseguradora, brindando soluciones innovadoras que ayudan a sus clientes a mejorar sus procesos y aumentar su eficiencia.',
+        responsabilities: [
+          'Organizar el tiempo y calidad del equipo mediante la metodología Scrum.',
+          'Trabajar con los clientes para evaluar si un requisito de negocio específico es viable y realizable desde una perspectiva técnica.',
+          'Traducir los requisitos de negocio en tareas técnicas específicas que el equipo de desarrollo pueda entender y llevar a cabo.',
+          'Buscar opciones de mejora en la aplicación para mejorar el rendimiento y la eficiencia de esta.'
+        ],
+        technologies: [
+
+        ],
+        startDate: new Date(2022, 8, 27),
+        endDate: new Date(2023, 4, 31),
+        projects: []
+      },
+      {
+        id: 1,
+        role: 'FullStack Developer',
+        roleDescription: '',
+        entity: 'Clave Tecnologías, Santiago.',
+        entityDescription: '',
+        responsabilities: [
+          'Participación diaria en reuniones lideras por nuestro Scrum Master.',
+          'Desarrollar nuevas funcionaliades, mantener y mejorar el CORE de la plataforma.',
+          'Implementación de nuevas tecnologías.',
+          'Capacitar a nuevos integrantes en las tecnologías utilizadas en el desarrollo del software.',
+          'Identificar problemas, analizar información y solucionar bug o errores con la finalidad el sistema.',
+          'Resolver incidencias en producción para cumplir con los SLA de los clientes-'
+        ],
+        technologies: [
+
+        ],
+        startDate: new Date(2016, 3, 16),
+        endDate: new Date(2022, 8, 28),
+        projects: []
+      }
+    ]
   }
 
 }

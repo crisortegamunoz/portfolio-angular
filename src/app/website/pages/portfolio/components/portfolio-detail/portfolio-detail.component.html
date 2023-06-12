@@ -1,0 +1,58 @@
+<div class="bg-white lg:rounded-2xl dark:bg-[#111111]">
+  <div class="container px-4 sm:px-5 md:px-10 lg:px-[60px]">
+    <div *ngIf="portfolio" class="p-5 mb-2">
+        <h2 class="text-[#edc851] dark:hover:text-[#FFE79B] text-4xl text-center font-bold">
+          {{ portfolio.projectName }}
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+          <div class="space-y-2">
+            <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
+              <i class="fa-regular fa-file-lines text-lg mr-2 hidden sm:block"></i>
+              Categoría :&nbsp;
+              <span class="font-medium"> {{ portfolio.category.name }} </span>
+            </p>
+            <p *ngIf="portfolio.client != null" class="dark:text-white flex items-center text-[15px] sm:text-lg">
+              <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
+              Cliente :&nbsp;
+              <span class="font-medium">{{ portfolio.client }}</span>
+            </p>
+            <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
+              <i class="fa-solid fa fa-calendar text-lg mr-2 hidden sm:block"></i>
+              Período :&nbsp;
+              <span class="font-medium">{{ portfolio.workingFrom | date:'yyyy-MM' }} - {{ portfolio.workingTo | date:'yyyy-MM' }}</span>
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
+              <i class="fa-brands fa-github text-lg mr-2 hidden sm:block"></i>
+              Repositorio :&nbsp;
+              <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#5050f5]">
+                <a href="https://www.envato.com" target="_blank" rel="noopener noreferrer">Ir al sitio</a>
+              </span>
+            </p>
+            <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
+              <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
+              Demo :&nbsp;
+              <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#5050f5]">
+                <a href="https://www.envato.com" target="_blank" rel="noopener noreferrer">Ir al sitio</a>
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div *ngFor="let description of portfolio.descriptions">
+          <p class="dark:text-white text-2line font-normal text-[17px] sm:text-sm mb-3">
+            {{ description }}
+          </p>
+        </div>
+
+
+        <div class="pr-3">
+          <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+            src="./images/work_images/1.jpg" alt="portfolio image" />
+        </div>
+      </div>
+  </div>
+  <app-footer></app-footer>
+</div>

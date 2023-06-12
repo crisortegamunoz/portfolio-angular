@@ -6,6 +6,9 @@ import { FilterButtonComponent } from './components/filter-button/filter-button.
 import { DaysSincePipe } from './pipe/days-since.pipe';
 import { EllipsisPipe } from './pipe/ellipsis.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ChangeLogComponent } from './components/change-log/change-log.component';
+
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 
@@ -16,10 +19,12 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     FilterButtonComponent,
     DaysSincePipe,
     EllipsisPipe,
-    SpinnerComponent
+    SpinnerComponent,
+    ChangeLogComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ScrollingModule
   ],
   exports: [
     MobileInformationComponent,
