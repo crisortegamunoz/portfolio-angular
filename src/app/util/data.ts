@@ -681,7 +681,9 @@ export class WebsiteData {
           name: 'Laboratorio',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Firebase Database', 'Firebase Hosting', 'Firebase Storage', 'Angular 8', 'Angular Material', 'TypeScript'
+        ],
       },
       {
         id: 4,
