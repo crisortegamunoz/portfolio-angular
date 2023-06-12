@@ -47,11 +47,24 @@
           </p>
         </div>
 
+        <div class="container bg-[#f8fbfb] dark:bg-[#111111]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="col-span-1">
+                <div class="pr-3">
+                  <img class="object-cover rounded-xl mt-6"
+                    [src]="portfolio.image" [alt]="portfolio.projectName" />
+                </div>
+              </div>
 
-        <div class="pr-3">
-          <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
-            src="./images/work_images/1.jpg" alt="portfolio image" />
-        </div>
+              <div class="col-span-1">
+                  <h4 class="text-5xl dark:text-white font-medium mb-8"> Tecnologías </h4>
+                  <div *ngIf="portfolio.technologies.length > 0" class="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
+                    <button *ngFor="let tech of portfolio.technologies" class="resume-btn"> {{ tech }}</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
       </div>
   </div>
   <app-footer></app-footer>

@@ -429,7 +429,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'Oracle','Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Angular 13', 'AWS', 'S3'
+        ],
       },
       {
         id: 11,
@@ -452,7 +454,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'PostgreSQL','Java 8', 'Hibernate', 'Springframework 5', 'JavaScript', 'ExtJS'
+        ],
       },
       {
         id: 10,
@@ -478,7 +482,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'PostgreSQL','Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Angular 8', 'AWS', 'S3'
+        ],
       },
       {
         id: 9,
@@ -557,7 +563,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'Oracle', 'Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Angular 13', 'AWS', 'S3'
+        ],
       },
       {
         id: 6,
@@ -578,7 +586,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'Oracle','Java 8', 'Hibernate', 'Springframework 5', 'JavaScript', 'Angular 13'
+        ],
       },
       {
         id: 5,
@@ -625,7 +635,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'Oracle','Java 8', 'Hibernate', 'Springframework 5', 'JavaScript', 'ExtJS'
+        ],
       },
       {
         id: 3,
@@ -646,7 +658,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'PostgreSQL','Java 8', 'Hibernate', 'Springframework 5', 'JavaScript', 'ExtJS'
+        ],
       },
       {
         id: 2,
@@ -665,7 +679,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'Oracle','Java 8', 'Hibernate', 'Springframework 5', 'JavaScript', 'ExtJS'
+        ],
       },
       {
         id: 1,
@@ -686,7 +702,9 @@ export class WebsiteData {
           name: 'Profesional',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Maven', 'Jenkins', 'Oracle','Java 8', 'Hibernate', 'Springframework 5', 'JavaScript', 'ExtJS'
+        ],
       }
     ];
   }

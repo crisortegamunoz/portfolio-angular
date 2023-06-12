@@ -16,7 +16,6 @@ export class PortfolioDetailComponent implements OnInit {
   portfolio: Portfolio | null = null;
 
   constructor(private route: ActivatedRoute, private portfolioService: PortfolioService) {
-    debugger;
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.portfolioId = params.get('id');
         if (this.portfolioId) {
