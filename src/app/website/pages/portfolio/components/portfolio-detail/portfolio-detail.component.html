@@ -27,16 +27,18 @@
             <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
               <i class="fa-brands fa-github text-lg mr-2 hidden sm:block"></i>
               Repositorio :&nbsp;
-              <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#5050f5]">
-                <a href="https://www.envato.com" target="_blank" rel="noopener noreferrer">Ir al sitio</a>
+              <span *ngIf="portfolio.repository" class="font-medium transition-all duration-300 ease-in-out hover:text-[#5050f5]">
+                <a [href]="portfolio.repository" target="_blank" rel="noopener noreferrer">Ir al sitio</a>
               </span>
+              <span *ngIf="!portfolio.repository" class="font-medium">Sin acceso</span>
             </p>
             <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
               <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
               Demo :&nbsp;
-              <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#5050f5]">
-                <a href="https://www.envato.com" target="_blank" rel="noopener noreferrer">Ir al sitio</a>
+              <span *ngIf="portfolio.demo" class="font-medium transition-all duration-300 ease-in-out hover:text-[#5050f5]">
+                <a [href]="portfolio.demo" target="_blank" rel="noopener noreferrer">Ir al sitio</a>
               </span>
+              <span *ngIf="!portfolio.demo" class="font-medium">Sin acceso</span>
             </p>
           </div>
         </div>
@@ -57,7 +59,7 @@
               </div>
 
               <div class="col-span-1">
-                  <h4 class="text-5xl dark:text-white font-medium mb-8"> Tecnologías </h4>
+                  <h4 class="text-5xl text-[#edc851] dark:hover:text-[#FFE79B] font-medium mb-8"> Tecnologías </h4>
                   <div *ngIf="portfolio.technologies.length > 0" class="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
                     <button *ngFor="let tech of portfolio.technologies" class="resume-btn"> {{ tech }}</button>
                   </div>

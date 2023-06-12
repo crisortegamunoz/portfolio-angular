@@ -412,14 +412,68 @@ export class WebsiteData {
   static loadPortfolio(): Portfolio[] {
     return [
       {
+        id: 14,
+        projectName: 'Trello Clone',
+        client: null,
+        image: '/assets/images/portfolio/laboratory/Trello-clone.png',
+        descriptions: [
+          `Este proyecto corresponde a una copia de Trello para realizar el curso de maquetación con Angular CDK y TailwindCSS de Platzi.
+           A medida que se avanzaba en el, se iban explicando y enseñando como utilizar diferentes componentes del CDK de angular sin interferir
+           en el template de la aplicación, demostrando lo potente que es al utilizar los diferentes componentes de Angular con un framework de estilos como lo es TailwindCSS`,
+          `Entre los componentes que se enseñaron en el curso están: Overlay, Modals, Tables, Acordeones, Drag and Drop.`
+        ],
+        repository: 'https://github.com/crisortegamunoz/trello-clone',
+        demo: 'https://trello-clone-4b581.web.app/login',
+        workingFrom: new Date(2023, 5, 1),
+        workingTo: new Date(2023, 5, 11),
+        publish: new Date(2023, 5, 12),
+        category: {
+          id: 2,
+          name: 'Laboratorio',
+          section: 'Portfolio'
+        },
+        technologies: [
+          'Git', 'Firebase Hosting', 'TailwindCSS 3', 'Angular 16', 'Angular CDK'
+        ],
+      },
+      {
+        id: 13,
+        projectName: 'Platzi Store',
+        client: null,
+        image: '/assets/images/portfolio/laboratory/platzi-store.png',
+        descriptions: [
+          `Este es un proyecto angular que consume servicios desde una API, su única funcionalidad fue realizar un repaso de conceptos básicos
+           de angular, como la comunicación entre componentes, consumo de servicios, Lazy loading y modularización, entre otros.`,
+        ],
+        repository: 'https://github.com/crisortegamunoz/platzi-store-angular',
+        demo: 'https://yarnstore-e4716.web.app/home',
+        workingFrom: new Date(2023, 4, 1),
+        workingTo: new Date(2023, 4, 29),
+        publish: new Date(2023, 5, 12),
+        category: {
+          id: 2,
+          name: 'Laboratorio',
+          section: 'Portfolio'
+        },
+        technologies: [
+          'Git', 'Firebase Hosting', 'Angular 13'
+        ],
+      },
+      {
         id: 12,
         projectName: 'Seguros Generales',
         client: 'Clave Tecnologías',
         image: '/assets/images/portfolio/profesional/PAC.jpg',
         descriptions: [
           `Módulo de Kinetyc Platform. A diferencia del módulo Líneas Comerciales, "PAC" esta orientado a procesos de auto-atención
-           de los clientes y canales en relación a la cotización, propuesta, suscripción, emisión de seguros generales`,
-          `Es importante recalcar que los usuarios finales solo pueden realizar este flujo accediendo por medio de una campaña comercial.`
+           de los clientes y canales en relación a la cotización, propuesta, suscripción, emisión de seguros generales. Es importante
+           recalcar que los usuarios finales solo pueden realizar este flujo accediendo por medio de una campaña comercial.`,
+          `Mi responsabilidad en este proyecto inició como desarrollador FullStack, realizando la mantención y creación de nuevas funcionalidades.
+           Posteriormente tomé el control de esta aplicación participando en reuniones directas con el cliente, teniendo que analizar la factibilidad
+           de sus requerimientos y si estos podrían implementarse en la plataforma. Además tuve que liderar un equipo para designar tareas una vez que
+           estuvieran creadas las historias de usuario.`,
+           `Entre otras de mis responsabilidades se encuentra la optimización de tiempos de respuesta en diferentes servicios logrando disminuir este tiempo
+           entre un 30% al 70% dependiendo del servicio.`
         ],
         workingFrom: new Date(2021, 3, 25),
         workingTo: new Date(2021, 8, 8),
@@ -430,7 +484,7 @@ export class WebsiteData {
           section: 'Portfolio'
         },
         technologies: [
-          'Git', 'Maven', 'Jenkins', 'Oracle','Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Angular 13', 'AWS', 'S3'
+          'Git', 'Maven', 'Jenkins', 'Oracle','Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Spring Web', 'Angular 13', 'AWS', 'S3'
         ],
       },
       {
@@ -483,7 +537,7 @@ export class WebsiteData {
           section: 'Portfolio'
         },
         technologies: [
-          'Git', 'Maven', 'Jenkins', 'PostgreSQL','Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Angular 8', 'AWS', 'S3'
+          'Git', 'Maven', 'Jenkins', 'PostgreSQL','Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Spring Web', 'Angular 8', 'AWS', 'S3'
         ],
       },
       {
@@ -513,7 +567,9 @@ export class WebsiteData {
           name: 'Personal',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Gradle', 'PostgreSQL','Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Spring Web', 'Heroku'
+        ],
       },
       {
         id: 8,
@@ -543,7 +599,9 @@ export class WebsiteData {
           name: 'Personal',
           section: 'Portfolio'
         },
-        technologies: [],
+        technologies: [
+          'Git', 'Firebase Hosting', 'Firebase Storage', 'Firebase Database', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular 8'
+        ],
       },
       {
         id: 7,
@@ -552,8 +610,13 @@ export class WebsiteData {
         image: '/assets/images/portfolio/profesional/PAS.png',
         descriptions: [
           `Módulo de Kinetyc Platform. A diferencia del módulo Líneas Comerciales, "PAS" esta orientado a procesos de auto-atención
-           de los clientes y canales en relación a la cotización, propuesta, suscripción, emisión de seguros de garantía.`,
-          `Es importante recalcar que los usuarios finales solo pueden realizar este flujo accediendo por medio de una campaña comercial.`
+           de los clientes y canales en relación a la cotización, propuesta, suscripción, emisión de seguros de garantía. Es importante recalcar que los usuarios finales solo pueden realizar este flujo accediendo por medio de una campaña comercial.`,
+          `Mi responsabilidad en este proyecto inició como desarrollador FullStack, realizando la mantención y creación de nuevas funcionalidades.
+           Posteriormente tomé el control de esta aplicación participando en reuniones directas con el cliente, teniendo que analizar la factibilidad
+           de sus requerimientos y si estos podrían implementarse en la plataforma. Además tuve que liderar un equipo para designar tareas una vez que
+           estuvieran creadas las historias de usuario.`,
+           `Entre otras de mis responsabilidades se encuentra la optimización de tiempos de respuesta en diferentes servicios logrando disminuir este tiempo
+           entre un 30% al 70% dependiendo del servicio.`
         ],
         workingFrom: new Date(2020, 3, 15),
         workingTo: new Date(2020, 11, 17),
@@ -564,7 +627,7 @@ export class WebsiteData {
           section: 'Portfolio'
         },
         technologies: [
-          'Git', 'Maven', 'Jenkins', 'Oracle', 'Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Angular 13', 'AWS', 'S3'
+          'Git', 'Maven', 'Jenkins', 'Oracle', 'Java 11', 'SpringBoot', 'Spring Data JPA', 'Spring Security', 'Spring Web', 'Angular 13', 'AWS', 'S3'
         ],
       },
       {
@@ -576,7 +639,10 @@ export class WebsiteData {
           `Módulo de la plataforma Kinetyc. Permite la creación de campañas comerciales en base a un convenio
            comercial previamente configurado. Esto permite a la misma compañia de seguros disponibilizar una serie
            de productos "en oferta" para ofrecerla a sus clientes, así como también permite a un intermediario
-           entregarle un enlance donde los clientes puedan ver y cotizar ciertos productos.`
+           entregarle un enlance donde los clientes puedan ver y cotizar ciertos productos.`,
+           `Mi responsabilidad fue encargarme del desarrollo completo de esta pequeña aplicación, desde la creación de los servicios backend
+           utilizando Springframework, hasta el desarrollo del frontend con Angular 8 inicialmente. Con el tiempo, cuando me hice cargo del equipo
+           de mantención y mejoras se fueron realizando upgrade a la aplicación, añadiendo nuevas funcionalidades y actualizando la versión de Angular 8 a la versión 13.`
         ],
         workingFrom: new Date(2020, 2, 10),
         workingTo: new Date(2020, 7, 14),
@@ -625,7 +691,10 @@ export class WebsiteData {
         descriptions: [
           `Módulo de la plataforma Kinetyc donde se realizá el registro de las condiciones de comercialización
           con un intermediario. Permite registrar las variables de tarificación y capacidades de venta en diversos
-          formatos de relación comercial, en las que participan los roles de asegurador, intermediario, contratante y asegurado.`
+          formatos de relación comercial, en las que participan los roles de asegurador, intermediario, contratante y asegurado.`,
+          `Mi rol en este proyecto fue de desarrollador FullStack realizando tareas backend y frontend, con las tecnologías de Spring Framework
+          y en ExtJS respectivamente. Fui participe en las reuniones diarias para dar los estados de avance de las tareas, así como de bajar
+          algunos requerimientos o proponer ideas de cambio para mejorar la experiencia de usuario.`
         ],
         workingFrom: new Date(2019, 2, 15),
         workingTo: new Date(2019, 5, 13),
@@ -646,9 +715,10 @@ export class WebsiteData {
         image: '/assets/images/portfolio/profesional/AGL.jpg',
         descriptions: [
           `Módulo central de Kinetyc PAS Life. Se hace cargo de todo el proceso de manejo de cotización, propuesta,
-           suscripción, emisión, plan de pago y endoso. AGL contiene la base de pólizas y clientes asociados a ellos.`,
-          `El proceso de emisión se reduce a una secuencia de cuatro pasos: Cotizar → Ingresar datos de propuesta → Ingresar
-           datos de pago → Suscribir y emitir.`
+           suscripción, emisión, plan de pago y endoso. AGL contiene la base de pólizas y clientes asociados a ellos. El proceso de emisión se reduce a una secuencia de cuatro pasos: Cotizar → Ingresar datos de propuesta → Ingresar
+           datos de pago → Suscribir y emitir.`,
+          `Mi responsabilidad fue de desarrollador FullStack, teniendo que realizar varias tareas en backend como frontend. Además tuve el desafío de capacitar a
+          los nuevos integrantes del equipo en ExtJS, ya que dominé ese framework en poco tiempo y se me hacia muy sencillo el transpasar el conocimiento y tips a los nuevos.`
         ],
         workingFrom: new Date(2017, 3, 14),
         workingTo: new Date(2018, 11, 20),
@@ -670,7 +740,11 @@ export class WebsiteData {
         descriptions: [
           `Módulo dentro de Kinetyc Platform orientado a los seguros de garantía, es utilizado por los intermediarios
            internos de una compañia. Se hace cargo de todo el proceso de manejo de cotización, propuesta, suscripción, emisión,
-           plan de pago y endoso. AGL contiene la base de pólizas y clientes asociados a ellos.`],
+           plan de pago y endoso. AGL contiene la base de pólizas y clientes asociados a ellos.`,
+          `Encargado de realizar mantenciónes, mejoras y nuevas funcionalidades al módulo para potenciar su uso, las más complicadas fueron
+           relacionadas a refactorizar y rehacer clases en ExtJS que tenián toda la funcionalidad del aplicativo en dos controladores ExtJS, el mayor
+           logro fue separar en varios archivos dichas funcionalidades, mejorando no solo lo anterior, también ayudó a la mejora de tiempos de respuesta en
+           la descarga de archivos estáticos, ya que se descargaban a medida que se tenían que usar y no al entrar al sitio de la aplicación.`],
         workingFrom: new Date(2016, 11, 15),
         workingTo: null,
         publish: new Date(2023, 5, 7),
@@ -691,8 +765,9 @@ export class WebsiteData {
         descriptions: [
         `Módulo Kinetyc Platform. Donde se realiza la gestión de procesos de activación de mandatos de cobros de pólizas.
          Teniendo soporte para diferentes medios de pago automáticos como Transbank, entidades bancarias y previred.`,
-        `t`,
-        `t`
+        `Este fue mi primer gran proyecto como desarrollador junior, teniendo que aprender rápidamente sobre ExtJS ya que inicialmente mis tareas
+         fueron orientadas al desarrollo front, a medida que avanzaba el proyecto y me iba adaptando poco a poco como profesional me brindaron
+         pequeñas tareas del backend, principalmente servicios que obtuvieran información para poblar las vistas para el usuario.`
         ],
         workingFrom: new Date(2016, 7, 15),
         workingTo: new Date(2016, 11, 21),
