@@ -26,7 +26,7 @@ export class PortfolioService {
     return this.httpClient.get<Portfolio>(`${this.SERVICE}/${id}`);
   }
 
-  getByCategoryId(categoryId: number) {
-
+  getByCategoryId(categoryId: number): Observable<Page<Portfolio>> {
+    return this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}/category/${categoryId}`);
   }
 }

@@ -3,11 +3,11 @@
       <div class="py-12">
           <h2 class="after-effect after:left-52 mt-12 lg:mt-0">Portafolio</h2>
           <div *ngIf="categories.length > 0" class="button-group isotop-menu-wrapper mt-[30px] flex w-full justify-start md:justify-end flex-wrap font-medium">
-            <button class="filter" (click)="searchByCategory(null)">Todos</button>
+            <button class="filter" (click)="searchByCategory(0)">Todos</button>
             <button class="filter" *ngFor="let category of categories" (click)="searchByCategory(category.id)">{{ category.name }}</button>
           </div>
-          <app-spinner *ngIf="portfolios.length <= 0" [message]="'Cargando...'"></app-spinner>
-          <div *ngIf="portfolios.length > 0" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[30px] grid gap-x-10 gap-y-7 mb-6">
+          <app-spinner *ngIf="loading" [message]="'Cargando...'"></app-spinner>
+          <div *ngIf="show" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[30px] grid gap-x-10 gap-y-7 mb-6">
               <app-portfolio-item *ngFor="let portfolio of portfolios" [portfolio]="portfolio"></app-portfolio-item>
           </div>
       </div>

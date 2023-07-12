@@ -79,6 +79,7 @@
     "rxjs": "~7.8.0",
     "source-map-js": "^1.0.2",
     "supports-preserve-symlinks-flag": "^1.0.0",
+    "sweetalert2": "^11.7.16",
     "to-regex-range": "^5.0.1",
     "tslib": "^2.3.0",
     "util-deprecate": "^1.0.2",
