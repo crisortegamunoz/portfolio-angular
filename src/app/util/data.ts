@@ -43,6 +43,45 @@ export class WebsiteData {
   static loadCertificate(): Certificate[] {
     return [
       {
+        id: 49,
+        name: "StoryTelling Marca Personal",
+        pdfUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-11_Storytelling-Marca-Personal.pdf?alt=media&token=d432c8fa-c371-4770-a0f8-fd9f63692dab",
+        imgUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-11_Storytelling-Marca-Personal.png?alt=media&token=73884f64-4482-4e94-bbbf-568f616366aa",
+        entityName: "Platzi",
+        completed: new Date("2023-07-11T04:00:00"),
+        category: {
+            id: 13,
+            name: "Soft-Skills",
+            section: "CERTIFICATE"
+        }
+    },
+    {
+        id: 48,
+        name: "Seguridad de la Información",
+        pdfUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-11_Seguridad_Informacion.pdf?alt=media&token=17e2ed1e-7ed0-4ade-bc43-408d5d4d5184",
+        imgUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-11_Seguridad_Informacion.png?alt=media&token=de4e172e-d9d8-4e5d-93c1-43f01f07854f",
+        entityName: "Nivelat",
+        completed: new Date("2023-07-11T04:00:00"),
+        category: {
+            id: 14,
+            name: "Seguridad",
+            section: "CERTIFICATE"
+        }
+    },
+    {
+        id: 47,
+        name: "Técnicas Teletrabajo",
+        pdfUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-11_Tecnicas_Teletrabajo.pdf?alt=media&token=cd42fe41-02a8-4786-a8d9-0825b8fed6d9",
+        imgUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-11_Tecnicas_Teletrabajo.png?alt=media&token=ae109520-3b88-4bd4-b5c7-e42716b588cd",
+        entityName: "Nivelat",
+        completed: new Date("2023-07-11T04:00:00"),
+        category: {
+            id: 13,
+            name: "Soft-Skills",
+            section: "CERTIFICATE"
+        }
+    },
+      {
         id: 46,
         name: "Curso Spring Security",
         pdfUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-08_Spring_Security.pdf?alt=media&token=24ffbc59-67e9-4a6f-82f1-c3a1ecccb191",
