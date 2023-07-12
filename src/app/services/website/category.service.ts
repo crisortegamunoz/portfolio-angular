@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Category } from '../../models/website/caterogry.models';
+import { Category } from '../../models/website/caterogy.models';
 import { WebsiteData } from '../../util/data';
 
 @Injectable({

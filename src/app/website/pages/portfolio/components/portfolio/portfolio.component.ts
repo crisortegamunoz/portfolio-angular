@@ -6,7 +6,7 @@ import { PortfolioService } from '../../../../../services/website/portfolio.serv
 import { CategoryService } from '../../../../../services/website/category.service';
 
 import { Portfolio } from '../../../../../models/website/portfolio.models';
-import { Category } from '../../../../../models/website/caterogry.models';
+import { Category } from '../../../../../models/website/caterogy.models';
 
 
 @Component({
@@ -29,11 +29,17 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     this.categories = this.categoryService.getBySection('Portfolio');
-    this.portfolios = this.portfolioService.getAll()
+    this.getPortfolios();
+  }
+
+  getPortfolios() {
+    this.portfolioService.getAll().subscribe((page) => {
+      this.portfolios = page.content;
+    });
   }
 
   searchByCategory(categoryId: number | null) {
-    this.portfolios = categoryId ? this.portfolioService.getByCategoryId(categoryId) : this.portfolioService.getAll();
+    //this.portfolios = categoryId ? this.portfolioService.getByCategoryId(categoryId) : this.portfolioService.getAll();
   }
 
 }

@@ -11,18 +11,20 @@ import { Portfolio } from '../../../../../models/website/portfolio.models';
 })
 export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
 
-
-  portfolioId: string | null = null;
   portfolio: Portfolio | null = null;
+  constructor(private router: Router,
+              private route: ActivatedRoute,
+              private portfolioService: PortfolioService) {
 
-  constructor(private router: Router, private route: ActivatedRoute, private portfolioService: PortfolioService) {
   }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.portfolioId = params.get('id');
-        if (this.portfolioId) {
-          this.portfolio = this.portfolioService.findById(this.portfolioId);
+      const id = params.get('id');
+        if (id) {
+          this.portfolioService.findById(parseInt(id)).subscribe(response => {
+            this.portfolio = response;
+          });
         }
     });
   }

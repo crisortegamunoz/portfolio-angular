@@ -1,28 +1,32 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 import { Portfolio } from '../../models/website/portfolio.models';
+import { Page } from '../../models/response/page.model';
 import { WebsiteData } from 'src/app/util/data';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PortfolioService {
 
-  constructor() {
+  private SERVICE = `/api/portfolios`;
+
+  constructor(private httpClient: HttpClient) {
 
   }
 
-  getAll(): Portfolio[] {
-    return WebsiteData.loadPortfolio();
+  getAll(): Observable<Page<Portfolio>> {
+    return this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}`);
   }
 
-  findById(id: string) {
-    const itemId = parseInt(id);
-    const array = WebsiteData.loadPortfolio();
-    return array.find(item => item.id === itemId)!;
+  findById(id: number): Observable<Portfolio> {
+    return this.httpClient.get<Portfolio>(`${this.SERVICE}/${id}`);
   }
 
-  getByCategoryId(categoryId: number): Portfolio[] {
-    const array = WebsiteData.loadPortfolio();
-    return array.filter(portfolio => portfolio.category.id === categoryId)
+  getByCategoryId(categoryId: number) {
+
   }
 }

@@ -2,7 +2,7 @@
   <div class="container px-4 sm:px-5 md:px-10 lg:px-[60px]">
     <div *ngIf="portfolio" class="p-5 mb-2">
         <h2 class="text-[#edc851] dark:hover:text-[#FFE79B] text-4xl text-center font-bold">
-          {{ portfolio.projectName }}
+          {{ portfolio.portfolioName }}
         </h2>
         <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
           <div class="space-y-2">
@@ -11,15 +11,15 @@
               Categoría :&nbsp;
               <span class="font-medium"> {{ portfolio.category.name }} </span>
             </p>
-            <p *ngIf="portfolio.client != null" class="dark:text-white flex items-center text-[15px] sm:text-lg">
+            <p *ngIf="portfolio.clientName != null" class="dark:text-white flex items-center text-[15px] sm:text-lg">
               <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
               Cliente :&nbsp;
-              <span class="font-medium">{{ portfolio.client }}</span>
+              <span class="font-medium">{{ portfolio.clientName }}</span>
             </p>
             <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
               <i class="fa-solid fa fa-calendar text-lg mr-2 hidden sm:block"></i>
               Período :&nbsp;
-              <span class="font-medium">{{ portfolio.workingFrom | date:'yyyy-MM' }} - {{ portfolio.workingTo | date:'yyyy-MM' }}</span>
+              <span class="font-medium">{{ portfolio.startDate| date:'yyyy-MM' }} - {{ portfolio.endDate| date:'yyyy-MM' }}</span>
             </p>
           </div>
 
@@ -43,9 +43,8 @@
           </div>
         </div>
 
-        <div *ngFor="let description of portfolio.descriptions">
-          <p class="dark:text-white text-2line font-normal text-[17px] sm:text-sm mb-3">
-            {{ description }}
+        <div>
+          <p [innerHTML]="portfolio.description" class="dark:text-white text-2line font-normal text-[17px] sm:text-sm mb-3" style="white-space: pre-line">
           </p>
         </div>
 
@@ -54,7 +53,7 @@
               <div class="col-span-1">
                 <div class="pr-3">
                   <img class="object-cover rounded-xl mt-6"
-                    [src]="portfolio.image" [alt]="portfolio.projectName" />
+                    [src]="portfolio.img" [alt]="portfolio.portfolioName" />
                 </div>
               </div>
 

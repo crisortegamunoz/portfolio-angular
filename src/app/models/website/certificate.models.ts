@@ -1,4 +1,4 @@
-import { Category } from "./caterogry.models";
+import { Category } from './caterogy.models';
 
 export interface Certificate {
   id: number;

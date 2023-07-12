@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CertificateService } from '../../../../../services/website/certificate.service';
 import { CategoryService } from '../../../../../services/website/category.service';
 import { Certificate } from '../../../../../models/website/certificate.models';
-import { Category } from '../../../../../models/website/caterogry.models';
+import { Category } from '../../../../../models/website/caterogy.models';
 
 @Component({
   selector: 'app-certificates',

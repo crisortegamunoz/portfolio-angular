@@ -1,16 +1,18 @@
-import { Category } from "./caterogry.models";
+
+import { Category } from './caterogy.models';
+import { Technology } from './technology.model';
 
 export interface Portfolio {
   id: number;
-  projectName: string;
-  client: string | null,
-  image: string;
-  descriptions: string[];
-  repository?: string;
-  demo?: string;
-  workingFrom: Date;
-  workingTo: Date | null;
-  publish: Date;
+  portfolioName: string;
+  clientName: string;
+  img: string;
+  description: string;
+  repository: string;
+  demo: string;
+  startDate: Date;
+  endDate: Date;
+  publishDate: Date;
+  technologies: Technology[];
   category: Category;
-  technologies: string[];
 }
