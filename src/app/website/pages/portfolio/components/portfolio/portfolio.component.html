@@ -8,7 +8,16 @@
           </div>
           <app-spinner *ngIf="loading" [message]="'Cargando...'"></app-spinner>
           <div *ngIf="show" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[30px] grid gap-x-10 gap-y-7 mb-6">
-              <app-portfolio-item *ngFor="let portfolio of portfolios" [portfolio]="portfolio"></app-portfolio-item>
+              <app-portfolio-item *ngFor="let portfolio of portfolios | paginate: { id: 'laboratoryGrid',
+                                                                        itemsPerPage: pageSize,
+                                                                        currentPage: currentPage,
+                                                                        totalItems: totalRecords }"
+              [portfolio]="portfolio"></app-portfolio-item>
+          </div>
+          <div class="flex flex-wrap justify-center" *ngIf="totalRecords > 6">
+
+              <pagination-controls (pageChange)="pageChanged($event)" previousLabel='Anterior' nextLabel='Siguiente' id='laboratoryGrid'></pagination-controls>
+
           </div>
       </div>
   </div>

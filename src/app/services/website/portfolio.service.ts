@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpStatusCode } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Portfolio } from '../../models/website/portfolio.models';
 import { Page } from '../../models/response/page.model';
-import { WebsiteData } from 'src/app/util/data';
+import Swal from 'sweetalert2';
 
 
 @Injectable({
@@ -18,8 +18,9 @@ export class PortfolioService {
 
   }
 
-  getAll(): Observable<Page<Portfolio>> {
-    return this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}`);
+  getAll(page: number, elements: number): Observable<Page<Portfolio>> {
+    const path = page > 0 && elements > 0 ? `?pages=${page}&elements=${elements}` : null;
+    return path ? this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}${path}`): this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}`);
   }
 
   findById(id: number): Observable<Portfolio> {

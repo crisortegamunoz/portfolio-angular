@@ -1,23 +1,31 @@
 import { Injectable } from '@angular/core';
 import { Certificate } from '../../models/website/certificate.models'
-import { WebsiteData } from 'src/app/util/data';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Page } from 'src/app/models/response/page.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CertificateService {
 
-  constructor() {
+  private SERVICE = `/api/certificates`;
+
+  constructor(private httpClient: HttpClient) {
 
   }
 
-  getAll(): Certificate[] {
-    return WebsiteData.loadCertificate();
+  getAllByPage(page: number, elements: number): Observable<Page<Certificate>> {
+    const path = page > 0 && elements > 0 ? `?pages=${page}&elements=${elements}` : null;
+    return path ? this.httpClient.get<Page<Certificate>>(`${this.SERVICE}${path}`) : this.httpClient.get<Page<Certificate>>(`${this.SERVICE}`);
   }
 
-  getByCategoryId(categoryId: number): Certificate[] {
-    const array = WebsiteData.loadCertificate();
-    return array.filter(certificate => certificate.category.id === categoryId);
+  findById(id: number): Observable<Certificate> {
+    return this.httpClient.get<Certificate>(`${this.SERVICE}/${id}`);
+  }
+
+  getByCategoryId(categoryId: number): Observable<Page<Certificate>> {
+    return this.httpClient.get<Page<Certificate>>(`${this.SERVICE}/category/${categoryId}`);
   }
 
 }
