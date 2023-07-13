@@ -18,7 +18,7 @@ export class PortfolioService {
 
   }
 
-  getAll(page: number, elements: number): Observable<Page<Portfolio>> {
+  getAllByPage(page: number, elements: number): Observable<Page<Portfolio>> {
     const path = page > 0 && elements > 0 ? `?pages=${page}&elements=${elements}` : null;
     return path ? this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}${path}`): this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}`);
   }
@@ -30,4 +30,10 @@ export class PortfolioService {
   getByCategoryId(categoryId: number): Observable<Page<Portfolio>> {
     return this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}/category/${categoryId}`);
   }
+
+  getByCategoryIdAndPage(categoryId: number, page: number, elements: number): Observable<Page<Portfolio>> {
+    const path = page > 0 && elements > 0 ? `?pages=${page}&elements=${elements}` : '';
+    return this.httpClient.get<Page<Portfolio>>(`${this.SERVICE}/category/${categoryId}${path}`);
+  }
+
 }

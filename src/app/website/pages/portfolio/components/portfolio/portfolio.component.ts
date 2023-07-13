@@ -8,9 +8,6 @@ import { CategoryService } from '../../../../../services/website/category.servic
 import { Portfolio } from '../../../../../models/website/portfolio.models';
 import { Category } from '../../../../../models/website/caterogy.models';
 
-import Swal from 'sweetalert2';
-
-
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html'
@@ -22,7 +19,7 @@ export class PortfolioComponent implements OnInit {
   totalRecords: number;
   portfolios: Portfolio[];
   categories: Category[];
-  categoryId: string | null;
+  categoryId: number;
   loading: boolean;
   show: boolean;
 
@@ -36,27 +33,16 @@ export class PortfolioComponent implements OnInit {
     this.show = false;
     this.portfolios = [];
     this.categories = [];
-    this.categoryId = null;
+    this.categoryId = 0;
   }
 
   ngOnInit(): void {
-    this.categories = this.categoryService.getBySection('Portfolio');
-    this.getPortfolios(this.currentPage, this.pageSize);
-  }
-
-  pageChanged(page: number): void {
-    this.loading = true;
-    this.currentPage = page;
-    this.getPortfolios(this.currentPage - 1, this.pageSize);
-  }
-
-  searchByCategory(categoryId: number) {
-    this.currentPage = 0;
-    categoryId > 0 ? this.getPortfoliosByCategoryId(categoryId) : this.getPortfolios(this.currentPage, this.pageSize);
-  }
-
-  getPortfolios(page: number, elements: number) {
-    this.portfolioService.getAll(page, elements).subscribe((page) => {
+    this.categoryService.getBySection('PORTFOLIO').pipe(
+      switchMap(categories => {
+        this.categories = categories;
+        return this.portfolioService.getAllByPage(this.currentPage, this.pageSize);
+      }),
+    ).subscribe(page => {
       this.portfolios = page.content;
       this.totalRecords = page.totalElements;
       this.loading = false;
@@ -64,9 +50,45 @@ export class PortfolioComponent implements OnInit {
     });
   }
 
-  getPortfoliosByCategoryId(categoryId: number) {
+  pageChanged(page: number): void {
+    this.loading = true;
+    this.currentPage = page;
+    this.categoryId > 0 ?
+      this.getByCategoryIdAndPage(this.categoryId, this.currentPage - 1, this.pageSize) :
+        this.getPortfolios(this.currentPage - 1, this.pageSize);
+  }
+
+  searchByCategory(categoryId: number) {
+    this.loading = true;
+    this.show = false;
+    this.currentPage = 0;
+    this.categoryId = categoryId;
+    this.categoryId > 0 ? this.getPortfoliosByCategoryId(this.categoryId) : this.getPortfolios(this.currentPage, this.pageSize);
+  }
+
+  private getPortfolios(page: number, elements: number) {
+    this.portfolioService.getAllByPage(page, elements).subscribe((page) => {
+      this.portfolios = page.content;
+      this.totalRecords = page.totalElements;
+      this.loading = false;
+      this.show = true;
+    });
+  }
+
+  private getPortfoliosByCategoryId(categoryId: number) {
     this.portfolioService.getByCategoryId(categoryId).subscribe((page) =>{
         this.portfolios = page.content;
+        this.totalRecords = page.totalElements;
+        this.loading = false;
+        this.show = true;
+      }
+    );
+  }
+
+  private getByCategoryIdAndPage(categoryId: number, page: number, elements: number) {
+    this.portfolioService.getByCategoryIdAndPage(categoryId, page, elements).subscribe((page) =>{
+        this.portfolios = page.content;
+        this.totalRecords = page.totalElements;
         this.loading = false;
         this.show = true;
       }

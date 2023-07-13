@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../../models/website/caterogy.models';
 import { WebsiteData } from '../../util/data';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
 
-  constructor() {
+  private SERVICE = `/api/categories`;
+
+  constructor(private httpClient: HttpClient) {
 
   }
 
@@ -15,8 +19,8 @@ export class CategoryService {
     return WebsiteData.loadCategories();
   }
 
-  getBySection(section: string): Category[] {
-    return this.getAll().filter(category => category.section === section);
+  getBySection(section: string): Observable<Category[]> {
+    return this.httpClient.get<Category[]>(`${this.SERVICE}/section/${section}`);
   }
 
 }

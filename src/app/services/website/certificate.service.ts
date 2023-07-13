@@ -16,7 +16,7 @@ export class CertificateService {
   }
 
   getAllByPage(page: number, elements: number): Observable<Page<Certificate>> {
-    const path = page > 0 && elements > 0 ? `?pages=${page}&elements=${elements}` : null;
+    const path = page > 0 && elements > 0 ? `?pages=${page}&elements=${elements}` : '';
     return path ? this.httpClient.get<Page<Certificate>>(`${this.SERVICE}${path}`) : this.httpClient.get<Page<Certificate>>(`${this.SERVICE}`);
   }
 
@@ -26,6 +26,11 @@ export class CertificateService {
 
   getByCategoryId(categoryId: number): Observable<Page<Certificate>> {
     return this.httpClient.get<Page<Certificate>>(`${this.SERVICE}/category/${categoryId}`);
+  }
+
+  getByCategoryIdAndPage(categoryId: number, page: number, elements: number): Observable<Page<Certificate>> {
+    const path = page > 0 && elements > 0 ? `?pages=${page}&elements=${elements}` : '';
+    return this.httpClient.get<Page<Certificate>>(`${this.SERVICE}/category/${categoryId}${path}`);
   }
 
 }
