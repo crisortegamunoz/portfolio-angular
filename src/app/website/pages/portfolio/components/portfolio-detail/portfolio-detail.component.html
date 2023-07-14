@@ -57,10 +57,10 @@
                 </div>
               </div>
 
-              <div class="col-span-1">
+              <div *ngIf="technologies.length > 0" class="col-span-1">
                   <h4 class="text-5xl text-[#edc851] dark:hover:text-[#FFE79B] font-medium mb-8"> Tecnologías </h4>
-                  <div *ngIf="portfolio.technologies.length > 0" class="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
-                    <button [class]="getRandomClass()" *ngFor="let tech of portfolio.technologies"> {{ tech.name }}</button>
+                  <div class="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
+                    <button [class]="tech.class" *ngFor="let tech of technologies"> {{ tech.name }}</button>
                   </div>
               </div>
           </div>

@@ -3,7 +3,9 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 import { PortfolioService } from '../../../../../services/website/portfolio.service';
 import { Portfolio } from '../../../../../models/website/portfolio.models';
+import { Technology, TechnologyPortfolio } from '../../../../../models/website/technology.model';
 import { Functions } from '../../../../../util/functions';
+
 
 
 @Component({
@@ -14,10 +16,12 @@ import { Functions } from '../../../../../util/functions';
 export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
 
   portfolio: Portfolio | null = null;
+  technologies: TechnologyPortfolio[];
+
   constructor(private router: Router,
               private route: ActivatedRoute,
               private portfolioService: PortfolioService) {
-
+    this.technologies = [];
   }
 
   ngOnInit(): void {
@@ -26,6 +30,7 @@ export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
         if (id) {
           this.portfolioService.findById(parseInt(id)).subscribe(response => {
             this.portfolio = response;
+            this.loadTechnologyForPortfolio(this.portfolio.technologies);
           });
         }
     });
@@ -40,8 +45,10 @@ export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
     });
   }
 
-  getRandomClass() {
-    return Functions.getClassFromList();
+  private loadTechnologyForPortfolio(technologies: Technology[]): void {
+    technologies.forEach(item => {
+      const tech:TechnologyPortfolio = { ...item, class: Functions.getClassFromList() };
+      this.technologies.push(tech);
+    })
   }
-
 }
