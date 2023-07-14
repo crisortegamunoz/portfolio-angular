@@ -15,10 +15,6 @@ export class CategoryService {
 
   }
 
-  getAll(): Category[] {
-    return WebsiteData.loadCategories();
-  }
-
   getBySection(section: string): Observable<Category[]> {
     return this.httpClient.get<Category[]>(`${this.SERVICE}/section/${section}`);
   }
