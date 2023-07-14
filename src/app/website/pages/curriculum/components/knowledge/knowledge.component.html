@@ -1,1 +1,1 @@
-<button class="resume-btn"> {{ knowledge?.name }}</button>
+<button [class]="knowledge?.cssClass"> {{ knowledge?.name ? knowledge?.name : knowledge?.technology?.name }}</button>

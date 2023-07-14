@@ -34,7 +34,7 @@
 
               <div class="col-span-1">
                   <h4 class="text-5xl dark:text-white font-medium mb-8"> Conocimientos </h4>
-                  <div *ngIf="knowledges.length > 0" class="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
+                  <div *ngIf="knowledges.length > 0" class="flex gap-x-0 gap-y-0 md:gap-y-0 md:gap-x-0 flex-wrap">
                     <app-knowledge *ngFor="let knowledge of knowledges" [knowledge]="knowledge"></app-knowledge>
                   </div>
               </div>

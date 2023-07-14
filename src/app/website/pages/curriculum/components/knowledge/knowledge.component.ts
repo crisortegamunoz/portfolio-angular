@@ -1,13 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { Knowledge } from '../../../../../models/website/knowledge.models';
+import { Skill } from '../../../../../models/website/skill.model';
 
 @Component({
   selector: 'app-knowledge',
-  templateUrl: './knowledge.component.html'
+  templateUrl: './knowledge.component.html',
+  styleUrls: ['./knowledge.component.scss']
 })
 export class KnowledgeComponent {
 
-  @Input() knowledge: Knowledge | null;
+  @Input() knowledge: Skill | null;
 
   constructor() {
     this.knowledge = null;
