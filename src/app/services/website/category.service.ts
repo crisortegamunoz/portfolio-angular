@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../../models/website/caterogy.models';
-import { WebsiteData } from '../../util/data';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 

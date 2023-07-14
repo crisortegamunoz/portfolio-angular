@@ -3,11 +3,13 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 import { PortfolioService } from '../../../../../services/website/portfolio.service';
 import { Portfolio } from '../../../../../models/website/portfolio.models';
+import { Functions } from '../../../../../util/functions';
 
 
 @Component({
   selector: 'app-portfolio-detail',
-  templateUrl: './portfolio-detail.component.html'
+  templateUrl: './portfolio-detail.component.html',
+  styleUrls: ['./portfolio-detail.component.scss']
 })
 export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
 
@@ -36,6 +38,10 @@ export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
         behavior: 'smooth'
       });
     });
+  }
+
+  getRandomClass() {
+    return Functions.getClassFromList();
   }
 
 }

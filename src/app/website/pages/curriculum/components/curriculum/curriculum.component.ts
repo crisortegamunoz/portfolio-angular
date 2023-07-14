@@ -4,6 +4,7 @@ import { Skill } from '../../../../../models/website/skill.model';
 import { ExperienceService } from '../../../../../services/website/experience.service';
 import { SkillService } from '../../../../../services/website/skill.service';
 import { switchMap } from 'rxjs';
+import { Functions } from '../../../../../util/functions';
 
 @Component({
   selector: 'app-curriculum',
@@ -15,7 +16,6 @@ export class CurriculumComponent implements OnInit {
   studies: Experience[];
   skills: Skill[];
   knowledges: Skill[];
-  classList: string[];
 
   constructor(private experienceService: ExperienceService,
               private skillService: SkillService) {
@@ -23,12 +23,11 @@ export class CurriculumComponent implements OnInit {
     this.studies = [];
     this.skills = [];
     this.knowledges = [];
-    this.classList = ['fill', 'pulse', 'close', 'raise', 'up', 'slide']
   }
 
   ngOnInit(): void {
-    this.workHistory = this.experienceService.getWorks();
-    this.studies = this.experienceService.getStudies();
+    //this.workHistory = this.experienceService.getWorks();
+    //this.studies = this.experienceService.getStudies();
     this.skillService.getSkillsByCategoryName('Habilidad').pipe(
       switchMap((skills: Skill[]) => {
         this.skills = skills;
@@ -42,8 +41,7 @@ export class CurriculumComponent implements OnInit {
 
   private loadClassWithRandom(knowledges: Skill[]): void {
     knowledges.forEach(item => {
-      const position = Math.floor(Math.random() * 6);
-      item.cssClass = this.classList[position];
+      item.cssClass = Functions.getClassFromList();
       this.knowledges.push(item);
     })
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutBox } from 'src/app/models/website/about-me.models';
+import { About } from 'src/app/models/website/about-me.models';
 import { AboutMeService } from 'src/app/services/website/about-me.service';
 
 @Component({
@@ -8,17 +8,17 @@ import { AboutMeService } from 'src/app/services/website/about-me.service';
 })
 export class AboutMeComponent implements OnInit {
 
-  boxes: AboutBox[];
+  about: About | null;
 
   constructor(private aboutMeService: AboutMeService) {
-    this.boxes = [];
+    this.about = null;
   }
   ngOnInit(): void {
-    this.getAllBoxes();
+    this.aboutMeService.getAll().subscribe(abouts => {
+      this.about = abouts[0];
+    });
   }
 
-  getAllBoxes() {
-    this.boxes = this.aboutMeService.getAll();
-  }
+
 
 }

@@ -1,7 +1,8 @@
-export interface AboutBox {
-  id: number,
-  title: string,
-  description: string,
-  class: string,
-  image: string
+import { Box } from './box.model';
+
+export interface About {
+  id: number;
+  title: string;
+  descriptions: string[];
+  boxes: Box[];
 }
