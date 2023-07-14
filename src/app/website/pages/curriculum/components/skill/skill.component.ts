@@ -3,7 +3,8 @@ import { Skill } from '../../../../../models/website/skill.model';
 
 @Component({
   selector: 'app-skill',
-  templateUrl: './skill.component.html'
+  templateUrl: './skill.component.html',
+  styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent {
 
