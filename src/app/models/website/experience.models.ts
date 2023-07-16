@@ -1,12 +1,16 @@
+import { Category } from './caterogy.models';
+import { Technology } from './technology.model';
+
 export interface Experience {
   id: number;
-  role?: string | null;
-  roleDescription: string | null;
-  entity: string | null;
-  entityDescription: string | null;
-  startDate: Date;
-  endDate: Date;
-  responsabilities: string[];
-  technologies: string[];
-  projects: string[];
+  roleName: string;
+  roleDescription: string;
+  entityName: string;
+  entityDescription: string;
+  entityLocation: string;
+  responsibilities: string[];
+  periodStart: Date;
+  periodEnd: Date;
+  category: Category;
+  technologies: Technology[];
 }

@@ -26,11 +26,18 @@ export class CurriculumComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.workHistory = this.experienceService.getWorks();
-    //this.studies = this.experienceService.getStudies();
+
     this.skillService.getSkillsByCategoryName('Habilidad').pipe(
       switchMap((skills: Skill[]) => {
         this.skills = skills;
+        return this.experienceService.getExperienceByCategoryName('Trabajo');
+      }),
+      switchMap((works: Experience[]) => {
+        this.workHistory = works;
+        return this.experienceService.getExperienceByCategoryName('Estudio');
+      }),
+      switchMap((studies: Experience[]) => {
+        this.studies = studies;
         return this.skillService.getSkillsByCategoryNameOrderByPercentage('Conocimiento');
       })
     ).subscribe((knowledges => {

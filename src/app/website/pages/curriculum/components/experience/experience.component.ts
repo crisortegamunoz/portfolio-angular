@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Experience } from '../../../../../models/website/experience.models';
-import { ExperienceService } from '../../../../../services/website/experience.service';
 
 @Component({
   selector: 'app-experience',
@@ -12,8 +11,12 @@ export class ExperienceComponent  {
 
   @Input() experience: Experience | null;
 
-  constructor(private experienceService: ExperienceService) {
+  constructor() {
     this.experience = null;
+  }
+
+  ngOnInit(): void {
+
   }
 
 }
