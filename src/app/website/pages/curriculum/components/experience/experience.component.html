@@ -9,6 +9,7 @@
       <ul *ngIf="experience.responsibilities.length > 0" class="list-disc ml-6">
         <li *ngFor="let responsability of experience.responsibilities" class="dark:text-[#F5F5F5]">{{ responsability }}</li>
       </ul>
+  <p *ngIf="experience.technologies.length > 0" class="dark:text-[#F5F5F5]"> {{ loadStack(experience.technologies) }} </p>
 </div>
 
 

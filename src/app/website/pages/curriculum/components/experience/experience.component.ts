@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Experience } from '../../../../../models/website/experience.models';
+import { Technology } from '../../../../../models/website/technology.model';
 
 @Component({
   selector: 'app-experience',
@@ -17,6 +18,12 @@ export class ExperienceComponent  {
 
   ngOnInit(): void {
 
+  }
+
+  loadStack(technologies: Technology[]): string {
+    const nameArray: string[] = technologies.map((item) => {return item.name});
+    const formattedNames: string = nameArray.map((name) => `${name}`).join(' / ');
+    return `Stack Tecnológico: ${formattedNames}`;
   }
 
 }
