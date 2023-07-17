@@ -1,10 +1,11 @@
-<div *ngIf="about">
+<div>
   <div class="container lg:rounded-2xl bg-white dark:bg-[#111111] px-4 sm:px-5 md:px-10 lg:px-20">
       <div data-aos="fade" class="aos-init aos-animate">
-          <div class="py-12">
+        <div class="py-12">
               <!-- about page title -->
               <h2 class="after-effect after:left-52 mt-12 lg:mt-0"> Sobre Mí </h2>
-              <div class="grid grid-cols-12 md:gap-10 pt-4 md:pt-[40px] items-center">
+              <app-loading *ngIf="!about"></app-loading>
+              <div *ngIf="about" class="grid grid-cols-12 md:gap-10 pt-4 md:pt-[40px] items-center">
                   <div class="col-span-12 md:col-span-4">
                       <!-- about me image -->
                       <img class="w-full md:w-[330px] md:h-[484px] object-cover overflow-hidden rounded-[35px] mb-3 md:mb-0"
@@ -22,7 +23,7 @@
               </div>
           </div>
           <!-- whai i do contain -->
-          <div class="pb-12">
+          <div *ngIf="about" class="pb-12">
               <h3 class="text-[35px] dark:text-white font-medium pb-5"> Mí día a día </h3>
               <div *ngIf="about.boxes && about.boxes.length > 0" class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                   <app-about-box *ngFor="let box of about.boxes" [box]="box"></app-about-box>

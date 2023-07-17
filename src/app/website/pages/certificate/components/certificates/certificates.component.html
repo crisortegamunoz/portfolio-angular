@@ -2,19 +2,19 @@
   <div class="container mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
     <div class="py-12">
       <h2 class="after-effect after:left-60 mt-12 lg:mt-0">Certificados</h2>
-      <div *ngIf="categories.length > 0" class="button-group isotop-menu-wrapper mt-[30px] flex w-full justify-start md:justify-end flex-wrap font-medium">
+      <app-loading *ngIf="loading"></app-loading>
+      <div *ngIf="!loading && categories.length > 0" class="button-group isotop-menu-wrapper mt-[30px] flex w-full justify-start md:justify-end flex-wrap font-medium">
         <button class="filter" (click)="searchByCategory(0)">Todos</button>
         <button class="filter" *ngFor="let category of categories" (click)="searchByCategory(category.id)">{{ category.name }}</button>
       </div>
     </div>
-    <app-spinner *ngIf="loading"[message]="'Cargando...'"></app-spinner>
     <div *ngIf="show" id="isotop-gallery-wrapper" class="flex flex-wrap justify-start mymix portfolio_list-two three-col ">
         <app-certificate *ngFor="let certificate of certificates | paginate: { id: 'certificateGrid',
-        itemsPerPage: pageSize,
-        currentPage: currentPage,
-        totalItems: totalRecords }"
-
-        [certificate]="certificate" class="portfolio_list-two-items isotop-item dev branding "></app-certificate>
+                                                                               itemsPerPage: pageSize,
+                                                                               currentPage: currentPage,
+                                                                               totalItems: totalRecords }"
+                          [certificate]="certificate" class="portfolio_list-two-items isotop-item dev branding ">
+        </app-certificate>
     </div>
     <div class="flex flex-wrap justify-center" *ngIf="totalRecords > 6">
         <pagination-controls (pageChange)="pageChanged($event)" previousLabel='Anterior' nextLabel='Siguiente' id='certificateGrid'></pagination-controls>

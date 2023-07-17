@@ -5,10 +5,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FilterButtonComponent } from './components/filter-button/filter-button.component';
 import { DaysSincePipe } from './pipe/days-since.pipe';
 import { EllipsisPipe } from './pipe/ellipsis.pipe';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 import { ChangeLogComponent } from './components/change-log/change-log.component';
 
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { LoadingComponent } from './components/loading/loading.component';
 
 
 
@@ -19,8 +19,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     FilterButtonComponent,
     DaysSincePipe,
     EllipsisPipe,
-    SpinnerComponent,
-    ChangeLogComponent
+    ChangeLogComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +29,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   exports: [
     MobileInformationComponent,
     FooterComponent,
-    SpinnerComponent,
+    LoadingComponent,
     DaysSincePipe,
     EllipsisPipe
   ]

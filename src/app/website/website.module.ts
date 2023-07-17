@@ -6,15 +6,12 @@ import { WebsiteRoutingModule } from './website-routing.module';
 import { NavComponent } from './components/nav/nav.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
-import { LoadingComponent } from './components/loading/loading.component';
-
 
 @NgModule({
   declarations: [
     NavComponent,
     LayoutComponent,
     HeaderComponent,
-    LoadingComponent
     ],
   imports: [
     CommonModule,

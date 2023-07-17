@@ -16,6 +16,7 @@ export class CurriculumComponent implements OnInit {
   studies: Experience[];
   skills: Skill[];
   knowledges: Skill[];
+  loading: boolean;
 
   constructor(private experienceService: ExperienceService,
               private skillService: SkillService) {
@@ -23,6 +24,7 @@ export class CurriculumComponent implements OnInit {
     this.studies = [];
     this.skills = [];
     this.knowledges = [];
+    this.loading = true;
   }
 
   ngOnInit(): void {
@@ -51,6 +53,7 @@ export class CurriculumComponent implements OnInit {
       item.cssClass = Functions.getClassFromList();
       this.knowledges.push(item);
     })
+    this.loading = false;
   }
 
 }
