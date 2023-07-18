@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Select, initTE } from "tw-elements";
+import { switchMap } from 'rxjs';
+
 import { CertificateService } from '../../../../../services/website/certificate.service';
 import { CategoryService } from '../../../../../services/website/category.service';
 import { Certificate } from '../../../../../models/website/certificate.models';
 import { Category } from '../../../../../models/website/caterogy.models';
-import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { Functions } from '../../../../../util/functions';
+
+
 
 @Component({
   selector: 'app-certificates',
@@ -21,10 +25,9 @@ export class CertificatesComponent implements OnInit {
   categoryId: number;
   loading: boolean;
   show: boolean;
+  category: Category;
 
-  constructor(private route: ActivatedRoute,
-              private router: Router,
-              private certificateService: CertificateService,
+  constructor(private certificateService: CertificateService,
               private categoryService: CategoryService) {
     this.totalRecords = 0;
     this.currentPage = 0;
@@ -34,9 +37,11 @@ export class CertificatesComponent implements OnInit {
     this.certificates = [];
     this.categories = [];
     this.categoryId = 0;
+    this.category = Functions.createCategoryAll();
   }
 
   ngOnInit(): void {
+    initTE({ Select });
     this.categoryService.getBySection('CERTIFICATE').pipe(
       switchMap(categories => {
         this.categories = categories;
@@ -58,7 +63,7 @@ export class CertificatesComponent implements OnInit {
         this.getCertificates(this.currentPage - 1, this.pageSize);
   }
 
-  searchByCategory(categoryId: number) {
+  onSearchByCategory(categoryId: number): void {
     this.loading = true;
     this.show = false;
     this.currentPage = 0;

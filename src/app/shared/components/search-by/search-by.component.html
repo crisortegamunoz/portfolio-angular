@@ -1,0 +1,21 @@
+<div>
+  <div class="flex justify-between">
+    <label for="countries" class="order-last mb-2 text-sm font-medium text-gray-900 dark:text-white">Buscar</label>
+  </div>
+  <div class="flex justify-between">
+    <select *ngIf="!showProfesionalFirst" #teams (change)="onSelected(teams.value)" class="order-last bg-gray-50 border border-gray-300 text-gray-900
+                                  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500
+                                  block w-52 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                                  dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected [value]="defaultCategory.id"> {{ defaultCategory.name }}</option>
+      <option *ngFor="let category of categories" [value]="category.id"> {{ category.name }}</option>
+    </select>
+    <select *ngIf="showProfesionalFirst" #teams (change)="onSelected(teams.value)" class="order-last bg-gray-50 border border-gray-300 text-gray-900
+                                  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500
+                                  block w-52 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                                  dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      <option selected [value]="defaultCategory.id"> {{ defaultCategory.name }}</option>
+      <option *ngFor="let category of categories" [value]="category.id"> {{ category.name }}</option>
+    </select>
+  </div>
+</div>

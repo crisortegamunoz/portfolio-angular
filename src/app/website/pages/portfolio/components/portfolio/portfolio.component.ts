@@ -7,6 +7,7 @@ import { CategoryService } from '../../../../../services/website/category.servic
 
 import { Portfolio } from '../../../../../models/website/portfolio.models';
 import { Category } from '../../../../../models/website/caterogy.models';
+import { Functions } from 'src/app/util/functions';
 
 @Component({
   selector: 'app-portfolio',
@@ -22,6 +23,7 @@ export class PortfolioComponent implements OnInit {
   categoryId: number;
   loading: boolean;
   show: boolean;
+  category: Category;
 
   constructor(private route: ActivatedRoute,
               private portfolioService: PortfolioService,
@@ -34,13 +36,15 @@ export class PortfolioComponent implements OnInit {
     this.portfolios = [];
     this.categories = [];
     this.categoryId = 0;
+    this.category = {} as Category;
   }
 
   ngOnInit(): void {
     this.categoryService.getBySection('PORTFOLIO').pipe(
       switchMap(categories => {
-        this.categories = categories;
-        return this.portfolioService.getAllByPage(this.currentPage, this.pageSize);
+        this.categories = this.orderByProfesionalCategory(categories);
+        this.categoryId = this.category.id
+        return this.portfolioService.getByCategoryId(this.categoryId);
       }),
     ).subscribe(page => {
       this.portfolios = page.content;
@@ -58,7 +62,7 @@ export class PortfolioComponent implements OnInit {
         this.getPortfolios(this.currentPage - 1, this.pageSize);
   }
 
-  searchByCategory(categoryId: number) {
+  onSearchByCategory(categoryId: number) {
     this.loading = true;
     this.show = false;
     this.currentPage = 0;
@@ -93,6 +97,24 @@ export class PortfolioComponent implements OnInit {
         this.show = true;
       }
     );
+  }
+
+  private orderByProfesionalCategory(categories: Category[]): Category[] {
+    const PROFESIONAL_CATEGORY = this.getProfesionalCategory(categories);
+    if (PROFESIONAL_CATEGORY) {
+      this.category = PROFESIONAL_CATEGORY;
+      const INDEX = categories.findIndex(category => category.id === PROFESIONAL_CATEGORY.id);
+      categories.splice(INDEX, 1);
+      categories.push(Functions.createCategoryAll());
+    }
+    return categories;
+  }
+
+  private getProfesionalCategory(categories: Category[]): Category | undefined {
+    const category = categories.find((category) => {
+      return category.name === 'Profesional'
+    });
+    return category;
   }
 
 }

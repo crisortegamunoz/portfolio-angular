@@ -81,6 +81,7 @@
     "sweetalert2": "^11.7.16",
     "to-regex-range": "^5.0.1",
     "tslib": "^2.3.0",
+    "tw-elements": "^1.0.0-beta2",
     "util-deprecate": "^1.0.2",
     "xtend": "^4.0.2",
     "yaml": "^1.10.2",
