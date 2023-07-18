@@ -8,6 +8,16 @@ export class WebsiteData {
   static loadCategories(): Category[] {
     return [
       {
+        id: 14,
+        name: "Seguridad",
+        section: "Certificate"
+      },
+      {
+        id: 13,
+        name: "Soft-Skills",
+        section: "Certificate"
+      },
+      {
         id: 6,
         name: 'Cloud',
         section: 'Certificate'
@@ -42,6 +52,19 @@ export class WebsiteData {
 
   static loadCertificate(): Certificate[] {
     return [
+      {
+        id: 50,
+        name: "Curso Marca Personal",
+        pdfUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-18_Marca-Personal.pdf?alt=media&token=872eabe1-053d-402c-b36d-67e7850fa2b7",
+        imgUrl: "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2F2023-07-18_Marca-Personal.png?alt=media&token=f20302db-da6d-40a7-86e4-ab9bc0b52c21",
+        entityName: "Platzi",
+        completed: new Date("2023-07-18T04:00:00"),
+        category: {
+            id: 13,
+            name: "Soft-Skills",
+            section: "CERTIFICATE"
+        }
+    },
       {
         id: 49,
         name: "StoryTelling Marca Personal",
