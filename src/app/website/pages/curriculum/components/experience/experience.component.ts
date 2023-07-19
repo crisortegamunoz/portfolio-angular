@@ -11,13 +11,42 @@ import { Technology } from '../../../../../models/website/technology.model';
 export class ExperienceComponent  {
 
   @Input() experience: Experience | null;
+  isAnimated = false;
+  showMore: boolean;
+  showLess: boolean;
+  isStudy: boolean;
 
   constructor() {
     this.experience = null;
+    this.showMore = false;
+    this.showLess = false;
+    this.isStudy = false;
   }
 
   ngOnInit(): void {
+    this.onShowMore();
+    this.onShowIfCategoryStudy();
+  }
 
+  toggleAnimation() {
+    this.isAnimated = !this.isAnimated;
+    this.showMore = !this.showMore;
+    this.showLess = !this.showMore
+  }
+
+  onShowMore() {
+    if (this.experience
+        && (this.experience.entityDescription
+              || this.experience.roleDescription
+              || this.experience.responsibilities.length > 3)) {
+        this.showMore = true;
+    }
+  }
+
+  onShowIfCategoryStudy() {
+    if (!this.showMore) {
+      this.isStudy = this.experience?.category.name === 'Estudio';
+    }
   }
 
   loadStack(technologies: Technology[]): string {

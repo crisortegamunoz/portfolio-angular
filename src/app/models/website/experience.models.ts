@@ -9,6 +9,7 @@ export interface Experience {
   entityDescription: string;
   entityLocation: string;
   responsibilities: string[];
+  accomplishments: string[];
   periodStart: Date;
   periodEnd: Date;
   category: Category;
