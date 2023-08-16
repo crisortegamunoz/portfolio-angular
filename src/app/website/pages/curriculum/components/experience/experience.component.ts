@@ -66,9 +66,14 @@ export class ExperienceComponent  {
       yearDifference--;
       monthDifference += 12;
     }
-    monthDifference > 0 ? 
+
+    if (yearDifference > 0) {
+      monthDifference > 0 ? 
       this.periodOfTime = `${yearDifference} años, ${monthDifference} meses`
         : this.periodOfTime = `${yearDifference} años`
+    } else {
+      this.periodOfTime = `${monthDifference} meses`;
+    }
   }
 
 }

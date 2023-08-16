@@ -1,6 +1,6 @@
 <div *ngIf="experience" class="py-4 dark:bg-transparent bg-[#FFFFFF] pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2">
   <span *ngIf="experience.periodEnd" class="text-tiny text-gray-lite dark:text-[#F5F5F5]"> {{ experience.periodStart | date:'yyyy-MM' }} - {{ experience.periodEnd | date:'yyyy-MM' }} · {{ periodOfTime }}</span>
-  <span *ngIf="!experience.periodEnd" class="text-tiny text-gray-lite dark:text-[#F5F5F5]"> {{ experience.periodStart | date:'yyyy-MM' }} - Actual · {{ periodOfTime }}</span>
+  <span *ngIf="!experience.periodEnd" class="text-tiny text-gray-lite dark:text-[#F5F5F5]"> {{ experience.periodStart | date:'yyyy-MM' }} - Actualidad · {{ periodOfTime }}</span>
   <h3 *ngIf="experience.roleName" class="text-xl dark:text-white"> {{ experience.roleName }}</h3>
   <h4 class="text-lg font-medium dark:text-white"> {{ experience.entityName }}</h4>
   <p *ngIf="experience.entityDescription" class="dark:text-[#F5F5F5]"> {{ experience.entityDescription }} </p>
