@@ -36,7 +36,7 @@ export class CurriculumComponent implements OnInit {
       }),
       switchMap((works: Experience[]) => {
         this.workHistory = works;
-        return this.experienceService.getExperienceByCategoryName('Estudio');
+        return this.experienceService.getExperienceByCategoryName('Educacion');
       }),
       switchMap((studies: Experience[]) => {
         this.studies = studies;

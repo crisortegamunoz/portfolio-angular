@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 
 import { Portfolio } from '../../models/website/portfolio.models';
 import { Page } from '../../models/response/page.model';
-import Swal from 'sweetalert2';
 
 
 @Injectable({

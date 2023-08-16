@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Select, initTE } from "tw-elements";
+//import { Select, initTE } from "tw-elements";
 import { switchMap } from 'rxjs';
 
 import { CertificateService } from '../../../../../services/website/certificate.service';
@@ -41,7 +41,7 @@ export class CertificatesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    initTE({ Select });
+    //initTE({ Select });
     this.categoryService.getBySection('CERTIFICATE').pipe(
       switchMap(categories => {
         this.categories = categories;

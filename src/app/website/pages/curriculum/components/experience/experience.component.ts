@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { Experience } from '../../../../../models/website/experience.models';
 import { Technology } from '../../../../../models/website/technology.model';
 
+import { differenceInYears, differenceInMonths } from 'date-fns';
+
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
@@ -11,6 +13,7 @@ import { Technology } from '../../../../../models/website/technology.model';
 export class ExperienceComponent  {
 
   @Input() experience: Experience | null;
+  periodOfTime: string;
   isAnimated = false;
   showMore: boolean;
   showLess: boolean;
@@ -18,6 +21,7 @@ export class ExperienceComponent  {
 
   constructor() {
     this.experience = null;
+    this.periodOfTime = '';
     this.showMore = false;
     this.showLess = false;
     this.isStudy = false;
@@ -25,7 +29,11 @@ export class ExperienceComponent  {
 
   ngOnInit(): void {
     this.onShowMore();
-    this.onShowIfCategoryStudy();
+    if (this.experience) {
+      this.loadYearAndMonth(new Date(this.experience.periodStart), 
+            this.experience.periodEnd ? new Date(this.experience.periodEnd) : new Date());
+      this.isStudy = this.experience.category.name === 'Educación';
+    }
   }
 
   toggleAnimation() {
@@ -43,16 +51,24 @@ export class ExperienceComponent  {
     }
   }
 
-  onShowIfCategoryStudy() {
-    if (!this.showMore) {
-      this.isStudy = this.experience?.category.name === 'Estudio';
-    }
-  }
-
   loadStack(technologies: Technology[]): string {
     const nameArray: string[] = technologies.map((item) => {return item.name});
     const formattedNames: string = nameArray.map((name) => `${name}`).join(' / ');
     return `Stack Tecnológico: ${formattedNames}`;
+  }
+
+
+  private loadYearAndMonth(begin: Date, end: Date): void {
+    let yearDifference: number = end.getFullYear() - begin.getFullYear();
+    let monthDifference: number = end.getMonth() - begin.getMonth();
+
+    if (monthDifference < 0) {
+      yearDifference--;
+      monthDifference += 12;
+    }
+    monthDifference > 0 ? 
+      this.periodOfTime = `${yearDifference} años, ${monthDifference} meses`
+        : this.periodOfTime = `${yearDifference} años`
   }
 
 }
