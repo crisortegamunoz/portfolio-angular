@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Experience } from '../../../../../models/website/experience.models';
-import { Skill } from '../../../../../models/website/skill.model';
-import { ExperienceService } from '../../../../../services/website/experience.service';
-import { SkillService } from '../../../../../services/website/skill.service';
+import { Experience } from '../../../../../core/models/website/experience.models';
+import { Skill } from '../../../../../core/models/website/skill.model';
+import { ExperienceService } from '../../../../../core/services/website/experience.service';
+import { SkillService } from '../../../../../core/services/website/skill.service';
 import { switchMap } from 'rxjs';
-import { Functions } from '../../../../../util/functions';
+import { Functions } from '../../../../../core/util/functions';
 
 @Component({
   selector: 'app-curriculum',

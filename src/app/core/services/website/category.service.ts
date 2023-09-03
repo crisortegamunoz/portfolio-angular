@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Category } from '../../models/website/caterogy.models';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+import { Category } from '../../models/website/caterogy.models';
 
 @Injectable({
   providedIn: 'root'

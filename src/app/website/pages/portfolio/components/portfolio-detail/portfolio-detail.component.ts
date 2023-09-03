@@ -1,10 +1,10 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
-import { PortfolioService } from '../../../../../services/website/portfolio.service';
-import { Portfolio } from '../../../../../models/website/portfolio.models';
-import { Technology, TechnologyPortfolio } from '../../../../../models/website/technology.model';
-import { Functions } from '../../../../../util/functions';
+import { PortfolioService } from '../../../../../core/services/website/portfolio.service';
+import { Portfolio } from '../../../../../core/models/website/portfolio.models';
+import { Technology, TechnologyPortfolio } from '../../../../../core/models/website/technology.model';
+import { Functions } from '../../../../../core/util/functions';
 
 
 
@@ -30,7 +30,9 @@ export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
         if (id) {
           this.portfolioService.findById(parseInt(id)).subscribe(response => {
             this.portfolio = response;
-            this.loadTechnologyForPortfolio(this.portfolio.technologies);
+            if (this.portfolio) {
+              this.loadTechnologyForPortfolio(this.portfolio.technologies);
+            }
           });
         }
     });

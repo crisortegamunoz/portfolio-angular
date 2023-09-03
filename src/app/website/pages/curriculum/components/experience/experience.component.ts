@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Experience } from '../../../../../models/website/experience.models';
-import { Technology } from '../../../../../models/website/technology.model';
+import { Experience } from '../../../../../core/models/website/experience.models';
+import { Technology } from '../../../../../core/models/website/technology.model';
 
 import { differenceInYears, differenceInMonths } from 'date-fns';
 

@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 //import { Select, initTE } from "tw-elements";
 import { switchMap } from 'rxjs';
 
-import { CertificateService } from '../../../../../services/website/certificate.service';
-import { CategoryService } from '../../../../../services/website/category.service';
-import { Certificate } from '../../../../../models/website/certificate.models';
-import { Category } from '../../../../../models/website/caterogy.models';
-import { Functions } from '../../../../../util/functions';
+import { CertificateService } from '../../../../../core/services/website/certificate.service';
+import { CategoryService } from '../../../../../core/services/website/category.service';
+import { Certificate } from '../../../../../core/models/website/certificate.models';
+import { Category } from '../../../../../core/models/website/caterogy.models';
+import { Functions } from '../../../../../core/util/functions';
 
 
 

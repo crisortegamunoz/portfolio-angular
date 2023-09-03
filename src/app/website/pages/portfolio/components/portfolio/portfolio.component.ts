@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
 
-import { PortfolioService } from '../../../../../services/website/portfolio.service';
-import { CategoryService } from '../../../../../services/website/category.service';
+import { PortfolioService } from '../../../../../core/services/website/portfolio.service';
+import { CategoryService } from '../../../../../core/services/website/category.service';
 
-import { Portfolio } from '../../../../../models/website/portfolio.models';
-import { Category } from '../../../../../models/website/caterogy.models';
-import { Functions } from 'src/app/util/functions';
+import { Portfolio } from '../../../../../core/models/website/portfolio.models';
+import { Category } from '../../../../../core/models/website/caterogy.models';
+import { Functions } from '../../../../../core/util/functions';
 
 @Component({
   selector: 'app-portfolio',

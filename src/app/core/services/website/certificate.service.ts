@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Certificate } from '../../models/website/certificate.models'
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Page } from 'src/app/models/response/page.model';
+
+import { Page } from '../../models/response/page.model';
+import { Certificate } from '../..//models/website/certificate.models'
 
 @Injectable({
   providedIn: 'root'

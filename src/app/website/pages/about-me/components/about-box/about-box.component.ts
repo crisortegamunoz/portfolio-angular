@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Box } from 'src/app/models/website/box.model';
+import { Box } from '../../../../../core/models/website/box.model';
 
 @Component({
   selector: 'app-about-box',
