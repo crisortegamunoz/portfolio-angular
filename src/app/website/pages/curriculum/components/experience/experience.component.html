@@ -6,7 +6,7 @@
   <p *ngIf="experience.entityDescription" class="dark:text-[#F5F5F5]"> {{ experience.entityDescription }} </p>
   <p *ngIf="experience.roleDescription" class="dark:text-[#F5F5F5]"> {{ experience.roleDescription }} </p>
   <div *ngIf="showMore" class="flex flex-col items-end">
-    <a class="mb-0 mt-5 mr-12 text-sm font-medium text-gray-900 dark:text-[#F5F5F5] text-xtiny"
+    <a class="mb-0 mt-5 mr-12 text-sm font-medium text-gray-900 dark:text-[#F5F5F5] text-xtiny cursor-pointer"
        (click)="toggleAnimation()" >Ver más...</a>
   </div>
   <div [ngClass]="{ 'h-0 opacity-0': !isAnimated, 'h-auto opacity-100': isAnimated}"
@@ -23,7 +23,7 @@
     <p *ngIf="experience.technologies.length > 0" class="mt-2 dark:text-[#F5F5F5]"> {{ loadStack(experience.technologies) }} </p>
   </div>
   <div *ngIf="showLess" class="flex flex-col items-end">
-    <a class="mb-0 mt-5 mr-12 text-sm font-medium text-gray-900 dark:text-[#F5F5F5] text-xtiny"
+    <a class="mb-0 mt-5 mr-12 text-sm font-medium text-gray-900 dark:text-[#F5F5F5] text-xtiny cursor-pointer"
        (click)="toggleAnimation()" >Ver menos...</a>
   </div>
   <div *ngIf="isStudy">

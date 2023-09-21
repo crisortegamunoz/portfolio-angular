@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ErrorServiceInterceptor } from './core/interceptor/error-service.interceptor';
+import { JwtInterceptor } from './core/interceptor/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ErrorServiceInterceptor } from './core/interceptor/error-service.interc
     HttpClientModule
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorServiceInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-//import { Select, initTE } from "tw-elements";
 import { switchMap } from 'rxjs';
 
 import { CertificateService } from '../../../../../core/services/website/certificate.service';
 import { CategoryService } from '../../../../../core/services/website/category.service';
+
 import { Certificate } from '../../../../../core/models/website/certificate.models';
 import { Category } from '../../../../../core/models/website/caterogy.models';
+import { Page } from '../../../../../core/models/response/page.model';
+
 import { Functions } from '../../../../../core/util/functions';
+
 
 
 
@@ -19,21 +22,21 @@ export class CertificatesComponent implements OnInit {
 
   currentPage: number;
   pageSize: number;
-  totalRecords: number;
   certificates: Certificate[];
   categories: Category[];
   categoryId: number;
   loading: boolean;
   show: boolean;
+  findMore: boolean;
   category: Category;
 
   constructor(private certificateService: CertificateService,
               private categoryService: CategoryService) {
-    this.totalRecords = 0;
     this.currentPage = 0;
-    this.pageSize = 6;
+    this.pageSize = 9;
     this.loading = true;
     this.show = false;
+    this.findMore = true;
     this.certificates = [];
     this.categories = [];
     this.categoryId = 0;
@@ -41,7 +44,6 @@ export class CertificatesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //initTE({ Select });
     this.categoryService.getBySection('CERTIFICATE').pipe(
       switchMap(categories => {
         this.categories = categories;
@@ -49,55 +51,45 @@ export class CertificatesComponent implements OnInit {
       }),
     ).subscribe(page => {
       this.certificates = page.content;
-      this.totalRecords = page.totalElements;
       this.loading = false;
       this.show = true;
     });
-  }
-
-  pageChanged(page: number): void {
-    this.loading = true;
-    this.currentPage = page;
-    this.categoryId > 0 ?
-      this.getByCategoryIdAndPage(this.categoryId, this.currentPage - 1, this.pageSize) :
-        this.getCertificates(this.currentPage - 1, this.pageSize);
   }
 
   onSearchByCategory(categoryId: number): void {
     this.loading = true;
     this.show = false;
     this.currentPage = 0;
+    this.certificates = [];
     this.categoryId = categoryId;
-    this.categoryId > 0 ? this.getCertificatesByCategoryId(this.categoryId) : this.getCertificates(this.currentPage, this.pageSize);
+    this.categoryId > 0 ? this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) : this.getCertificates(this.currentPage, this.pageSize);
+  }
+
+  getMore(): void {
+    this.currentPage++;
+    this.categoryId > 0 ?
+      this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) :
+        this.getCertificates(this.currentPage, this.pageSize);
   }
 
   private getCertificates(page: number, elements: number) {
     this.certificateService.getAllByPage(page, elements).subscribe((page) => {
-      this.certificates = page.content;
-      this.totalRecords = page.totalElements;
-      this.loading = false;
-      this.show = true;
+      this.disabledLoadMoreButton(page);
     });
   }
 
-  private getCertificatesByCategoryId(categoryId: number) {
-    this.certificateService.getByCategoryId(categoryId).subscribe((page) =>{
-        this.certificates = page.content;
-        this.totalRecords = page.totalElements;
-        this.loading = false;
-        this.show = true;
+  private getByCategoryIdAndPage(categoryId: number, page: number, elements: number) {
+    this.certificateService.getByCategoryIdAndPage(categoryId, page, elements).subscribe((page) => {
+        this.disabledLoadMoreButton(page);
       }
     );
   }
 
-  private getByCategoryIdAndPage(categoryId: number, page: number, elements: number) {
-    this.certificateService.getByCategoryIdAndPage(categoryId, page, elements).subscribe((page) =>{
-        this.certificates = page.content;
-        this.totalRecords = page.totalElements;
-        this.loading = false;
-        this.show = true;
-      }
-    );
+  private disabledLoadMoreButton(page: Page<Certificate>): void {
+    this.certificates = this.certificates.concat(page.content);
+    this.loading = false;
+    this.show = true;
+    this.findMore = !page.last;
   }
 
 }

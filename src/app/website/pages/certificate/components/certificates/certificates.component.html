@@ -11,15 +11,13 @@
         <app-loading *ngIf="loading"></app-loading>
     </div>
     <div *ngIf="show" id="isotop-gallery-wrapper" class="flex flex-wrap justify-start mymix portfolio_list-two three-col ">
-        <app-certificate *ngFor="let certificate of certificates | paginate: { id: 'certificateGrid',
-                                                                               itemsPerPage: pageSize,
-                                                                               currentPage: currentPage,
-                                                                               totalItems: totalRecords }"
+        <app-certificate *ngFor="let certificate of certificates"
                           [certificate]="certificate" class="portfolio_list-two-items isotop-item dev branding ">
         </app-certificate>
     </div>
-    <div class="flex flex-wrap justify-center" *ngIf="show && totalRecords > 6">
-        <pagination-controls (pageChange)="pageChanged($event)" previousLabel='Anterior' nextLabel='Siguiente' id='certificateGrid'></pagination-controls>
+    <div *ngIf="findMore" class="flex flex-col items-end">
+      <button class="ngx-pagination cursor-pointer"
+         (click)="getMore()" >Ver más...</button>
     </div>
   </div>
   <app-footer></app-footer>

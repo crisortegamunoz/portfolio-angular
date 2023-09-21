@@ -8,6 +8,7 @@ import { CategoryService } from '../../../../../core/services/website/category.s
 import { Portfolio } from '../../../../../core/models/website/portfolio.models';
 import { Category } from '../../../../../core/models/website/caterogy.models';
 import { Functions } from '../../../../../core/util/functions';
+import { Page } from '../../../../../core/models/response/page.model';
 
 @Component({
   selector: 'app-portfolio',
@@ -24,6 +25,7 @@ export class PortfolioComponent implements OnInit {
   loading: boolean;
   show: boolean;
   category: Category;
+  findMore: boolean;
 
   constructor(private route: ActivatedRoute,
               private portfolioService: PortfolioService,
@@ -33,6 +35,7 @@ export class PortfolioComponent implements OnInit {
     this.currentPage = 0;
     this.pageSize = 6;
     this.show = false;
+    this.findMore = true;
     this.portfolios = [];
     this.categories = [];
     this.categoryId = 0;
@@ -47,56 +50,45 @@ export class PortfolioComponent implements OnInit {
         return this.portfolioService.getByCategoryId(this.categoryId);
       }),
     ).subscribe(page => {
-      this.portfolios = page.content;
-      this.totalRecords = page.totalElements;
-      this.loading = false;
-      this.show = true;
+      this.disabledLoadMoreButton(page);
     });
-  }
-
-  pageChanged(page: number): void {
-    this.loading = true;
-    this.currentPage = page;
-    this.categoryId > 0 ?
-      this.getByCategoryIdAndPage(this.categoryId, this.currentPage - 1, this.pageSize) :
-        this.getPortfolios(this.currentPage - 1, this.pageSize);
   }
 
   onSearchByCategory(categoryId: number) {
     this.loading = true;
     this.show = false;
     this.currentPage = 0;
+    this.portfolios = [];
     this.categoryId = categoryId;
-    this.categoryId > 0 ? this.getPortfoliosByCategoryId(this.categoryId) : this.getPortfolios(this.currentPage, this.pageSize);
+    this.categoryId > 0 ? 
+      this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) 
+      : this.getPortfolios(this.currentPage, this.pageSize);
+  }
+
+  getMore(): void {
+    this.currentPage++;
+    this.categoryId > 0 ?
+      this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) :
+        this.getPortfolios(this.currentPage, this.pageSize);
   }
 
   private getPortfolios(page: number, elements: number) {
     this.portfolioService.getAllByPage(page, elements).subscribe((page) => {
-      this.portfolios = page.content;
-      this.totalRecords = page.totalElements;
-      this.loading = false;
-      this.show = true;
+      this.disabledLoadMoreButton(page);
     });
   }
 
-  private getPortfoliosByCategoryId(categoryId: number) {
-    this.portfolioService.getByCategoryId(categoryId).subscribe((page) =>{
-        this.portfolios = page.content;
-        this.totalRecords = page.totalElements;
-        this.loading = false;
-        this.show = true;
-      }
-    );
+  private getByCategoryIdAndPage(categoryId: number, page: number, elements: number) {
+    this.portfolioService.getByCategoryIdAndPage(categoryId, page, elements).subscribe((page) => {
+      this.disabledLoadMoreButton(page);
+    });
   }
 
-  private getByCategoryIdAndPage(categoryId: number, page: number, elements: number) {
-    this.portfolioService.getByCategoryIdAndPage(categoryId, page, elements).subscribe((page) =>{
-        this.portfolios = page.content;
-        this.totalRecords = page.totalElements;
-        this.loading = false;
-        this.show = true;
-      }
-    );
+  private disabledLoadMoreButton(page: Page<Portfolio>): void {
+    this.portfolios = this.portfolios.concat(page.content);
+    this.loading = false;
+    this.show = true;
+    this.findMore = !page.last;
   }
 
   private orderByProfesionalCategory(categories: Category[]): Category[] {
