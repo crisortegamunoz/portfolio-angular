@@ -30,9 +30,7 @@ export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
         if (id) {
           this.portfolioService.findById(parseInt(id)).subscribe(response => {
             this.portfolio = response;
-            if (this.portfolio) {
-              this.loadTechnologyForPortfolio(this.portfolio.technologies);
-            }
+            this.loadTechnologyForPortfolio(this.portfolio.technologies);
           });
         }
     });
