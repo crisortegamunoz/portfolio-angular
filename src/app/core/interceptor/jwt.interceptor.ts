@@ -16,7 +16,7 @@ export class JwtInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
-    const apiKey = '';
+    const apiKey = 'cb0e1c35-e2eb-475b-a288-896f0f348d9d';
     request = request.clone({
       setHeaders: {
         'x-api-key': apiKey

@@ -10,7 +10,7 @@
                           (searchByCategory)="onSearchByCategory($event)">
           </app-search-by>
           <app-loading *ngIf="loading"></app-loading>
-          <div *ngIf="show" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[30px] grid gap-x-10 gap-y-7 mb-6">
+          <div *ngIf="show" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[30px] grid gap-x-10 gap-y-7 mb-6" transition="slide-in-bottom">
               <app-portfolio-item *ngFor="let portfolio of portfolios" [portfolio]="portfolio"></app-portfolio-item>
           </div>
           <div *ngIf="findMore" class="flex flex-col items-end">
