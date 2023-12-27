@@ -10,10 +10,14 @@ import { Page } from '../../models/response/page.model';
 })
 export class PortfolioService {
 
-  private SERVICE = `/api/portfolios`;
+  private SERVICE = `assets/data`;
 
   constructor(private httpClient: HttpClient) {
 
+  }
+
+  getAll(): Observable<Portfolio[]> {
+    return this.httpClient.get<Portfolio[]>(`${this.SERVICE}/portfolio.json`);
   }
 
   getAllByPage(page: number, elements: number): Observable<Page<Portfolio>> {

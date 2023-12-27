@@ -9,7 +9,7 @@ import { About } from '../../models/website/about-me.models';
 })
 export class AboutMeService {
 
-  private SERVICE = `/api/abouts`;
+  private SERVICE = 'assets/data/abouts.json';
 
   constructor(private httpClient: HttpClient) {
 

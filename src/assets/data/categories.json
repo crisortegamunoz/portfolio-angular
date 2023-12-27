@@ -1,0 +1,57 @@
+[
+    {
+        "id": 15,
+        "name": "Conocimiento",
+        "section": "KNOWLEDGE"
+    },
+    {
+        "id": 14,
+        "name": "Habilidad",
+        "section": "KNOWLEDGE"
+    },
+    {
+        "id": 13,
+        "name": "Educación",
+        "section": "EXPERIENCE"
+    },
+    {
+        "id": 12,
+        "name": "Trabajo",
+        "section": "EXPERIENCE"
+    },
+    {
+        "id": 11,
+        "name": "Personal",
+        "section": "PORTFOLIO"
+    },
+    {
+        "id": 10,
+        "name": "Laboratorio",
+        "section": "PORTFOLIO"
+    },
+    {
+        "id": 9,
+        "name": "Profesional",
+        "section": "PORTFOLIO"
+    },
+    {
+        "id": 8,
+        "name": "Soft-Skills",
+        "section": "CERTIFICATE"
+    },
+    {
+        "id": 7,
+        "name": "Cloud",
+        "section": "CERTIFICATE"
+    },
+    {
+        "id": 6,
+        "name": "Frontend",
+        "section": "CERTIFICATE"
+    },
+    {
+        "id": 5,
+        "name": "Backend",
+        "section": "CERTIFICATE"
+    }
+]

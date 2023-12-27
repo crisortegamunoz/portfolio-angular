@@ -35,11 +35,11 @@ export class CurriculumComponent implements OnInit {
         return this.experienceService.getExperienceByCategoryName('Trabajo');
       }),
       switchMap((works: Experience[]) => {
-        this.workHistory = works;
+        this.workHistory = works.filter(work => work.category.name === 'Trabajo').reverse();
         return this.experienceService.getExperienceByCategoryName('Educacion');
       }),
       switchMap((studies: Experience[]) => {
-        this.studies = studies;
+        this.studies = studies.filter(study => study.category.name === 'Educación').reverse();
         return this.skillService.getSkillsByCategoryNameOrderByPercentage('Conocimiento');
       })
     ).subscribe((knowledges => {

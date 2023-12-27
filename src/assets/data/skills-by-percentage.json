@@ -1,0 +1,88 @@
+[
+    {
+        "id": 1,
+        "name": null,
+        "show": true,
+        "percentage": 80,
+        "cssClass": "java",
+        "cssStyle": "width: 80%",
+        "technology": {
+            "id": 6,
+            "name": "Java",
+            "version": "8"
+        },
+        "category": {
+            "id": 14,
+            "name": "Habilidad",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 2,
+        "name": null,
+        "show": true,
+        "percentage": 75,
+        "cssClass": "javascript",
+        "cssStyle": "width: 75%",
+        "technology": {
+            "id": 20,
+            "name": "JavaScript",
+            "version": null
+        },
+        "category": {
+            "id": 14,
+            "name": "Habilidad",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 3,
+        "name": null,
+        "show": true,
+        "percentage": 75,
+        "cssClass": "typescript",
+        "cssStyle": "width: 75%",
+        "technology": {
+            "id": 21,
+            "name": "TypeScript",
+            "version": null
+        },
+        "category": {
+            "id": 14,
+            "name": "Habilidad",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 4,
+        "name": null,
+        "show": true,
+        "percentage": 70,
+        "cssClass": "angular",
+        "cssStyle": "width: 70%",
+        "technology": {
+            "id": 26,
+            "name": "Angular",
+            "version": "16"
+        },
+        "category": {
+            "id": 14,
+            "name": "Habilidad",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Oracle / PostgreSQL",
+        "show": true,
+        "percentage": 70,
+        "cssClass": "database",
+        "cssStyle": "width: 70%",
+        "technology": null,
+        "category": {
+            "id": 14,
+            "name": "Habilidad",
+            "section": "KNOWLEDGE"
+        }
+    }
+]

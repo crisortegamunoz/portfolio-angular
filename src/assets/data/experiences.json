@@ -1,0 +1,398 @@
+[
+    {
+        "id": 1,
+        "roleName": "",
+        "roleDescription": "",
+        "entityName": "Instituto Profesional DuocUC, Ingeniería En Informática.",
+        "entityDescription": "",
+        "entityLocation": "Santiago, Chile",
+        "responsibilities": [
+            "Miembro del Centro de Innovación y Transferencia Tecnológica aportando al desarrollo de software a diferentes aplicaciones."
+        ],
+        "accomplishments": [
+            ""
+        ],
+        "periodStart": "2012-03-12T03:00:00",
+        "periodEnd": "2015-12-18T03:00:00",
+        "category": {
+            "id": 13,
+            "name": "Educación",
+            "section": "EXPERIENCE"
+        },
+        "technologies": []
+    },
+    {
+        "id": 2,
+        "roleName": "Full Stack Developer",
+        "roleDescription": "Como Fullstack Developer tuve que integrarme a un equipo especializado en seguros de garantía y generales para desarrollar software de alta calidad para la industria aseguradora.",
+        "entityName": "CLAVE - Plataformas Tecnológicas para la Industria Aseguradora",
+        "entityDescription": "",
+        "entityLocation": "Providencia, Chile",
+        "responsibilities": [
+            "Participación diaria en reuniones lideras por nuestro Scrum Master.",
+            "Desarrollar nuevas funcionaliades, mantener y mejorar el CORE de la plataforma.",
+            "Implementación de nuevas tecnologías.",
+            "Capacitar a nuevos integrantes en las tecnologías utilizadas en el desarrollo del software.",
+            "Identificar problemas, analizar información, solucionar bugs y errores con la finalidad de mejorar el sistema.",
+            "Resolver incidencias en producción para cumplir con los SLA de los clientes."
+        ],
+        "accomplishments": [
+            "Rápida solución a las incidencias de producción.",
+            "Optimización en los tiempos de respuesta de los servicios.",
+            "Refactorización de código en las distintas aplicaciones."
+        ],
+        "periodStart": "2016-04-18T03:00:00",
+        "periodEnd": "2022-09-26T03:00:00",
+        "category": {
+            "id": 12,
+            "name": "Trabajo",
+            "section": "EXPERIENCE"
+        },
+        "technologies": [
+            {
+                "id": 1,
+                "name": "Git",
+                "version": null
+            },
+            {
+                "id": 14,
+                "name": "Oracle",
+                "version": null
+            },
+            {
+                "id": 15,
+                "name": "PostgreSQL",
+                "version": null
+            },
+            {
+                "id": 17,
+                "name": "PL/SQL",
+                "version": null
+            },
+            {
+                "id": 18,
+                "name": "Jenkins",
+                "version": null
+            },
+            {
+                "id": 4,
+                "name": "Maven",
+                "version": null
+            },
+            {
+                "id": 6,
+                "name": "Java",
+                "version": "8"
+            },
+            {
+                "id": 9,
+                "name": "Hibernate",
+                "version": null
+            },
+            {
+                "id": 10,
+                "name": "Spring Framework",
+                "version": null
+            },
+            {
+                "id": 11,
+                "name": "Springboot",
+                "version": null
+            },
+            {
+                "id": 12,
+                "name": "Spring Data JPA",
+                "version": null
+            },
+            {
+                "id": 13,
+                "name": "Spring Security",
+                "version": null
+            },
+            {
+                "id": 19,
+                "name": "Spring Web",
+                "version": null
+            },
+            {
+                "id": 20,
+                "name": "JavaScript",
+                "version": null
+            },
+            {
+                "id": 21,
+                "name": "TypeScript",
+                "version": null
+            },
+            {
+                "id": 22,
+                "name": "Angular",
+                "version": "8"
+            },
+            {
+                "id": 37,
+                "name": "ExtJS",
+                "version": "5"
+            },
+            {
+                "id": 28,
+                "name": "Bitbucket",
+                "version": null
+            },
+            {
+                "id": 30,
+                "name": "AWS",
+                "version": null
+            },
+            {
+                "id": 31,
+                "name": "AWS S3",
+                "version": null
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "roleName": "Líder Técnico / Senior Fullstack Developer",
+        "roleDescription": "Como líder técnico, estuve a carga de un equipo conformado por 11 personas, ayudando a la coordinación de tareas y baja de requerimientos solicitadas por los clientes. revisando y analizando la factibilidad de estos para incluirlos en el CORE de la empresa.",
+        "entityName": "CLAVE - Plataformas Tecnológicas para la Industria Aseguradora",
+        "entityDescription": "Es una compañía especializada en el desarrollo de software para la industria aseguradora, brindando soluciones innovadoras que ayudan a sus clientes a mejorar sus procesos y aumentar su eficiencia.",
+        "entityLocation": "Remoto, Chile",
+        "responsibilities": [
+            "Organizar el tiempo y calidad del equipo mediante la metodología Scrum.",
+            "Trabajar con los clientes para evaluar si un requisito de negocio específico es viable y realizable desde una perspectiva técnica.",
+            "Traducir los requisitos de negocio en tareas técnicas específicas que el equipo de desarrollo pueda entender y llevar a cabo.",
+            "Buscar opciones de mejora en la aplicación para mejorar el rendimiento y la eficiencia de esta.",
+            "Apoyo constante a los miembros del equipo, respondiendo sus dudas técnicas y del negocio."
+        ],
+        "accomplishments": [
+            "Mejora en la inducción de los nuevos miembros, aplicando el método ágil Extreme Programming las primeras semanas dentro del equipo.",
+            "Identificación y optimización de servicios de las diferentes aplicaciones, mejorando los tiempos de respuesta de cara al cliente.",
+            "Unir al equipo a través de reuniones semanalas para que cada integrante pudiera dar su sentir con la finalidad de fortalecer los lazos del equipo."
+        ],
+        "periodStart": "2022-09-27T03:00:00",
+        "periodEnd": "2023-05-31T04:00:00",
+        "category": {
+            "id": 12,
+            "name": "Trabajo",
+            "section": "EXPERIENCE"
+        },
+        "technologies": [
+            {
+                "id": 1,
+                "name": "Git",
+                "version": null
+            },
+            {
+                "id": 18,
+                "name": "Jenkins",
+                "version": null
+            },
+            {
+                "id": 4,
+                "name": "Maven",
+                "version": null
+            },
+            {
+                "id": 7,
+                "name": "Java",
+                "version": "11"
+            },
+            {
+                "id": 14,
+                "name": "Oracle",
+                "version": null
+            },
+            {
+                "id": 9,
+                "name": "Hibernate",
+                "version": null
+            },
+            {
+                "id": 15,
+                "name": "PostgreSQL",
+                "version": null
+            },
+            {
+                "id": 17,
+                "name": "PL/SQL",
+                "version": null
+            },
+            {
+                "id": 10,
+                "name": "Spring Framework",
+                "version": null
+            },
+            {
+                "id": 11,
+                "name": "Springboot",
+                "version": null
+            },
+            {
+                "id": 12,
+                "name": "Spring Data JPA",
+                "version": null
+            },
+            {
+                "id": 13,
+                "name": "Spring Security",
+                "version": null
+            },
+            {
+                "id": 19,
+                "name": "Spring Web",
+                "version": null
+            },
+            {
+                "id": 20,
+                "name": "JavaScript",
+                "version": null
+            },
+            {
+                "id": 21,
+                "name": "TypeScript",
+                "version": null
+            },
+            {
+                "id": 24,
+                "name": "Angular",
+                "version": "13"
+            },
+            {
+                "id": 28,
+                "name": "Bitbucket",
+                "version": null
+            },
+            {
+                "id": 30,
+                "name": "AWS",
+                "version": null
+            },
+            {
+                "id": 31,
+                "name": "AWS S3",
+                "version": null
+            },
+            {
+                "id": 37,
+                "name": "ExtJS",
+                "version": "5"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "roleName": "Senior Full Stack Developer",
+        "roleDescription": "Como desarrollador me encuentro dentro de una célula de desarrollo de software como parte de un equipo multidisciplinario. Mi función es trabajar en equipo con profesionales de diferentes disciplinas, interactuando y colaborando activamente para lograr el éxito del proyecto y entregar un software de alta calidad que cumpla con las necesidades y expectativas de nuestros clientes.",
+        "entityName": "42Labs",
+        "entityDescription": "",
+        "entityLocation": "Remoto, Chile",
+        "responsibilities": [
+            "Diseñar y desarrollar interfaces de usuario atractivas y funcionales",
+            "Crear y mantener bases de datos eficientes para el almacenamiento y gestión de datos.",
+            "Implementar la lógica de negocio y la funcionalidad del lado del servidor.",
+            "Optimizar el rendimiento y la escalabilidad de las aplicaciones.",
+            "Realizar pruebas y depuración de aplicaciones para garantizar la calidad del software.",
+            "Colaborar con el",
+            "los equipo(s) para asegurar la integración fluida de componentes front-end y back-end.",
+            "Mantenerse actualizado con las últimas tecnologías y tendencias en desarrollo back y front."
+        ],
+        "accomplishments": [
+            "Rápida adaptación al equipo, logrando desarrollar las tareas en el tiempo estimado."
+        ],
+        "periodStart": "2023-06-01T04:00:00",
+        "periodEnd": null,
+        "category": {
+            "id": 12,
+            "name": "Trabajo",
+            "section": "EXPERIENCE"
+        },
+        "technologies": [
+            {
+                "id": 1,
+                "name": "Git",
+                "version": null
+            },
+            {
+                "id": 18,
+                "name": "Jenkins",
+                "version": null
+            },
+            {
+                "id": 4,
+                "name": "Maven",
+                "version": null
+            },
+            {
+                "id": 7,
+                "name": "Java",
+                "version": "11"
+            },
+            {
+                "id": 14,
+                "name": "Oracle",
+                "version": null
+            },
+            {
+                "id": 15,
+                "name": "PostgreSQL",
+                "version": null
+            },
+            {
+                "id": 11,
+                "name": "Springboot",
+                "version": null
+            },
+            {
+                "id": 12,
+                "name": "Spring Data JPA",
+                "version": null
+            },
+            {
+                "id": 13,
+                "name": "Spring Security",
+                "version": null
+            },
+            {
+                "id": 19,
+                "name": "Spring Web",
+                "version": null
+            },
+            {
+                "id": 2,
+                "name": "HTML5",
+                "version": ""
+            },
+            {
+                "id": 3,
+                "name": "CSS3",
+                "version": null
+            },
+            {
+                "id": 38,
+                "name": "Bootstrap",
+                "version": null
+            },
+            {
+                "id": 20,
+                "name": "JavaScript",
+                "version": null
+            },
+            {
+                "id": 21,
+                "name": "TypeScript",
+                "version": null
+            },
+            {
+                "id": 23,
+                "name": "Angular",
+                "version": "12"
+            },
+            {
+                "id": 29,
+                "name": "Gitlab",
+                "version": null
+            }
+        ]
+    }
+]

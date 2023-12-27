@@ -9,14 +9,14 @@ import { Category } from '../../models/website/caterogy.models';
 })
 export class CategoryService {
 
-  private SERVICE = `/api/categories`;
+  private SERVICE = `assets/data`;
 
   constructor(private httpClient: HttpClient) {
 
   }
 
   getBySection(section: string): Observable<Category[]> {
-    return this.httpClient.get<Category[]>(`${this.SERVICE}/section/${section}`);
+    return this.httpClient.get<Category[]>(`${this.SERVICE}/categories.json`);
   }
 
 }

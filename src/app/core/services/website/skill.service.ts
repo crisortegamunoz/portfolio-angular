@@ -9,18 +9,18 @@ import { Skill } from '../../models/website/skill.model';
 })
 export class SkillService {
 
-  private SERVICE = `/api/skills`;
+  private SERVICE = `assets/data`;
 
   constructor(private httpClient: HttpClient) {
 
   }
 
   getSkillsByCategoryName(name: string): Observable<Skill[]> {
-    return this.httpClient.get<Skill[]>(`${this.SERVICE}/category/${name}`);
+    return this.httpClient.get<Skill[]>(`${this.SERVICE}/skills-by-percentage.json`);
   }
 
   getSkillsByCategoryNameOrderByPercentage(name: string): Observable<Skill[]> {
-    return this.httpClient.get<Skill[]>(`${this.SERVICE}/orderByPercentage/${name}`);
+    return this.httpClient.get<Skill[]>(`${this.SERVICE}/skills.json`);
   }
 
 }

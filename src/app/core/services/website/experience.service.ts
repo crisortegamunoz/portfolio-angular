@@ -9,14 +9,14 @@ import { Experience } from '../../models/website/experience.models';
 })
 export class ExperienceService {
 
-  private SERVICE = `/api/experiences`;
+  private SERVICE = `assets/data`;
 
   constructor(private httpClient: HttpClient) {
 
   }
 
   getExperienceByCategoryName(categoryName: string): Observable<Experience[]> {
-    return this.httpClient.get<Experience[]>(`${this.SERVICE}/category/${categoryName}`);
+    return this.httpClient.get<Experience[]>(`${this.SERVICE}/experiences.json`);
   }
 
 }

@@ -28,9 +28,14 @@ export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
     this.route.paramMap.subscribe((params: ParamMap) => {
       const id = params.get('id');
         if (id) {
-          this.portfolioService.findById(parseInt(id)).subscribe(response => {
-            this.portfolio = response;
-            this.loadTechnologyForPortfolio(this.portfolio.technologies);
+          this.portfolioService.getAll().subscribe(portfolios => {
+            const portfolioArray: Portfolio[] = portfolios.filter(portfolio => portfolio.id.toString() === id);
+            if (portfolioArray.length > 0) {
+              this.portfolio = portfolioArray[0];
+              this.loadTechnologyForPortfolio(this.portfolio.technologies);
+            } else {
+              this.router.navigate(['/not-found']);
+            }
           });
         }
     });

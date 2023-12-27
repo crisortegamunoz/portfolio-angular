@@ -22,6 +22,7 @@ export class CertificatesComponent implements OnInit {
 
   currentPage: number;
   pageSize: number;
+  allCertificates: Certificate[];
   certificates: Certificate[];
   categories: Category[];
   categoryId: number;
@@ -32,12 +33,13 @@ export class CertificatesComponent implements OnInit {
 
   constructor(private certificateService: CertificateService,
               private categoryService: CategoryService) {
-    this.currentPage = 0;
+    this.currentPage = 1;
     this.pageSize = 9;
     this.loading = true;
     this.show = false;
     this.findMore = true;
     this.certificates = [];
+    this.allCertificates = [];
     this.categories = [];
     this.categoryId = 0;
     this.category = Functions.createCategoryAll();
@@ -46,11 +48,12 @@ export class CertificatesComponent implements OnInit {
   ngOnInit(): void {
     this.categoryService.getBySection('CERTIFICATE').pipe(
       switchMap(categories => {
-        this.categories = categories;
-        return this.certificateService.getAllByPage(this.currentPage, this.pageSize);
+        this.categories = categories.filter(category => category.section === 'CERTIFICATE');
+        return this.certificateService.getAll();
       }),
-    ).subscribe(page => {
-      this.certificates = page.content;
+    ).subscribe(certificates => {
+      this.allCertificates = certificates;
+      this.getMore();
       this.loading = false;
       this.show = true;
     });
@@ -59,37 +62,38 @@ export class CertificatesComponent implements OnInit {
   onSearchByCategory(categoryId: number): void {
     this.loading = true;
     this.show = false;
-    this.currentPage = 0;
+    this.currentPage = 1;
     this.certificates = [];
     this.categoryId = categoryId;
-    this.categoryId > 0 ? this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) : this.getCertificates(this.currentPage, this.pageSize);
+    this.categoryId > 0 ? this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) : this.getCertificates();
   }
 
   getMore(): void {
+    this.certificates = this.certificates.concat(this.allCertificates.slice((this.currentPage - 1) * this.pageSize, this.currentPage * this.pageSize));
     this.currentPage++;
-    this.categoryId > 0 ?
-      this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) :
-        this.getCertificates(this.currentPage, this.pageSize);
+    this.disabledLoadMoreButton();
   }
 
-  private getCertificates(page: number, elements: number) {
-    this.certificateService.getAllByPage(page, elements).subscribe((page) => {
-      this.disabledLoadMoreButton(page);
+  private getCertificates() {
+    this.certificateService.getAll().subscribe(certificates => {
+      this.allCertificates = certificates;
+      this.getMore();
+      this.loading = false;
+      this.show = true;
     });
   }
 
   private getByCategoryIdAndPage(categoryId: number, page: number, elements: number) {
-    this.certificateService.getByCategoryIdAndPage(categoryId, page, elements).subscribe((page) => {
-        this.disabledLoadMoreButton(page);
-      }
-    );
+    this.certificateService.getAll().subscribe(certificates => {
+      this.allCertificates = certificates.filter(certificate => certificate.category.id === categoryId);
+      this.getMore();
+      this.loading = false;
+      this.show = true;
+    });
   }
 
-  private disabledLoadMoreButton(page: Page<Certificate>): void {
-    this.certificates = this.certificates.concat(page.content);
-    this.loading = false;
-    this.show = true;
-    this.findMore = !page.last;
+  private disabledLoadMoreButton(): void {
+    this.findMore = !(this.certificates.length === this.allCertificates.length);
   }
 
 }

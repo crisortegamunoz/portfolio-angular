@@ -24,7 +24,7 @@ import { JwtInterceptor } from './core/interceptor/jwt.interceptor';
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    /*{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },*/
     { provide: HTTP_INTERCEPTORS, useClass: ErrorServiceInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

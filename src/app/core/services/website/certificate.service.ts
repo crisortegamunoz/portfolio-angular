@@ -10,10 +10,14 @@ import { Certificate } from '../..//models/website/certificate.models'
 })
 export class CertificateService {
 
-  private SERVICE = `/api/certificates`;
+  private SERVICE = `assets/data`;
 
   constructor(private httpClient: HttpClient) {
 
+  }
+
+  getAll(): Observable<Certificate[]> {
+    return this.httpClient.get<Certificate[]>(`${this.SERVICE}/certificates.json`);
   }
 
   getAllByPage(page: number, elements: number): Observable<Page<Certificate>> {

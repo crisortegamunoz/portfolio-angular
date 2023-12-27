@@ -19,6 +19,7 @@ export class PortfolioComponent implements OnInit {
   currentPage: number;
   pageSize: number;
   totalRecords: number;
+  allPortfolios: Portfolio[];
   portfolios: Portfolio[];
   categories: Category[];
   categoryId: number;
@@ -32,10 +33,11 @@ export class PortfolioComponent implements OnInit {
               private categoryService: CategoryService) {
     this.loading = true;
     this.totalRecords = 0;
-    this.currentPage = 0;
+    this.currentPage = 1;
     this.pageSize = 6;
     this.show = false;
     this.findMore = true;
+    this.allPortfolios = [];
     this.portfolios = [];
     this.categories = [];
     this.categoryId = 0;
@@ -45,50 +47,52 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
     this.categoryService.getBySection('PORTFOLIO').pipe(
       switchMap(categories => {
-        this.categories = this.orderByProfesionalCategory(categories);
-        this.categoryId = this.category.id
-        return this.portfolioService.getByCategoryId(this.categoryId);
+        this.categories = this.orderByProfesionalCategory(categories.filter(category => category.section === 'PORTFOLIO'));
+        return this.portfolioService.getAll();
       }),
-    ).subscribe(page => {
-      this.disabledLoadMoreButton(page);
+    ).subscribe(portfolios => {
+      this.allPortfolios = portfolios;
+      return this.getByCategoryIdAndPage(this.category.id, this.currentPage, this.pageSize);
     });
   }
 
   onSearchByCategory(categoryId: number) {
     this.loading = true;
     this.show = false;
-    this.currentPage = 0;
+    this.currentPage = 1;
     this.portfolios = [];
     this.categoryId = categoryId;
     this.categoryId > 0 ? 
       this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) 
-      : this.getPortfolios(this.currentPage, this.pageSize);
+      : this.getPortfolios();
   }
 
   getMore(): void {
+    this.portfolios = this.portfolios.concat(this.allPortfolios.slice((this.currentPage - 1) * this.pageSize, this.currentPage * this.pageSize));
     this.currentPage++;
-    this.categoryId > 0 ?
-      this.getByCategoryIdAndPage(this.categoryId, this.currentPage, this.pageSize) :
-        this.getPortfolios(this.currentPage, this.pageSize);
+    this.disabledLoadMoreButton();
   }
 
-  private getPortfolios(page: number, elements: number) {
-    this.portfolioService.getAllByPage(page, elements).subscribe((page) => {
-      this.disabledLoadMoreButton(page);
+  private getPortfolios() {
+    this.portfolioService.getAll().subscribe(portfolios => {
+      this.allPortfolios = portfolios;
+      this.getMore();
+      this.loading = false;
+      this.show = true;
     });
   }
 
   private getByCategoryIdAndPage(categoryId: number, page: number, elements: number) {
-    this.portfolioService.getByCategoryIdAndPage(categoryId, page, elements).subscribe((page) => {
-      this.disabledLoadMoreButton(page);
+    this.portfolioService.getAll().subscribe(portfolios => {
+      this.allPortfolios = portfolios.filter(portfolio => portfolio.category.id === categoryId);
+      this.getMore();
+      this.loading = false;
+      this.show = true;
     });
   }
 
-  private disabledLoadMoreButton(page: Page<Portfolio>): void {
-    this.portfolios = this.portfolios.concat(page.content);
-    this.loading = false;
-    this.show = true;
-    this.findMore = !page.last;
+  private disabledLoadMoreButton(): void {
+    this.findMore = !(this.portfolios.length === this.allPortfolios.length);
   }
 
   private orderByProfesionalCategory(categories: Category[]): Category[] {
@@ -96,7 +100,6 @@ export class PortfolioComponent implements OnInit {
     if (PROFESIONAL_CATEGORY) {
       this.category = PROFESIONAL_CATEGORY;
       const INDEX = categories.findIndex(category => category.id === PROFESIONAL_CATEGORY.id);
-      categories.splice(INDEX, 1);
       categories.push(Functions.createCategoryAll());
     }
     return categories;
