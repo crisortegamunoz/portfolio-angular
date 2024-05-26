@@ -7,9 +7,10 @@ import { differenceInDays } from 'date-fns';
 })
 export class DaysSincePipe implements PipeTransform {
 
-  transform(date: Date): string {
+  transform(publish: Date): string {
     const today = new Date();
-    const message = differenceInDays(today, date) == 0 ? 'Publicado hoy' : `Publicado hace ${differenceInDays(today, date)} ${differenceInDays(today, date) === 1 ? 'día' : 'días'}`;
+    const publishDate = new Date(publish);
+    const message = differenceInDays(today, publishDate) == 0 ? 'Publicado hoy' : `Publicado hace ${differenceInDays(today, publishDate)} ${differenceInDays(today, publishDate) === 1 ? 'día' : 'días'}`;
     return message;
   }
 

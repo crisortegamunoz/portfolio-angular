@@ -3,8 +3,9 @@
       <div class="container sm:px-5 md:px-10 lg:px-20">
           <div class="py-12 px-4">
               <h2 class="after-effect after:left-60 mb-[40px] mt-12 lg:mt-0"> Currículum </h2>
+              <app-loading *ngIf="loading"></app-loading>
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-x-6 gap-y-6">
-                  <div *ngIf="workHistory.length > 0">
+                  <div *ngIf="!loading && workHistory.length > 0">
                       <div class="flex items-center space-x-2 mb-4">
                           <i class="fa-solid text-6xl text-[#F95054] fa-briefcase"></i>
                           <h4 class="text-5xl dark:text-white font-medium"> Experiencia </h4>
@@ -12,7 +13,7 @@
                       <app-experience *ngFor="let work of workHistory" [experience]="work"></app-experience>
                   </div>
 
-                  <div *ngIf="studies.length > 0">
+                  <div *ngIf="!loading && studies.length > 0">
                     <div class="flex items-center space-x-2 mb-4">
                       <i class="fa-solid text-6xl text-[#F95054] fa-graduation-cap"></i>
                       <h4 class="text-5xl dark:text-white font-medium"> Estudios </h4>
@@ -27,14 +28,16 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="col-span-1">
                   <h4 class="text-5xl dark:text-white font-medium mb-6"> Habilidades </h4>
-                  <div *ngIf="skills.length > 0">
+                  <app-loading *ngIf="loading"></app-loading>
+                  <div *ngIf="!loading &&  skills.length > 0">
                     <app-skill  *ngFor="let skill of skills" [skill]="skill" ></app-skill>
                   </div>
               </div>
 
               <div class="col-span-1">
-                  <h4 class="text-5xl dark:text-white font-medium mb-8"> Conocimientos </h4>
-                  <div *ngIf="knowledges.length > 0" class="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
+                  <h4 class="text-5xl dark:text-white font-medium mb-8"> Conocimientos / Aptitudes </h4>
+                  <app-loading *ngIf="loading"></app-loading>
+                  <div *ngIf="!loading && knowledges.length > 0" class="flex gap-x-0 gap-y-0 md:gap-y-0 md:gap-x-0 flex-wrap">
                     <app-knowledge *ngFor="let knowledge of knowledges" [knowledge]="knowledge"></app-knowledge>
                   </div>
               </div>

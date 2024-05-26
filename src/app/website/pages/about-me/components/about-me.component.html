@@ -1,34 +1,32 @@
 <div>
   <div class="container lg:rounded-2xl bg-white dark:bg-[#111111] px-4 sm:px-5 md:px-10 lg:px-20">
       <div data-aos="fade" class="aos-init aos-animate">
-          <div class="py-12">
+        <div class="py-12">
               <!-- about page title -->
               <h2 class="after-effect after:left-52 mt-12 lg:mt-0"> Sobre Mí </h2>
-              <div class="grid grid-cols-12 md:gap-10 pt-4 md:pt-[40px] items-center">
+              <app-loading *ngIf="!about"></app-loading>
+              <div *ngIf="about" class="grid grid-cols-12 md:gap-10 pt-4 md:pt-[40px] items-center">
                   <div class="col-span-12 md:col-span-4">
                       <!-- about me image -->
-                      <img class="w-full md:w-[330px] md:h-[400px] object-cover overflow-hidden rounded-[35px] mb-3 md:mb-0"
+                      <img class="w-full md:w-[330px] md:h-[484px] object-cover overflow-hidden rounded-[35px] mb-3 md:mb-0"
                           src="/assets/images/about/about.jpg" alt="about image" />
                   </div>
                   <div class="col-span-12 md:col-span-8 space-y-2.5">
                       <div class="md:mr-12 xl:mr-16">
-                          <h3 class="text-4xl font-medium dark:text-white mb-2.5"> ¿Quién Soy? </h3>
-                          <p class="text-gray-lite dark:text-color-910 leading-7"> ¡Hola! Me llamo Cristian, soy ingeniero en informática con 7 años de experiencia
-                            en el desarrollo y gestión de software, con un fuerte compromiso con la satisfacción
-                            y el bienestar del cliente, diseñando e implementando mejoras en los sistemas. </p>
-                          <p class="text-gray-lite leading-7 mt-2.5 dark:text-color-910"> Soy un apasionado por aprender nuevas tecnologías y siempre estoy buscando nuevas
-                            herramientas para mejorar mis habilidades en el campo del desarrollo de software. </p>
+                          <h3 class="text-4xl font-medium dark:text-white mb-2.5"> {{ about.title }} </h3>
+                          <p class="text-gray-lite dark:text-color-910 leading-7"> {{ about.descriptions[0] }} </p>
+                          <p class="text-gray-lite leading-7 mt-2.5 dark:text-color-910"> {{ about.descriptions[1] }} </p>
+                          <p class="text-gray-lite leading-7 mt-2.5 dark:text-color-910"> {{ about.descriptions[2] }} </p>
                       </div>
                       <app-personal-info></app-personal-info>
                   </div>
               </div>
           </div>
           <!-- whai i do contain -->
-          <div class="pb-12">
+          <div *ngIf="about" class="pb-12">
               <h3 class="text-[35px] dark:text-white font-medium pb-5"> Mí día a día </h3>
-              <app-spinner *ngIf="boxes.length <= 0" [message]="'Cargando...'"></app-spinner>
-              <div *ngIf="boxes.length > 0" class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                  <app-about-box *ngFor="let box of boxes" [box]="box"></app-about-box>
+              <div *ngIf="about.boxes && about.boxes.length > 0" class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                  <app-about-box *ngFor="let box of about.boxes" [box]="box"></app-about-box>
               </div>
           </div>
       </div>

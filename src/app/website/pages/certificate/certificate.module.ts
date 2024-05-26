@@ -6,6 +6,8 @@ import { CertificatesComponent } from './components/certificates/certificates.co
 import { SharedModule } from '../../../shared/shared.module';
 import { CertificateComponent } from './components/certificate/certificate.component';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { CertificateComponent } from './components/certificate/certificate.compo
   imports: [
     CommonModule,
     CertificateRoutingModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ]
 })
 export class CertificateModule { }

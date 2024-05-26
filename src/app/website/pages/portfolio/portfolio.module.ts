@@ -7,6 +7,8 @@ import { SharedModule } from '../../../shared/shared.module';
 import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
 import { PortfolioDetailComponent } from './components/portfolio-detail/portfolio-detail.component';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     PortfolioComponent,
@@ -16,7 +18,8 @@ import { PortfolioDetailComponent } from './components/portfolio-detail/portfoli
   imports: [
     CommonModule,
     PortfolioRoutingModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ]
 })
 export class PortfolioModule { }
