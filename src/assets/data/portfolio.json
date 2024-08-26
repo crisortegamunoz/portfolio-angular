@@ -1,7 +1,101 @@
 [
     {
+        "id": 16,
+        "portfolioName": "Vacaciones",
+        "clientName": "Banco Santander",
+        "img": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fportfolio%2Fcrisortega%2FVacaciones.png?alt=media&token=0228cbf1-636e-4828-ba86-d962eff0bc2a",
+        "description": "En este proyecto, participé en la migración de un sistema de solicitud de vacaciones para los colaboradores del Banco Santander, actualizando una aplicación antigua desarrollada en C# y ASP.NET a una versión moderna utilizando tecnologías actuales. La actualización involucró la utilización de Java 11 con Spring Boot para el backend y Angular 12 para el frontend.\n\nFuncionalidades del Sistema:\n1.\tEl sistema renovado incluye varias funcionalidades clave para la gestión de las solicitudes de vacaciones:\n2.\tSolicitud de Vacaciones: Los colaboradores pueden realizar solicitudes de vacaciones de manera sencilla.\n3.\tSolicitud de Bonos: Los colaboradores tienen la opción de solicitar un bono si cumplen con un mínimo de días de vacaciones establecidos.\n4.\tReversa de Solicitud: Posibilidad de cancelar solicitudes de vacaciones previamente realizadas.\n5.\tHistorial de Solicitudes: Acceso al historial completo de solicitudes de vacaciones de cada colaborador.\n6.\tNotificaciones por Correo Electrónico: Envío automático de correos electrónicos al supervisor del colaborador para la aprobación o rechazo de las solicitudes de vacaciones.\n\nMi principal función en este proyecto fue en el área de frontend. Tuve que adaptarme rápidamente al proyecto, ya que el equipo estaba trabajando contra el reloj para cumplir con los plazos de entrega, esto debido a que ingresé al equipo en medio del desarrollo de este producto. A pesar de estos desafíos, logré integrarme eficazmente y contribuir significativamente al éxito del proyecto.\n\nUna vez entregada la aplicación, tuve que saldar una deuda técnica mencionada por el arquitecto, la cual consistía en dejar de enviar correos por medio de un servidor SMTP y utilizar un microservicio realizado por otro equipo para la gestión de envío de correos. Este ajuste mejoró la modularidad y eficiencia del sistema de notificaciones.\n\nAlgunos de los logros que quiero destacar son:\n1.\tAdaptación Rápida: Logré adaptarme rápidamente a las tecnologías y a las necesidades del proyecto, garantizando que el trabajo se realizara de manera eficiente y efectiva.\n2.\tEntrega Exitosa: Contribuí a cumplir con los tiempos de entrega establecidos, logrando satisfacer las expectativas del Product Owner, Tech Lead y Scrum Master.\n3.\tCumplimiento de Expectativas: Mi trabajo en el frontend fue reconocido por su calidad y eficiencia, alineándose perfectamente con los requisitos y expectativas del equipo de liderazgo del proyecto.\n\nEste proyecto no solo me permitió fortalecer mis habilidades técnicas en Angular, sino también demostrar mi capacidad para trabajar bajo presión y adaptarme rápidamente a nuevos entornos de trabajo. La colaboración y el cumplimiento de los objetivos del equipo fueron clave para el éxito de esta migración, lo que resultó en un sistema más moderno y eficiente para los colaboradores del Banco Santander.",
+        "repository": "",
+        "demo": "",
+        "startDate": "2023-07-16T04:00:00",
+        "endDate": "2023-09-01T04:00:00",
+        "publishDate": "2024-05-26T23:08:07",
+        "technologies": [
+            {
+                "id": 1,
+                "name": "Git",
+                "version": null
+            },
+            {
+                "id": 29,
+                "name": "Gitlab",
+                "version": null
+            },
+            {
+                "id": 18,
+                "name": "Jenkins",
+                "version": null
+            },
+            {
+                "id": 3,
+                "name": "CSS3",
+                "version": null
+            },
+            {
+                "id": 2,
+                "name": "HTML5",
+                "version": ""
+            },
+            {
+                "id": 20,
+                "name": "JavaScript",
+                "version": null
+            },
+            {
+                "id": 21,
+                "name": "TypeScript",
+                "version": null
+            },
+            {
+                "id": 40,
+                "name": "Angular Material",
+                "version": null
+            },
+            {
+                "id": 23,
+                "name": "Angular",
+                "version": "12"
+            },
+            {
+                "id": 44,
+                "name": "SQL Server 2012",
+                "version": null
+            },
+            {
+                "id": 45,
+                "name": "T-SQL",
+                "version": null
+            },
+            {
+                "id": 4,
+                "name": "Maven",
+                "version": null
+            },
+            {
+                "id": 7,
+                "name": "Java",
+                "version": "11"
+            },
+            {
+                "id": 11,
+                "name": "Springboot",
+                "version": null
+            },
+            {
+                "id": 19,
+                "name": "Spring Web",
+                "version": null
+            }
+        ],
+        "category": {
+            "id": 9,
+            "name": "Profesional",
+            "section": "PORTFOLIO"
+        }
+    },
+    {
         "id": 15,
-        "portfolioName": "MegaCentro - Control de Presupuesto",
+        "portfolioName": "Control de Presupuesto",
         "clientName": "Red MegaCentro",
         "img": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fportfolio%2Fcrisortega%2FMegaCentro.png?alt=media&token=3304fad1-800d-4a14-aeae-39fa25c1f615",
         "description": "Como parte de 42Labs,  tuvims que realziar una colaboración con MegaCentro Perú, donde llevé a cabo un proyecto de ingeniería inversa centrado en un software de gestión de bodega desarrollado en Microsoft Access. El objetivo principal fue comprender a fondo la estructura y funcionalidades del aplicativo para proporcionar mejoras y documentación exhaustiva.\n\nEl proceso inició con reuniones detalladas con el cliente, MegaCentro Perú, donde se recibió información esencial sobre el software existente. Este, específicamente diseñado para la gestión de bodegas y la elaboración de presupuestos de construcción, presentaba desafíos debido a su complejidad y a la falta de documentación clara.\n\nMi labor consistió en realizar una ingeniería inversa del aplicativo. Esto implicó una exhaustiva inspección de la base de datos subyacente para identificar las tablas, campos y tipos de datos utilizados. El propósito era comprender la estructura de la información almacenada y facilitar la creación de descripciones detalladas para los usuarios finales. Además, llevé a cabo una inspección a fondo de la interfaz de usuario y funcionalidades de la aplicación. Esta evaluación minuciosa permitió la creación de un manual de usuario completo, que detallaba de manera clara y concisa los procesos y pasos para maximizar la eficiencia en el uso del software.\n\nEn paralelo, mi jefe de proyecto lideró la creación de diagramas correspondientes que visualizaban la arquitectura y relaciones del software. Estos diagramas fueron esenciales para comprender la lógica de negocio y garantizar una implementación coherente de mejoras.\n\nEl proyecto culminó con éxito, cumpliendo con las expectativas del cliente. La entrega de mejoras sustanciales, el manual de usuario detallado y los diagramas visuales proporcionaron una solución integral que optimizó la experiencia del usuario. La satisfacción del cliente al final del proyecto destacó la efectividad de la ingeniería inversa aplicada y la capacidad para brindar soluciones prácticas a desafíos complejos. Este proyecto ahora forma parte integral de mi portafolio, destacando mi habilidad para abordar proyectos de ingeniería inversa con éxito y generar valor añadido para los clientes.",
