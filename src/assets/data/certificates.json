@@ -1,5 +1,96 @@
 [
     {
+        "id": 60,
+        "name": "Herramientas IA Developers",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-09-02_Herramientas_IA_Developers.pdf?alt=media&token=08d9c700-f515-40ac-8715-577aa9ce2d06",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-09-02_Herramientas_IA_Developers.png?alt=media&token=8215c12c-2a12-4133-bdf7-f923b64cfaba",
+        "entityName": "Platzi",
+        "completed": "2024-09-02T04:00:00",
+        "category": {
+            "id": 17,
+            "name": "Inteligencia Artificial",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
+        "id": 59,
+        "name": "Curso Prompt Engineering",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-08-26_Prompt_Engineering.pdf?alt=media&token=006a69b1-1aa2-4425-9f1c-7e344bfdab27",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-08-26_Prompt_Engineering.png?alt=media&token=9f81599f-2505-459c-809d-6c683103692f",
+        "entityName": "Platzi",
+        "completed": "2024-08-26T04:00:00",
+        "category": {
+            "id": 17,
+            "name": "Inteligencia Artificial",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
+        "id": 58,
+        "name": "Apache Camel Framework",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-07_25_Learn_Apache_Camel_Framework.pdf?alt=media&token=270892bd-3df5-4c3b-9d78-c179520b6728",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-07_25_Learn_Apache_Camel_Framework.png?alt=media&token=f92b8b00-90b8-4e61-8160-b6c3980a2f33",
+        "entityName": "Udemy",
+        "completed": "2024-07-25T04:00:00",
+        "category": {
+            "id": 5,
+            "name": "Backend",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
+        "id": 57,
+        "name": "Desarrollo Seguro Software",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-08-26_Desarrollo_Software_Seguro.pdf?alt=media&token=a63ffc19-e70d-4976-8f02-2eaf02216596",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-08-26_Desarrollo_Software_Seguro.png?alt=media&token=532ce5b9-2da1-4e21-a791-d4c71119d064",
+        "entityName": "Udemy",
+        "completed": "2024-07-17T04:00:00",
+        "category": {
+            "id": 5,
+            "name": "Backend",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
+        "id": 56,
+        "name": "OWASP Seguridad en APIs",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-07-17_OWASP_Seguridad_APIS.pdf?alt=media&token=7e6c9565-5f3a-43a6-bd9f-ff6bea61fca4",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-07-17_OWASP_Seguridad_APIS.png?alt=media&token=f55b5c94-82b7-4eb8-987e-38eba39c1ea7",
+        "entityName": "Udemy",
+        "completed": "2024-07-17T04:00:00",
+        "category": {
+            "id": 5,
+            "name": "Backend",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
+        "id": 55,
+        "name": "Fundamentos IA",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-05-21_Fundamentos_IA.pdf?alt=media&token=d3f6fc4e-3f3b-4f70-8b2d-f29b7258c9d8",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-05-21_Fundamentos_IA.png?alt=media&token=eef3b357-f95f-4b7d-95ad-f72b9638cdea",
+        "entityName": "Platzi",
+        "completed": "2024-05-21T04:00:00",
+        "category": {
+            "id": 17,
+            "name": "Inteligencia Artificial",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
+        "id": 54,
+        "name": "Master IA Generativa",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-05-20_Master_IA_Generativa.pdf?alt=media&token=8fc51846-bd3e-44fa-b884-ada903b5d746",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-05-20_Master_IA_Generativa.png?alt=media&token=23a4a3e0-ffa5-467b-bfb1-db793331cf77",
+        "entityName": "Udemy",
+        "completed": "2024-05-20T04:00:00",
+        "category": {
+            "id": 17,
+            "name": "Inteligencia Artificial",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
         "id": 51,
         "name": "Curso Marca Personal",
         "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2023%2F2023-07-18_Marca-Personal.pdf?alt=media&token=e05ae6c7-2d0a-43a2-9890-0f715e8fb19c",
