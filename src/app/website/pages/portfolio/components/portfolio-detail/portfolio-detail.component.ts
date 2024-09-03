@@ -1,28 +1,42 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
-import { PortfolioService } from '../../../../../services/website/portfolio.service';
-import { Portfolio } from '../../../../../models/website/portfolio.models';
+import { PortfolioService } from '../../../../../core/services/website/portfolio.service';
+import { Portfolio } from '../../../../../core/models/website/portfolio.models';
+import { Technology, TechnologyPortfolio } from '../../../../../core/models/website/technology.model';
+import { Functions } from '../../../../../core/util/functions';
+
 
 
 @Component({
   selector: 'app-portfolio-detail',
-  templateUrl: './portfolio-detail.component.html'
+  templateUrl: './portfolio-detail.component.html',
+  styleUrls: ['./portfolio-detail.component.scss']
 })
 export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
 
-
-  portfolioId: string | null = null;
   portfolio: Portfolio | null = null;
+  technologies: TechnologyPortfolio[];
 
-  constructor(private router: Router, private route: ActivatedRoute, private portfolioService: PortfolioService) {
+  constructor(private router: Router,
+              private route: ActivatedRoute,
+              private portfolioService: PortfolioService) {
+    this.technologies = [];
   }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.portfolioId = params.get('id');
-        if (this.portfolioId) {
-          this.portfolio = this.portfolioService.findById(this.portfolioId);
+      const id = params.get('id');
+        if (id) {
+          this.portfolioService.getAll().subscribe(portfolios => {
+            const portfolioArray: Portfolio[] = portfolios.filter(portfolio => portfolio.id.toString() === id);
+            if (portfolioArray.length > 0) {
+              this.portfolio = portfolioArray[0];
+              this.loadTechnologyForPortfolio(this.portfolio.technologies);
+            } else {
+              this.router.navigate(['/not-found']);
+            }
+          });
         }
     });
   }
@@ -36,4 +50,10 @@ export class PortfolioDetailComponent implements OnInit, AfterViewInit  {
     });
   }
 
+  private loadTechnologyForPortfolio(technologies: Technology[]): void {
+    technologies.forEach(item => {
+      const tech:TechnologyPortfolio = { ...item, class: Functions.getClassFromList() };
+      this.technologies.push(tech);
+    })
+  }
 }

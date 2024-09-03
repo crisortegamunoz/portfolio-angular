@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Experience } from '../../../../../models/website/experience.models';
-import { Skill } from '../../../../../models/website/skill.model';
-import { Knowledge } from '../../../../../models/website/knowledge.models';
-import { ExperienceService } from '../../../../../services/website/experience.service';
-import { SkillService } from '../../../../../services/website/skill.service';
-import { KnowledgeService } from '../../../../../services/website/knowledge.service';
+import { Experience } from '../../../../../core/models/website/experience.models';
+import { Skill } from '../../../../../core/models/website/skill.model';
+import { ExperienceService } from '../../../../../core/services/website/experience.service';
+import { SkillService } from '../../../../../core/services/website/skill.service';
+import { switchMap } from 'rxjs';
+import { Functions } from '../../../../../core/util/functions';
 
 @Component({
   selector: 'app-curriculum',
@@ -15,22 +15,45 @@ export class CurriculumComponent implements OnInit {
   workHistory: Experience[];
   studies: Experience[];
   skills: Skill[];
-  knowledges: Knowledge[];
+  knowledges: Skill[];
+  loading: boolean;
 
   constructor(private experienceService: ExperienceService,
-              private skillService: SkillService,
-              private knowledgeService: KnowledgeService) {
+              private skillService: SkillService) {
     this.workHistory = [];
     this.studies = [];
     this.skills = [];
     this.knowledges = [];
+    this.loading = true;
   }
 
   ngOnInit(): void {
-    this.workHistory = this.experienceService.getWorks();
-    this.studies = this.experienceService.getStudies();
-    this.skills = this.skillService.getSkillToShow();
-    this.knowledges = this.knowledgeService.getKnowledges();
+
+    this.skillService.getSkillsByCategoryName('Habilidad').pipe(
+      switchMap((skills: Skill[]) => {
+        this.skills = skills;
+        return this.experienceService.getExperienceByCategoryName('Trabajo');
+      }),
+      switchMap((works: Experience[]) => {
+        this.workHistory = works.filter(work => work.category.name === 'Trabajo').reverse();
+        return this.experienceService.getExperienceByCategoryName('Educacion');
+      }),
+      switchMap((studies: Experience[]) => {
+        this.studies = studies.filter(study => study.category.name === 'Educación').reverse();
+        return this.skillService.getSkillsByCategoryNameOrderByPercentage('Conocimiento');
+      })
+    ).subscribe((knowledges => {
+        this.loadClassWithRandom(knowledges);
+      })
+    );
+  }
+
+  private loadClassWithRandom(knowledges: Skill[]): void {
+    knowledges.forEach(item => {
+      item.cssClass = Functions.getClassFromList();
+      this.knowledges.push(item);
+    })
+    this.loading = false;
   }
 
 }

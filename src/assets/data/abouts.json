@@ -1,0 +1,61 @@
+[
+    {
+    "id": 1,
+    "title": "¿Quién Soy?",
+    "descriptions": [
+        "¡Hola! Me llamo Cristian, soy ingeniero en informática con 8 años de experiencia en el desarrollo y gestión de software, con un fuerte compromiso con la satisfacción y el bienestar del cliente, diseñando e implementando mejoras en los sistemas.",
+        "Soy un apasionado por aprender nuevas tecnologías y siempre estoy buscando nuevas herramientas para mejorar mis habilidades en el campo del desarrollo de software.",
+        "Me gustan las actividades físicas, es por eso que disfruto andar en bicicleta y jugar volleyball. Disfruto el compartir con mis amistades y familiarias, así como también jugar con mis mascotas."
+    ],
+    "boxes": [
+        {
+            "id": 1,
+            "title": "Tecnologías",
+            "description": "Ayudando a la industria tecnológica a desarrollar nuevas plataformas de alto rendimiento con la finaliad de facilitar la vida a las personas.",
+            "cssStyle": "about-box bg-[#fcf4ff] dark:bg-transparent",
+            "iconImg": "/assets/images/icons/icon1.svg",
+            "order": 1
+        },
+        {
+            "id": 2,
+            "title": "Gestión de equipo",
+            "description": "Guiando y retroalimentando a los miembros del equipo en pro del cumplimiento de metas, priorizando la eficiencia y prolijidad.",
+            "cssStyle": "about-box bg-[#fff4f4] dark:bg-transparent",
+            "iconImg": "/assets/images/icons/icon2.svg",
+            "order": 2
+        },
+        {
+            "id": 3,
+            "title": "Desarrollo",
+            "description": "Dedicado a la creación, mantención y a mejorar las funcionalides de las aplicaciones para que el usuario tenga una buena experiencia.",
+            "cssStyle": "about-box bg-[#fcf4ff] dark:bg-transparent",
+            "iconImg": "/assets/images/icons/icon3.svg",
+            "order": 3
+        },
+        {
+            "id": 4,
+            "title": "Compartir conocimiento",
+            "description": "Guiando a mis compañeros y compañeras de trabajo, compartiendo el conocimiento, ya sea sobre una tecnología en especifico o sobre el negocio.",
+            "cssStyle": "about-box bg-[#fcf4ff] dark:bg-transparent",
+            "iconImg": "/assets/images/icons/icon4.svg",
+            "order": 4
+        },
+        {
+            "id": 5,
+            "title": "Planning",
+            "description": "Participación continua con los clientes, revisando la factibilidad técnica de sus requerimientos para implementarlos en los sistemas.",
+            "cssStyle": "about-box bg-[#fefaf0] dark:bg-transparent",
+            "iconImg": "/assets/images/icons/icon5.svg",
+            "order": 5
+        },
+        {
+            "id": 6,
+            "title": "Aprendiendo",
+            "description": "Siempre es bueno ver que hay de nuevo en el mercado, por ese motivo actualizo mi stack constantemente viendo nuevas versiones o framework.",
+            "cssStyle": "about-box bg-[#fcf4ff] dark:bg-transparent",
+            "iconImg": "/assets/images/icons/icon6.svg",
+            "order": 6
+        }
+    ]
+}
+]

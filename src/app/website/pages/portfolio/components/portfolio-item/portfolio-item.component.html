@@ -2,14 +2,14 @@
   <div class="overflow-hidden rounded-lg">
    <a (click)="showDetail()">
       <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
-        [src]="portfolio.image" alt="blog image" />
+        [src]="portfolio.img" alt="blog image" />
     </a>
   </div>
   <div class="flex flex-wrap mt-4 text-tiny text-gray-lite dark:text-white">
-    <span> {{ portfolio.publish | daysSince }}</span>
-    <span> {{ portfolio.descriptions[0] | ellipsis: 50 }}</span>
+    <span> {{ portfolio.publishDate| daysSince }}</span>
+    <span> {{ portfolio.description | ellipsis: 50 }}</span>
   </div>
   <h3 class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
-    <a (click)="showDetail()">{{ portfolio.projectName }}</a>
+    <a (click)="showDetail()">{{ portfolio.portfolioName }}</a>
   </h3>
 </div>

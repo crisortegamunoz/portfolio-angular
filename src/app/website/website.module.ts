@@ -7,12 +7,11 @@ import { NavComponent } from './components/nav/nav.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 
-
 @NgModule({
   declarations: [
     NavComponent,
     LayoutComponent,
-    HeaderComponent
+    HeaderComponent,
     ],
   imports: [
     CommonModule,

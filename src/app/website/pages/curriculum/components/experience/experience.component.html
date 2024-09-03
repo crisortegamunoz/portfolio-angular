@@ -1,13 +1,37 @@
-<div *ngIf="experience" class="py-4 dark:bg-transparent bg-[#eef5fa] pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2">
-  <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]"> {{ experience.startDate | date:'yyyy-MM' }} - {{ experience.endDate | date:'yyyy-MM' }}</span>
-  <h3 *ngIf="experience.role" class="text-xl dark:text-white"> {{ experience.role }}</h3>
-  <h4 class="text-lg font-medium dark:text-white"> {{ experience.entity }}</h4>
-  <p *ngIf="experience.entityDescription" class="dark:text-[#b7b7b7]"> {{ experience.entityDescription }} </p>
-  <p *ngIf="experience.roleDescription" class="dark:text-[#b7b7b7]"> {{ experience.roleDescription }} </p>
-  <p *ngIf="experience.responsabilities.length > 0" class="dark:text-[#b7b7b7]"> Responsabilidades: </p>
-      <ul *ngIf="experience.responsabilities.length > 0" class="list-disc ml-6">
-        <li *ngFor="let responsability of experience.responsabilities" class="dark:text-[#b7b7b7]">{{ responsability }}</li>
-      </ul>
+<div *ngIf="experience" class="py-4 dark:bg-transparent bg-[#FFFFFF] pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2">
+  <span *ngIf="experience.periodEnd" class="text-tiny text-gray-lite dark:text-[#F5F5F5]"> {{ experience.periodStart | date:'yyyy-MM' }} - {{ experience.periodEnd | date:'yyyy-MM' }} · {{ periodOfTime }}</span>
+  <span *ngIf="!experience.periodEnd" class="text-tiny text-gray-lite dark:text-[#F5F5F5]"> {{ experience.periodStart | date:'yyyy-MM' }} - Actualidad · {{ periodOfTime }}</span>
+  <h3 *ngIf="experience.roleName" class="text-xl dark:text-white"> {{ experience.roleName }}</h3>
+  <h4 class="text-lg font-medium dark:text-white"> {{ experience.entityName }}</h4>
+  <p *ngIf="experience.entityDescription" class="dark:text-[#F5F5F5]"> {{ experience.entityDescription }} </p>
+  <p *ngIf="experience.roleDescription" class="dark:text-[#F5F5F5]"> {{ experience.roleDescription }} </p>
+  <div *ngIf="showMore" class="flex flex-col items-end">
+    <a class="mb-0 mt-5 mr-12 text-sm font-medium text-gray-900 dark:text-[#F5F5F5] text-xtiny cursor-pointer"
+       (click)="toggleAnimation()" >Ver más...</a>
+  </div>
+  <div [ngClass]="{ 'h-0 opacity-0': !isAnimated, 'h-auto opacity-100': isAnimated}"
+      class="overflow-hidden transition-all duration-500 ease-in-out"
+    >
+    <p *ngIf="experience.responsibilities.length > 0" class="dark:text-[#F5F5F5]"> Responsabilidades: </p>
+    <ul *ngIf="experience.responsibilities.length > 0" class="list-disc ml-6">
+      <li *ngFor="let responsability of experience.responsibilities" class="dark:text-[#F5F5F5]">{{ responsability }}</li>
+    </ul>
+    <p *ngIf="experience.accomplishments && experience.accomplishments.length > 0" class="mt-2 dark:text-[#F5F5F5]"> Logros: </p>
+    <ul *ngIf="experience.accomplishments && experience.accomplishments.length > 0" class="list-disc ml-6">
+      <li *ngFor="let accomplishment of experience.accomplishments" class="dark:text-[#F5F5F5]">{{ accomplishment }}</li>
+    </ul>
+    <p *ngIf="experience.technologies.length > 0" class="mt-2 dark:text-[#F5F5F5]"> {{ loadStack(experience.technologies) }} </p>
+  </div>
+  <div *ngIf="showLess" class="flex flex-col items-end">
+    <a class="mb-0 mt-5 mr-12 text-sm font-medium text-gray-900 dark:text-[#F5F5F5] text-xtiny cursor-pointer"
+       (click)="toggleAnimation()" >Ver menos...</a>
+  </div>
+  <div *ngIf="isStudy">
+    <p *ngIf="experience.responsibilities.length > 0" class="dark:text-[#F5F5F5]"> Responsabilidades: </p>
+    <ul *ngIf="experience.responsibilities.length > 0" class="list-disc ml-6">
+      <li *ngFor="let responsability of experience.responsibilities" class="dark:text-[#F5F5F5]">{{ responsability }}</li>
+    </ul>
+  </div>
 </div>
 
 

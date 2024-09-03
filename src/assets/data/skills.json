@@ -1,0 +1,212 @@
+[
+    {
+        "id": 6,
+        "name": null,
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": {
+            "id": 1,
+            "name": "Git",
+            "version": null
+        },
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 7,
+        "name": null,
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": {
+            "id": 4,
+            "name": "Maven",
+            "version": null
+        },
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 8,
+        "name": null,
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": {
+            "id": 5,
+            "name": "Gradle",
+            "version": null
+        },
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 10,
+        "name": null,
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": {
+            "id": 11,
+            "name": "Springboot",
+            "version": null
+        },
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 12,
+        "name": null,
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": {
+            "id": 32,
+            "name": "Firebase",
+            "version": null
+        },
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Gestión del tiempo",
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": null,
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Comunicación",
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": null,
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Problem-Solving",
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": null,
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 16,
+        "name": "Flexibilidad",
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": null,
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Metodologías Ágiles",
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": null,
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Attlassian Suite",
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": null,
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 19,
+        "name": null,
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": {
+            "id": 17,
+            "name": "PL/SQL",
+            "version": null
+        },
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    },
+    {
+        "id": 20,
+        "name": null,
+        "show": true,
+        "percentage": null,
+        "cssClass": null,
+        "cssStyle": null,
+        "technology": {
+            "id": 18,
+            "name": "Jenkins",
+            "version": null
+        },
+        "category": {
+            "id": 15,
+            "name": "Conocimiento",
+            "section": "KNOWLEDGE"
+        }
+    }
+]

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Portfolio } from '../../../../../models/website/portfolio.models';
 import { Router } from '@angular/router';
+
+import { Portfolio } from '../../../../../core/models/website/portfolio.models';
 
 @Component({
   selector: 'app-portfolio-item',

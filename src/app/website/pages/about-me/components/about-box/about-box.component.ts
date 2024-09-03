@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AboutBox } from 'src/app/models/website/about-me.models';
+import { Box } from '../../../../../core/models/website/box.model';
 
 @Component({
   selector: 'app-about-box',
@@ -8,7 +8,7 @@ import { AboutBox } from 'src/app/models/website/about-me.models';
 
 export class AboutBoxComponent {
 
-  @Input() box: AboutBox | null;
+  @Input() box: Box | null;
 
   constructor() {
     this.box = null;
