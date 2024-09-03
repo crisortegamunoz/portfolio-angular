@@ -1,5 +1,6 @@
-<div *ngIf="certificate" class="rounded-lg bg-[#fff3fc] dark:bg-[#212425] p-6 dark:border-[2px] border-[#212425] ">
-    <div class="overflow-hidden rounded-lg">
+<div *ngIf="certificate" class="relative rounded-lg bg-[#fff3fc] dark:bg-[#212425] p-6 dark:border-[2px] border-[#212425] ">
+  <div *ngIf="isDateWithin30Days(certificate.completed)" class="new-badge">Nuevo</div>  
+  <div class="overflow-hidden rounded-lg">
       <a [href]="certificate.pdfUrl" target="_blank" rel="noopener noreferrer">
         <img
           class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"

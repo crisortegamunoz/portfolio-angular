@@ -99,7 +99,38 @@
     @apply rounded-md cursor-pointer font-poppins bg-black text-black font-medium mx-2.5 flex text-xtiny py-2 md:px-3 xl:px-4 flex-wrap transition-all duration-300 ease-in-out dark:hover:text-black dark:bg-[#c97a0c] hover:text-white hover:bg-gradient-to-r from-[#f2991d] to-[#edc851] dark:text-white ;
   }
 
+  .relative {
+    position: relative;
+  }
+  
+  .new-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(8, 184, 245);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+    z-index: 10;
+  }
 
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 
 }
 
