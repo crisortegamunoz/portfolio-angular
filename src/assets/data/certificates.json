@@ -1,5 +1,31 @@
 [
     {
+        "id": 62,
+        "name": "Curso de Criptografía",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2025%2F2025-01-18_Fundamentos_Criptografia.pdf?alt=media&token=e0ca4127-99f6-4a3e-84f9-8ff560516dac",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2025%2F2025-01-18_Fundamentos_Criptografia.png?alt=media&token=6229b8f4-00ba-4b7b-bfb4-c63640dc7776",
+        "entityName": "Platzi",
+        "completed": "2025-01-18T04:00:00",
+        "category": {
+            "id": 18,
+            "name": "CiberSeguridad",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
+        "id": 61,
+        "name": "Curso Github Copilot",
+        "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-09-08_Github_Copilot.pdf?alt=media&token=93c527d1-3097-4605-bbd0-ff3da4b28911",
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-09-08_Github_Copilot.png?alt=media&token=86758bac-7172-4184-ac92-60744fee16ce",
+        "entityName": "Platzi",
+        "completed": "2024-09-08T04:00:00",
+        "category": {
+            "id": 17,
+            "name": "Inteligencia Artificial",
+            "section": "CERTIFICATE"
+        }
+    },
+    {
         "id": 60,
         "name": "Herramientas IA Developers",
         "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2024%2F2024-09-02_Herramientas_IA_Developers.pdf?alt=media&token=08d9c700-f515-40ac-8715-577aa9ce2d06",

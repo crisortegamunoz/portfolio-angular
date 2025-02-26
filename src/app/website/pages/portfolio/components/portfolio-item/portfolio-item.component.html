@@ -7,7 +7,7 @@
   </div>
   <div class="flex flex-wrap mt-4 text-tiny text-gray-lite dark:text-white">
     <span> {{ portfolio.publishDate| daysSince }}</span>
-    <span> {{ portfolio.description | ellipsis: 50 }}</span>
+    <span> {{ portfolio.description | ellipsis: 60 }}</span>
   </div>
   <h3 class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
     <a (click)="showDetail()">{{ portfolio.portfolioName }}</a>

@@ -1,5 +1,99 @@
 [
     {
+        "id": 18,
+        "portfolioName": "Publicador de Noticias",
+        "clientName": "Banco Santander",
+        "img": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fportfolio%2Fcrisortega%2FPublicador_Noticias.png?alt=media&token=1c4b65ac-45c8-4b2b-983f-1a90202c0a3a",
+        "description": "Publicador de Noticias es una aplicación web desarrollada con Angular para el frontend y una arquitectura low code en el backend, utilizando Spring Boot y Apache Camel.\nEste proyecto fue solicitado por el área de Comunicaciones de Banco Santander con el objetivo de proporcionar una plataforma para la difusión de noticias, beneficios y convenios dirigidos a los colaboradores internos del banco, quienes acceden a la información a través de una aplicación móvil.\n\nLa aplicación permite gestionar publicaciones de manera eficiente, desde la creación de contenido hasta su distribución.\nEntre sus principales funcionalidades, se incluyen:\n\t- Creación de publicaciones con título, bajada y descripción.\n\t- Carga de imágenes y adjuntos.\n\t- Configuración de visibilidad para audiencias específicas.\n\t- Programación de fechas de publicación.\n\t- Previsualización de cómo se verá la noticia en un dispositivo móvil.\n\nAunque el desarrollo de la aplicación parecía sencillo en términos técnicos, el proyecto presentó dos grandes desafíos:\n\t1. Mejora de los requerimientos iniciales: Como equipo, logramos no solo cumplir con lo solicitado, sino optimizar significativamente la solución propuesta en comparación con la idea original del cliente.\n\t2. Reestructuración del equipo y cambio metodológico: Iniciamos con un equipo de cinco desarrolladores, pero antes de comenzar el desarrollo, dos compañeros fueron desvinculados, reduciendo el equipo a solo tres.\n\tAdemás, migramos nuestra metodología de trabajo de Kanban a Scrum, lo que representó un reto adicional, especialmente para quienes no tenían experiencia previa en este marco de trabajo.\n\nA pesar de estos obstáculos, logramos adaptarnos rápidamente.\nLa implementación de Scrum resultó ser un acierto, ya que permitió distribuir la carga de trabajo de manera equitativa, asegurando que todos tuviéramos la misma cantidad de puntos en cada sprint.\nEsto no solo optimizó la productividad, sino que también fortaleció la colaboración dentro del equipo.\n\nNo solo cumplimos con los plazos establecidos, sino que incluso tuvimos la oportunidad de apoyar al equipo encargado de la aplicación móvil.\nPara ello, externalizamos algunos de nuestros servicios a través de APIGee, facilitando la integración y mejorando la experiencia del usuario final.\n\nEn definitiva, el Publicador de Noticias no solo es una herramienta funcional y eficiente, sino también el resultado de un equipo que supo superar desafíos, adaptarse al cambio y entregar un producto de alto valor para el banco.",
+        "repository": "",
+        "demo": "",
+        "startDate": "2024-09-09T04:00:00",
+        "endDate": "2024-12-13T04:00:00",
+        "publishDate": "2025-02-26T23:08:07",
+        "technologies": [
+            {
+                "id": 1,
+                "name": "Git",
+                "version": null
+            },
+            {
+                "id": 29,
+                "name": "Gitlab",
+                "version": null
+            },
+            {
+                "id": 18,
+                "name": "Jenkins",
+                "version": null
+            },
+            {
+                "id": 3,
+                "name": "CSS3",
+                "version": null
+            },
+            {
+                "id": 2,
+                "name": "HTML5",
+                "version": ""
+            },
+            {
+                "id": 20,
+                "name": "JavaScript",
+                "version": null
+            },
+            {
+                "id": 21,
+                "name": "TypeScript",
+                "version": null
+            },
+            {
+                "id": 40,
+                "name": "Angular Material",
+                "version": null
+            },
+            {
+                "id": 23,
+                "name": "Angular",
+                "version": "12"
+            },
+            {
+                "id": 44,
+                "name": "SQL Server 2012",
+                "version": null
+            },
+            {
+                "id": 45,
+                "name": "T-SQL",
+                "version": null
+            },
+            {
+                "id": 4,
+                "name": "Maven",
+                "version": null
+            },
+            {
+                "id": 7,
+                "name": "Java",
+                "version": "17"
+            },
+            {
+                "id": 11,
+                "name": "Springboot",
+                "version": null
+            },
+            {
+                "id": 19,
+                "name": "Spring Web",
+                "version": null
+            }
+        ],
+        "category": {
+            "id": 9,
+            "name": "Profesional",
+            "section": "PORTFOLIO"
+        }
+    },
+    {
         "id": 16,
         "portfolioName": "Vacaciones",
         "clientName": "Banco Santander",
