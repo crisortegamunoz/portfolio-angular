@@ -94,6 +94,115 @@
         }
     },
     {
+        "id": 17,
+        "portfolioName": "Asistente Virtual IA",
+        "clientName": "Banco Santander",
+        "img": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fportfolio%2Fcrisortega%2FVirtaul%20Assistant%20IA.jpg?alt=media&token=857e2208-bc1c-4d10-a614-9a7023462818",
+        "description": "El mundo empresarial demanda soluciones ágiles e innovadoras, y en Banco Santander surgió la oportunidad de desarrollar un Asistente Virtual con IA para los colaboradores internos. La misión era clara: ofrecer una herramienta que resolviera de manera eficiente dudas y consultas relacionadas con recursos humanos, tales como:\n\n\t✔️ Periodos de vacaciones\n\t✔️ Bonos y beneficios\n\t✔️ Solicitud de permisos\n\t✔️ Otras gestiones internas\n\nEl Enfoque Tecnológico\nPara garantizar una solución robusta, se planteó una arquitectura basada en tecnologías de vanguardia:\n\n\t🔹 Azure + OpenAI Assistant: Se eligió esta herramienta por su facilidad de configuración y su enfoque en asistentes virtuales.\n\t🔹 Spring Boot + Apache Camel: Desarrollo backend con enfoque low-code, asegurando integración con los sistemas internos.\n\t🔹 APIGee: Para externalizar los servicios y permitir la comunicación segura con redes externas.\n\t🔹 Angular: Desarrollo del Chat Virtual como un componente embebido en la plataforma de Recursos Humanos.\n\nEl Giro Inesperado\nA pesar del gran avance del proyecto, se recibió la orden de detenerlo. ¿El motivo? Desde Santander España ya se estaba desarrollando una solución similar, por lo que se decidió unificar esfuerzos a nivel global.\n\nSin embargo, esta experiencia marcó un antes y un después en mi carrera.\n\nMi Rol como Líder Técnico\nEste fue mi primer proyecto como Líder Técnico dentro del banco, un rol que implicó enfrentar múltiples desafíos, entre ellos:\n\n\t🚀 Diseñar la solución técnica junto con los arquitectos.\n\t📢 Presentar la propuesta en diversas mesas de aprobación del banco.\n\t🛠️ Validar tecnologías emergentes, como OpenAI Assistant, y compararlas con la IA convencional de ChatGPT.\n\t💡 Negociar costos y viabilidad del proyecto con diferentes áreas del banco.\n\t🎤 Desarrollar habilidades de comunicación y liderazgo, presentando la iniciativa ante directivos y equipos de alto nivel.\n\nEl Aprendizaje\nAunque el proyecto no llegó a producción, la experiencia fue invaluable. Aprendí a liderar, negociar, presentar y defender ideas, además de fortalecer mis habilidades técnicas y de comunicación.\n\nEste fue un recordatorio de que, en tecnología, no solo importa el producto final, sino también el camino recorrido y el crecimiento personal y profesional que obtenemos en el proceso.\n\n💡 A veces los proyectos se detienen, pero el aprendizaje nunca se pierde.",
+        "repository": "",
+        "demo": "",
+        "startDate": "2024-03-01T04:00:00",
+        "endDate": "2024-11-23T04:00:00",
+        "publishDate": "2025-01-20T23:08:07",
+        "technologies": [
+            {
+                "id": 1,
+                "name": "Git",
+                "version": null
+            },
+            {
+                "id": 29,
+                "name": "Gitlab",
+                "version": null
+            },
+            {
+                "id": 18,
+                "name": "Jenkins",
+                "version": null
+            },
+            {
+                "id": 3,
+                "name": "CSS3",
+                "version": null
+            },
+            {
+                "id": 2,
+                "name": "HTML5",
+                "version": ""
+            },
+            {
+                "id": 20,
+                "name": "JavaScript",
+                "version": null
+            },
+            {
+                "id": 21,
+                "name": "TypeScript",
+                "version": null
+            },
+            {
+                "id": 40,
+                "name": "Angular Material",
+                "version": null
+            },
+            {
+                "id": 23,
+                "name": "Angular",
+                "version": "12"
+            },
+            {
+                "id": 44,
+                "name": "SQL Server 2012",
+                "version": null
+            },
+            {
+                "id": 45,
+                "name": "T-SQL",
+                "version": null
+            },
+            {
+                "id": 4,
+                "name": "Maven",
+                "version": null
+            },
+            {
+                "id": 7,
+                "name": "Java",
+                "version": "17"
+            },
+            {
+                "id": 11,
+                "name": "Springboot",
+                "version": null
+            },
+            {
+                "id": 19,
+                "name": "Spring Web",
+                "version": null
+            },
+            {
+                "id": 50,
+                "name": "Azure",
+                "version": null
+            },
+            {
+                "id": 51,
+                "name": "OpenAI Assistant",
+                "version": null
+            },
+            {
+                "id": 52,
+                "name": "Azure Functions",
+                "version": null
+            }
+        ],
+        "category": {
+            "id": 9,
+            "name": "Profesional",
+            "section": "PORTFOLIO"
+        }
+    },
+    {
         "id": 16,
         "portfolioName": "Vacaciones",
         "clientName": "Banco Santander",
