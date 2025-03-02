@@ -1,4 +1,5 @@
-<div *ngIf="portfolio" class="p-5 rounded-lg mb-2 h-full dark:border-[#212425] bg-[#fcf4ff] dark:bg-[#212425] dark:border-2">
+<div *ngIf="portfolio" class="relative p-5 rounded-lg mb-2 h-full dark:border-[#212425] bg-[#fcf4ff] dark:bg-[#212425] dark:border-2">
+  <div *ngIf="isDateWithin30Days(portfolio.publishDate)" class="new-badge">Nuevo</div> 
   <div class="overflow-hidden rounded-lg">
    <a (click)="showDetail()">
       <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
