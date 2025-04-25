@@ -15,8 +15,9 @@ import { Functions } from '../../../../../core/util/functions';
 
 
 @Component({
-  selector: 'app-certificates',
-  templateUrl: './certificates.component.html'
+    selector: 'app-certificates',
+    templateUrl: './certificates.component.html',
+    standalone: false
 })
 export class CertificatesComponent implements OnInit {
 

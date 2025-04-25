@@ -3,8 +3,9 @@ import { About } from '../../../../core/models/website/about-me.models';
 import { AboutMeService } from '../../../../core/services/website/about-me.service';
 
 @Component({
-  selector: 'app-about-me',
-  templateUrl: './about-me.component.html'
+    selector: 'app-about-me',
+    templateUrl: './about-me.component.html',
+    standalone: false
 })
 export class AboutMeComponent implements OnInit {
 

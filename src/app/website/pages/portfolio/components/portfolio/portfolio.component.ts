@@ -11,8 +11,9 @@ import { Functions } from '../../../../../core/util/functions';
 import { Page } from '../../../../../core/models/response/page.model';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html'
+    selector: 'app-portfolio',
+    templateUrl: './portfolio.component.html',
+    standalone: false
 })
 export class PortfolioComponent implements OnInit {
 

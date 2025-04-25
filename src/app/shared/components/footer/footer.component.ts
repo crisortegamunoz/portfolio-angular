@@ -3,8 +3,9 @@ import { Dialog } from '@angular/cdk/dialog';
 import { ChangeLogComponent } from '../change-log/change-log.component';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html'
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    standalone: false
 })
 export class FooterComponent {
 

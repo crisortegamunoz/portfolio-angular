@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { DialogRef } from '@angular/cdk/dialog';
 
 @Component({
-  selector: 'app-change-log',
-  templateUrl: './change-log.component.html'
+    selector: 'app-change-log',
+    templateUrl: './change-log.component.html',
+    standalone: false
 })
 export class ChangeLogComponent {
 

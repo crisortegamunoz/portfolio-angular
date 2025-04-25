@@ -5,9 +5,10 @@ import { Technology } from '../../../../../core/models/website/technology.model'
 import { differenceInYears, differenceInMonths } from 'date-fns';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.scss'],
+    standalone: false
 })
 
 export class ExperienceComponent  {

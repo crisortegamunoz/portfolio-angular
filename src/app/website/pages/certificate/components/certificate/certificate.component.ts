@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import { Certificate } from '../../../../../core/models/website/certificate.models';
 
 @Component({
-  selector: 'app-certificate',
-  templateUrl: './certificate.component.html'
+    selector: 'app-certificate',
+    templateUrl: './certificate.component.html',
+    standalone: false
 })
 export class CertificateComponent {
 

@@ -11,15 +11,15 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^18.0.0",
+    "@angular/animations": "^19.2.8",
     "@angular/cdk": "^18.0.0",
-    "@angular/common": "^18.0.0",
-    "@angular/compiler": "^18.0.0",
-    "@angular/core": "^18.0.0",
-    "@angular/forms": "^18.0.0",
-    "@angular/platform-browser": "^18.0.0",
-    "@angular/platform-browser-dynamic": "^18.0.0",
-    "@angular/router": "^18.0.0",
+    "@angular/common": "^19.2.8",
+    "@angular/compiler": "^19.2.8",
+    "@angular/core": "^19.2.8",
+    "@angular/forms": "^19.2.8",
+    "@angular/platform-browser": "^19.2.8",
+    "@angular/platform-browser-dynamic": "^19.2.8",
+    "@angular/router": "^19.2.8",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "acorn": "^7.4.1",
     "acorn-node": "^1.8.2",
@@ -85,12 +85,12 @@
     "util-deprecate": "^1.0.2",
     "xtend": "^4.0.2",
     "yaml": "^1.10.2",
-    "zone.js": "~0.14.6"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.0.1",
-    "@angular/cli": "^18.0.1",
-    "@angular/compiler-cli": "^18.0.0",
+    "@angular-devkit/build-angular": "^19.2.9",
+    "@angular/cli": "^19.2.9",
+    "@angular/compiler-cli": "^19.2.8",
     "@tailwindcss/forms": "^0.5.3",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.14",
@@ -102,6 +102,6 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
-    "typescript": "~5.4.5"
+    "typescript": "~5.8.3"
   }
 }

@@ -7,8 +7,9 @@ import { switchMap } from 'rxjs';
 import { Functions } from '../../../../../core/util/functions';
 
 @Component({
-  selector: 'app-curriculum',
-  templateUrl: './curriculum.component.html'
+    selector: 'app-curriculum',
+    templateUrl: './curriculum.component.html',
+    standalone: false
 })
 export class CurriculumComponent implements OnInit {
 

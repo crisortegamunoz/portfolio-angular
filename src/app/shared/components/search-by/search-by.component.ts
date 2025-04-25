@@ -2,9 +2,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Category } from '../../../core/models/website/caterogy.models';
 
 @Component({
-  selector: 'app-search-by',
-  templateUrl: './search-by.component.html',
-  styleUrls: ['./search-by.component.scss']
+    selector: 'app-search-by',
+    templateUrl: './search-by.component.html',
+    styleUrls: ['./search-by.component.scss'],
+    standalone: false
 })
 export class SearchByComponent {
 

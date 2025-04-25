@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { Skill } from '../../../../../core/models/website/skill.model';
 
 @Component({
-  selector: 'app-knowledge',
-  templateUrl: './knowledge.component.html',
-  styleUrls: ['./knowledge.component.scss']
+    selector: 'app-knowledge',
+    templateUrl: './knowledge.component.html',
+    styleUrls: ['./knowledge.component.scss'],
+    standalone: false
 })
 export class KnowledgeComponent {
 

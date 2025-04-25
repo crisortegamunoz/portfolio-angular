@@ -3,7 +3,8 @@ import { differenceInDays } from 'date-fns';
 
 
 @Pipe({
-  name: 'daysSince'
+    name: 'daysSince',
+    standalone: false
 })
 export class DaysSincePipe implements PipeTransform {
 
