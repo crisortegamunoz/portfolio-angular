@@ -1,4 +1,29 @@
-[
+[{
+    "id": 69,
+    "name": "NestJS: Autenticación JWT",
+    "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2025%2F2025-08-06_NestJS_Autenticacion.pdf?alt=media&token=0eefa8ef-e55e-414c-a89f-5326ccec7ce8",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2025%2F2025-08-06_NestJS_Autenticacion.jpg?alt=media&token=c86b0259-90b1-4881-9357-8a8b46be970c",
+    "entityName": "Platzi",
+    "completed": "2025-08-06T04:00:00",
+    "category": {
+      "id": 18,
+      "name": "Backend",
+      "section": "CERTIFICATE"
+    }
+  },
+  {
+    "id": 68,
+    "name": "NestJS: MongoDB",
+    "pdfUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2025%2F2025-07-11_NestJS_MongoDB.pdf?alt=media&token=4d62f2bc-9724-48ee-a008-96d4a73181af",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/cms-portfolio-firebase.appspot.com/o/images%2Fcertificate%2Fcrisortega%2F2025%2F2025-07-11_NestJS_MongoDB.jpg?alt=media&token=497284a5-e6e8-44b5-9b25-5a7afa1b536d",
+    "entityName": "Platzi",
+    "completed": "2025-07-11T04:00:00",
+    "category": {
+      "id": 18,
+      "name": "Backend",
+      "section": "CERTIFICATE"
+    }
+  },
   {
     "id": 67,
     "name": "NestJS: Programación Modular",
